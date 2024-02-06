@@ -71,5 +71,14 @@ public class EnemiesCollection : MonoBehaviour
         }
     }
 
+    //Remove selected enemy/enemies 
+    public static void removeEnemies(List<GameObject> enemies) 
+    {
+        foreach (GameObject enemy in enemies)
+        {
+            enemiesList.Remove(enemy);
+        }
+    } 
+
     public static List<GameObject> getEnemyCollection() { return enemiesList; }
 }

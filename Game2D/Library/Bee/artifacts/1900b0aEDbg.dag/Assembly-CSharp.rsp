@@ -374,7 +374,10 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/EnemiesCollection.cs"
+"Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Hero.cs"
+"Assets/Scripts/SimpleEnemy.cs"
+"Assets/Scripts/StrongEnemy.cs"
 -langversion:9.0
 
 /deterministic
