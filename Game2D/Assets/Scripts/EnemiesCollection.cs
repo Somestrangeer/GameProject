@@ -8,9 +8,10 @@ public class EnemiesCollection : MonoBehaviour
 {
     // Store enemies of the level in this list
     private static List<GameObject> enemiesList = new List<GameObject>();
-    private int speed = 3;
-    private float visibleArea = 8f;
-    private float attackArea = 2f;
+
+    private int speed = EnemyParams.enemySpeed;
+    private float visibleArea = EnemyParams.visibleArea;
+    private float attackArea = EnemyParams.attackArea;
 
     private void Awake()
     {
@@ -25,6 +26,10 @@ public class EnemiesCollection : MonoBehaviour
 
     private void Update()
     {
+        // We always update the vars to get the changed values
+        visibleArea = EnemyParams.visibleArea;
+        attackArea = EnemyParams.attackArea;
+
         EnemyMovement();
     }
 
@@ -82,3 +87,4 @@ public class EnemiesCollection : MonoBehaviour
 
     public static List<GameObject> getEnemyCollection() { return enemiesList; }
 }
+

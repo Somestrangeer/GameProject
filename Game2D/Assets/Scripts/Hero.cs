@@ -9,6 +9,7 @@ public class Hero : MonoBehaviour
     private float damage = 50f;
     private int speed = 3;
     private float attackDistance = 2.0f;
+    private bool sneakModeEnable = false;
 
     private List<GameObject> killedEnemies = new List<GameObject>();
 
@@ -34,7 +35,11 @@ public class Hero : MonoBehaviour
         {
             attackEnemy();
         }
-
+        if (Input.GetKeyDown(KeyCode.C)) 
+        {
+            sneakHero();
+        }
+        
     }
 
     private void heroMovement()
@@ -49,7 +54,31 @@ public class Hero : MonoBehaviour
         // To make an animation we have to multiply it by time
         hero.transform.position += movement * Time.deltaTime;
     }
+    private void sneakHero() 
+    {
+        if (!sneakModeEnable) 
+        {
+            // NOTE: Add animation here later
+            hero.transform.localScale = new Vector3(1, 0.5f, 1);
 
+            EnemyParams.visibleArea = 4f;
+            EnemyParams.attackArea = 1.5f;
+
+            sneakModeEnable = true;
+        }
+        else 
+        {
+            // NOTE: Add animation here later
+            hero.transform.localScale = new Vector3(1, 1, 1);
+
+            EnemyParams.visibleArea = 8f;
+            EnemyParams.attackArea = 2f;
+
+            sneakModeEnable = false;
+        }
+        
+
+    }
     private void attackEnemy()
     {
         List<GameObject> enemyList = EnemiesCollection.getEnemyCollection();

@@ -7,9 +7,10 @@ public class StrongEnemy : MonoBehaviour, Enemy
 {
     private float hp = 400.0f;
     private float damage = 20.0f;
-    private float attackDistance = 2.0f;
-    private float damageSpeed = 0.5f;
+    private float attackDistance = EnemyParams.attackArea;
+    private float damageSpeed = EnemyParams.damageSpeed;
     private bool isAttacking = false;
+
     private GameObject strongEnemy;
 
     private void Awake()
@@ -21,6 +22,9 @@ public class StrongEnemy : MonoBehaviour, Enemy
 
     private void Update()
     {
+        // We always update the var to get the changed value
+        attackDistance = EnemyParams.attackArea;
+
         if (Vector3.Distance(strongEnemy.transform.position, Hero.getHero().transform.position) <= attackDistance && !isAttacking)
         {
             //Start the function in parallel
