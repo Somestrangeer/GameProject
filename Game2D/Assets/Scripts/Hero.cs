@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    //private float hp = 200f;
-    //private float damage = 50f;
+    private float hp = 200f;
+    private float damage = 50f;
     private int speed = 3;
 
     // The object of our hero
