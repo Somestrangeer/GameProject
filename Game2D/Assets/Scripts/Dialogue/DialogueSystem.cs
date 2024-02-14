@@ -3,40 +3,128 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Ink.Runtime;
 
 public class DialogueSystem : MonoBehaviour
 {
-    public Text DialogueText;
-    //public Animator PressEAnimator;
-    public Animator ImageAnimator;
-    private Queue<string> _sentences = new Queue<string>();
 
-    //start dialogue animation and fill queue with sentences
-    public void StartDialogue(Dialogue dialogue) 
+    [Header("DialogueUI")]
+    [SerializeField] private GameObject Image;
+    [SerializeField] private Text DialogueText;
+
+    [Header("DialogueUI")]
+    [SerializeField] private GameObject[] Choises;
+
+    private Text[] ChoisesText;
+
+    private Story CurrentSrory;
+
+    private bool DialogueIsPlaying;
+
+    private static DialogueSystem instance;
+
+    private void Awake()
     {
-        _sentences.Clear();
-
-        DialogueText.text = "";
-        ImageAnimator.SetBool(Animator.StringToHash("Start"), true);
-
-        foreach (var sentence in dialogue.sentences) 
+        if (instance != null)
         {
-            _sentences.Enqueue(sentence);
+            Debug.LogWarning("Dialogue System Warning");
         }
+        instance = this;
+    }
 
-        NextSentence();
+    public static DialogueSystem GetInstance()
+    {
+        return instance;
+    } 
+
+    public void Start() 
+    {
+        Image.SetActive(false);
+
+        DialogueIsPlaying = false;
+
+        //get all of the choises text
+        ChoisesText = new Text[Choises.Length];
+        int index = 0;
+        foreach (GameObject Choise in Choises) 
+        {
+            ChoisesText[index] = Choise.GetComponentInChildren<Text>();
+            index++;
+        }
+    }
+
+    public void EnterDialogueMode(TextAsset inkJSON) 
+    {
+        CurrentSrory = new Story(inkJSON.text);
+        DialogueIsPlaying = true;
+        Image.SetActive(true);
+
+        ContinueStory();
+    }
+
+    private void ExitDialogueMode()
+    {
+        DialogueIsPlaying = false;
+        Image.SetActive(false);
+        DialogueText.text = "";
     }
 
     private void Update()
     {
+        if (!DialogueIsPlaying)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            NextSentence();
+            ContinueStory();
+        }
+    }
+
+    private void ContinueStory()
+    {
+        if (CurrentSrory.canContinue)
+        {
+            //set text for the current dialogue line
+            DialogueText.text = CurrentSrory.Continue();
+
+            //display choises, if any, for this dialogue line
+            DisplayChoices();
+        }
+        else
+        {
+            ExitDialogueMode();
+        }
+    }
+
+    private void DisplayChoices()
+    {
+        List<Choice> CurrentChoises = CurrentSrory.currentChoices;
+
+        //defence check to sure UI can support the number of choises
+        if (CurrentChoises.Count > Choises.Length)
+        {
+            Debug.LogError("More choises then UI can support");
+        }
+
+        int index = 0;
+
+        //enable and initialize the choices up to amount of choices for the line of dialogue
+        foreach (Choice choice in CurrentChoises) 
+        {
+            Choises[index].gameObject.SetActive(true);
+            ChoisesText[index].text = choice.text;
+            index++;
+        }
+
+        for (int i = index; i < Choises.Length; i++)
+        {
+            Choises[i].gameObject.SetActive(false);
         }
     }
 
     //split text into letters
-    IEnumerator TypeLine(string sentence)
+    /*IEnumerator TypeLine(string sentence)
     {
         DialogueText.text = "";
         foreach (char Letter in sentence.ToCharArray()) 
@@ -44,26 +132,5 @@ public class DialogueSystem : MonoBehaviour
             DialogueText.text += Letter;
             yield return new WaitForSeconds(0.1f);
         }
-    }
-
-
-
-    //checking if the texts has run out
-    private void NextSentence()
-    {
-        if (_sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-        
-        string sentence = _sentences.Dequeue();
-        StartCoroutine(TypeLine(sentence));
-    }
-
-    //remove dialogue panel from window when dialogue ends
-    void EndDialogue()
-    {
-        ImageAnimator.SetBool(Animator.StringToHash("Start"), false);
-    }
+    }*/
 }
