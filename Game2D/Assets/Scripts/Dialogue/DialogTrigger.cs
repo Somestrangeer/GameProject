@@ -6,57 +6,58 @@ using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
 {
+    //The object of player
     private GameObject player;
     private DialogueSystem dialogueSystem;
-    private Dialogue[] dialogueObject;
-    public float distance;
+
+    [Header("Visual Cue")]
+    [SerializeField] private GameObject VisualCue;
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset InkJSON;
 
+    private bool PlayerInRange;
+
     private void Awake()
     {
+        
+        VisualCue.SetActive(false);
         dialogueSystem = FindObjectOfType<DialogueSystem>();
-        dialogueObject = FindObjectsOfType<Dialogue>();
         player = GameObject.FindWithTag("Player");
     }
 
-    //checks distance from object to person and compares it with the given max. distance (I think the name of the variables needs to be changed a little). And takes dialogue from the nearest NPC with dialogue
-
+    //shows the Dialogue available indicator and starts dialogue where button E pressed
     private void Update()
     {
-        Dialogue dialogObject = null;
-        float tempDistance = distance;
-        foreach (var dialog in dialogueObject) 
+        if (PlayerInRange && !DialogueSystem.GetInstance().DialogueIsPlaying)
         {
-            var distanceObject = Vector2.Distance(dialog.gameObject.transform.position, player.transform.position);
-            if (distanceObject < distance) 
-            {
-                if (distanceObject < tempDistance) 
-                {
-                    tempDistance = distanceObject;
-                    dialogObject = dialog;
-                }
-            }
-        }
-
-        //Adds LisghtDialogue indicator on NPC and staerts dialogue 
-        if (dialogObject != null) 
-        {
-            dialogObject.gameObject.GetComponent<Animator>().SetBool(Animator.StringToHash("LightDialogue"), true);
-            if (Input.GetKeyDown(KeyCode.E))
+            VisualCue.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E)) 
             {
                 DialogueSystem.GetInstance().EnterDialogueMode(InkJSON);
             }
         }
-
-        //removes LisghtDialogue indicator from NPC
-        foreach(var i in dialogueObject)
+        else
         {
-            if (i != dialogObject)
-            {
-                i.gameObject.GetComponent<Animator>().SetBool(Animator.StringToHash("LightDialogue"), false);
-            } 
+            VisualCue.SetActive(false);
+        }
+    }
+
+    //if player enter the collider range
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            PlayerInRange = true;
+        }
+    }
+
+    //if player exit the collider range
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            PlayerInRange = false;
         }
     }
 }

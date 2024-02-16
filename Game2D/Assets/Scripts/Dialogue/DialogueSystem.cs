@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
+using UnityEngine.EventSystems;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -17,9 +18,9 @@ public class DialogueSystem : MonoBehaviour
 
     private Text[] ChoisesText;
 
-    private Story CurrentSrory;
+    private Story CurrentStory;
 
-    private bool DialogueIsPlaying;
+    public bool DialogueIsPlaying;
 
     private static DialogueSystem instance;
 
@@ -27,14 +28,17 @@ public class DialogueSystem : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Dialogue System Warning");
+            Debug.LogWarning("Found more than 1 dialogue manager in the scene");
+            Destroy(this.gameObject);
         }
         instance = this;
     }
 
+
     public static DialogueSystem GetInstance()
     {
         return instance;
+
     } 
 
     public void Start() 
@@ -53,15 +57,17 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
+    //Open the dialogue panel and starts the new story with information from inkJSON file, pinned to NPC
     public void EnterDialogueMode(TextAsset inkJSON) 
     {
-        CurrentSrory = new Story(inkJSON.text);
+        CurrentStory = new Story(inkJSON.text);
         DialogueIsPlaying = true;
         Image.SetActive(true);
 
         ContinueStory();
     }
 
+    //Close the dialogue panel and clear the dialogue text
     private void ExitDialogueMode()
     {
         DialogueIsPlaying = false;
@@ -71,22 +77,26 @@ public class DialogueSystem : MonoBehaviour
 
     private void Update()
     {
+        //return right away if dialogue isn't playing
         if (!DialogueIsPlaying)
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        // handle continuing to the next line in the dialogue when submit is pressed
+        if (CurrentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.R))
         {
             ContinueStory();
         }
     }
 
+    //if the stroy can continue adds text to the dialogue panel
+    //Story is a Ink.Runtime class
     private void ContinueStory()
     {
-        if (CurrentSrory.canContinue)
+        if (CurrentStory.canContinue)
         {
             //set text for the current dialogue line
-            DialogueText.text = CurrentSrory.Continue();
+            DialogueText.text = CurrentStory.Continue();
 
             //display choises, if any, for this dialogue line
             DisplayChoices();
@@ -99,7 +109,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void DisplayChoices()
     {
-        List<Choice> CurrentChoises = CurrentSrory.currentChoices;
+        List<Choice> CurrentChoises = CurrentStory.currentChoices;
 
         //defence check to sure UI can support the number of choises
         if (CurrentChoises.Count > Choises.Length)
@@ -117,20 +127,27 @@ public class DialogueSystem : MonoBehaviour
             index++;
         }
 
+        // go through the remaining choices the UI supports and make sure they're hidden
         for (int i = index; i < Choises.Length; i++)
         {
             Choises[i].gameObject.SetActive(false);
         }
+
+        StartCoroutine(SelectFirstChoise());
     }
 
-    //split text into letters
-    /*IEnumerator TypeLine(string sentence)
+    private IEnumerator SelectFirstChoise()
     {
-        DialogueText.text = "";
-        foreach (char Letter in sentence.ToCharArray()) 
-        {
-            DialogueText.text += Letter;
-            yield return new WaitForSeconds(0.1f);
-        }
-    }*/
+        //Event system requires we clear it first, then wait for at least one frame before we set current selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(Choises[0].gameObject);
+    }
+
+    public void MakeChoise(int ChoiseIndex)
+    {
+        CurrentStory.ChooseChoiceIndex(ChoiseIndex);
+
+        ContinueStory();
+    }
 }
