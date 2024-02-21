@@ -26,17 +26,16 @@ public class DialogueSystem : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Debug.LogWarning("Found more than 1 dialogue manager in the scene");
-            Destroy(this.gameObject);
-        }
         instance = this;
     }
 
 
     public static DialogueSystem GetInstance()
     {
+        if (instance == null)
+        {
+            instance = new DialogueSystem();
+        }
         return instance;
 
     } 
