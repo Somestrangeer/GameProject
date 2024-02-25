@@ -68,7 +68,6 @@ public class hero : MonoBehaviour
         }
 
 
-        // To make an animation we have to multiply it by time
         herpObj.transform.position += movement * Time.deltaTime;
     }
 }
