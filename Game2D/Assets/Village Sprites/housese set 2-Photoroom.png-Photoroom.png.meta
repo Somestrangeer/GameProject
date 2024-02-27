@@ -1,0 +1,471 @@
+fileFormatVersion: 2
+guid: 0d0181aa57ba0a7409b0da9167bdbe8a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 387
+        width: 65
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c3bd6d43817f04f88b8cf911a71694
+      internalID: -182857106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 387
+        width: 66
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ea14978b84b9647a45544660f843dc
+      internalID: -416924319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 387
+        width: 68
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0956dffced30e4544959aa43374e36eb
+      internalID: 1132232009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 387
+        width: 78
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326348d919714fc4b885c25e68d78372
+      internalID: -1020495785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 387
+        width: 79
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66114be2811dae74cbf29d7330011259
+      internalID: -1802074855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 331
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0f517eabe4300439599494f3d8b4a9
+      internalID: 1385487154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 228
+        width: 76
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b712fa33c32c38458c34100be134582
+      internalID: 66750312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 228
+        width: 78
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000c85ee858d82840a4cd3d56b1e51b6
+      internalID: -1776852146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 228
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfcaf69c6ef7f741a32fc5bfb30e03f
+      internalID: 583710904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 228
+        width: 99
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b84a678449492458ec3aef76124007
+      internalID: -613176592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 228
+        width: 98
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140366e4d87724749a1038749738e7a5
+      internalID: -541156564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 70
+        width: 99
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484770c945501ad4b9f8520830af8adc
+      internalID: -1154132420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 70
+        width: 95
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9eb0219ea5865344b0831f4c08440f3
+      internalID: 1303377631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 70
+        width: 95
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdb5234db7938c4db1c66d721d9f598
+      internalID: -328944475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: housese set 2-Photoroom.png-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 70
+        width: 99
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993cbbbd86df6fc4f9b1c0f3560d252d
+      internalID: 1006469691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      housese set 2-Photoroom.png-Photoroom_0: -182857106
+      housese set 2-Photoroom.png-Photoroom_1: -416924319
+      housese set 2-Photoroom.png-Photoroom_10: -1212911555
+      housese set 2-Photoroom.png-Photoroom_11: -1763709808
+      housese set 2-Photoroom.png-Photoroom_12: -1712048863
+      housese set 2-Photoroom.png-Photoroom_13: -793923915
+      housese set 2-Photoroom.png-Photoroom_14: 66750312
+      housese set 2-Photoroom.png-Photoroom_15: -1776852146
+      housese set 2-Photoroom.png-Photoroom_16: 583710904
+      housese set 2-Photoroom.png-Photoroom_17: -613176592
+      housese set 2-Photoroom.png-Photoroom_18: -541156564
+      housese set 2-Photoroom.png-Photoroom_19: 71027199
+      housese set 2-Photoroom.png-Photoroom_2: 1132232009
+      housese set 2-Photoroom.png-Photoroom_20: -1824230219
+      housese set 2-Photoroom.png-Photoroom_21: 16585939
+      housese set 2-Photoroom.png-Photoroom_22: -323964018
+      housese set 2-Photoroom.png-Photoroom_23: 1917186157
+      housese set 2-Photoroom.png-Photoroom_24: -445866853
+      housese set 2-Photoroom.png-Photoroom_25: -1154132420
+      housese set 2-Photoroom.png-Photoroom_26: 1303377631
+      housese set 2-Photoroom.png-Photoroom_27: -328944475
+      housese set 2-Photoroom.png-Photoroom_28: 1006469691
+      housese set 2-Photoroom.png-Photoroom_3: -1020495785
+      housese set 2-Photoroom.png-Photoroom_4: -1802074855
+      housese set 2-Photoroom.png-Photoroom_5: 724372455
+      housese set 2-Photoroom.png-Photoroom_6: 1949977013
+      housese set 2-Photoroom.png-Photoroom_7: -273706274
+      housese set 2-Photoroom.png-Photoroom_8: 1385487154
+      housese set 2-Photoroom.png-Photoroom_9: -567442781
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
