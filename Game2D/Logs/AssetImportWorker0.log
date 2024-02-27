@@ -15,7 +15,7 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50460
+51401
 Successfully changed project path to: C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [512] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 1433078980 [EditorId] 1433078980 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [2780] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2210915558 [EditorId] 2210915558 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [512] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 1433078980 [EditorId] 1433078980 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2780] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2210915558 [EditorId] 2210915558 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 28.77 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 30.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56360
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.018175 seconds.
-- Loaded All Assemblies, in  0.571 seconds
+Registered in 0.020832 seconds.
+- Loaded All Assemblies, in  0.631 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.439 seconds
-Domain Reload Profiling: 1006ms
-	BeginReloadAssembly (182ms)
+- Finished resetting the current domain, in  0.496 seconds
+Domain Reload Profiling: 1122ms
+	BeginReloadAssembly (195ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (105ms)
-	LoadAllAssembliesAndSetupDomain (210ms)
-		LoadAssemblies (177ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (126ms)
+	LoadAllAssembliesAndSetupDomain (222ms)
+		LoadAssemblies (189ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (207ms)
-			TypeCache.Refresh (206ms)
-				TypeCache.ScanAssembly (187ms)
+		AnalyzeDomain (219ms)
+			TypeCache.Refresh (216ms)
+				TypeCache.ScanAssembly (196ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (440ms)
+	FinalizeReload (497ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (343ms)
+		SetupLoadedEditorAssemblies (379ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (17ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (13ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (235ms)
-			ProcessInitializeOnLoadMethodAttributes (74ms)
+			ProcessInitializeOnLoadAttributes (256ms)
+			ProcessInitializeOnLoadMethodAttributes (85ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,183 +115,57 @@ Domain Reload Profiling: 1006ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.772 seconds
-Refreshing native plugins compatible for Editor in 11.21 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.766 seconds
-Domain Reload Profiling: 1529ms
-	BeginReloadAssembly (247ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (74ms)
-	LoadAllAssembliesAndSetupDomain (372ms)
-		LoadAssemblies (418ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (102ms)
-			TypeCache.Refresh (97ms)
-				TypeCache.ScanAssembly (82ms)
-			ScanForSourceGeneratedMonoScriptInfo (3ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (767ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (550ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (248ms)
-			ProcessInitializeOnLoadAttributes (232ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
-			AfterProcessingInitializeOnLoad (17ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 11.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5882 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 43 unused Assets / (1.0 MB). Loaded Objects now: 6323.
-Memory consumption went from 196.5 MB to 195.5 MB.
-Total: 4.571800 ms (FindLiveObjects: 0.569200 ms CreateObjectMapping: 0.427000 ms MarkObjects: 2.985800 ms  DeleteObjects: 0.588200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 5518.152729 seconds.
-  path: Assets/UniversalRenderPipelineGlobalSettings.asset
-  artifactKey: Guid(16aacf3963df4c249866b93e96b74c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(16aacf3963df4c249866b93e96b74c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f57c24f5553e96203703f5c9e28ca7') in 0.007977 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 84.856350 seconds.
-  path: Assets/URP/2D.asset
-  artifactKey: Guid(5a0b20b12f3e15647bd734eecdd022fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/URP/2D.asset using Guid(5a0b20b12f3e15647bd734eecdd022fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a07948cd1c4f2e3b708abb723e224a6') in 0.001621 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/URP/2D_Renderer.asset
-  artifactKey: Guid(5cb5f1bec3b1ecb48b15369bdb34b93b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/URP/2D_Renderer.asset using Guid(5cb5f1bec3b1ecb48b15369bdb34b93b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7adbb1eb9d2fbc10b8939988348b7382') in 0.003239 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 47.333627 seconds.
-  path: Assets/Materials/New Material.mat
-  artifactKey: Guid(db3bdd92d2a72944ebb29e654f6d8a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/New Material.mat using Guid(db3bdd92d2a72944ebb29e654f6d8a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f80f27a5257ad031a0a5b5e11ab5f5c9') in 0.170040 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.063 seconds
-Refreshing native plugins compatible for Editor in 10.63 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.162 seconds
+Refreshing native plugins compatible for Editor in 13.56 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.255 seconds
-Domain Reload Profiling: 2308ms
-	BeginReloadAssembly (230ms)
+- Finished resetting the current domain, in  1.399 seconds
+Domain Reload Profiling: 2551ms
+	BeginReloadAssembly (234ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (40ms)
-	RebuildCommonClasses (49ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (48ms)
 	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (704ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (782ms)
 		LoadAssemblies (593ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (245ms)
-			TypeCache.Refresh (187ms)
-				TypeCache.ScanAssembly (168ms)
-			ScanForSourceGeneratedMonoScriptInfo (41ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1256ms)
+		AnalyzeDomain (331ms)
+			TypeCache.Refresh (248ms)
+				TypeCache.ScanAssembly (228ms)
+			ScanForSourceGeneratedMonoScriptInfo (48ms)
+			ResolveRequiredComponents (34ms)
+	FinalizeReload (1399ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1006ms)
+		SetupLoadedEditorAssemblies (1096ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (9ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (229ms)
-			ProcessInitializeOnLoadAttributes (625ms)
-			ProcessInitializeOnLoadMethodAttributes (117ms)
-			AfterProcessingInitializeOnLoad (16ms)
+			BeforeProcessingInitializeOnLoad (255ms)
+			ProcessInitializeOnLoadAttributes (676ms)
+			ProcessInitializeOnLoadMethodAttributes (126ms)
+			AfterProcessingInitializeOnLoad (17ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-Refreshing native plugins compatible for Editor in 10.14 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 10.59 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5801 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 40 unused Assets / (1.0 MB). Loaded Objects now: 6393.
-Memory consumption went from 198.6 MB to 197.6 MB.
-Total: 5.115200 ms (FindLiveObjects: 0.510200 ms CreateObjectMapping: 0.254300 ms MarkObjects: 3.785500 ms  DeleteObjects: 0.563800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
+Unloading 5940 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 138 unused Assets / (3.2 MB). Loaded Objects now: 6361.
+Memory consumption went from 223.9 MB to 220.8 MB.
+Total: 6.786200 ms (FindLiveObjects: 0.551400 ms CreateObjectMapping: 0.583200 ms MarkObjects: 4.025000 ms  DeleteObjects: 1.625500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:srp/default-shader: ff2869b2ce7c09b51d8bc2926aab598d -> 886a89792de1e9d3697bddabf731a298
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -305,314 +179,43 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:srp/default-material: 1323b11ab5f8e84b9c4553e3cd30b8d1 -> 00000000000000000f00000000000000
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.112 seconds
-Refreshing native plugins compatible for Editor in 13.36 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.682 seconds
-Domain Reload Profiling: 3784ms
-	BeginReloadAssembly (1342ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (1073ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (59ms)
-	RebuildCommonClasses (61ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (68ms)
-	LoadAllAssembliesAndSetupDomain (609ms)
-		LoadAssemblies (728ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (34ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (24ms)
-	FinalizeReload (1683ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1255ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (13ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (294ms)
-			ProcessInitializeOnLoadAttributes (770ms)
-			ProcessInitializeOnLoadMethodAttributes (143ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-Refreshing native plugins compatible for Editor in 12.46 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5798 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 59 unused Assets / (1.0 MB). Loaded Objects now: 6410.
-Memory consumption went from 201.2 MB to 200.2 MB.
-Total: 6.255500 ms (FindLiveObjects: 0.567000 ms CreateObjectMapping: 0.335400 ms MarkObjects: 4.628300 ms  DeleteObjects: 0.723200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:srp/default-shader: ff2869b2ce7c09b51d8bc2926aab598d -> 886a89792de1e9d3697bddabf731a298
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:srp/default-material: 1323b11ab5f8e84b9c4553e3cd30b8d1 -> 00000000000000000f00000000000000
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.850 seconds
-Refreshing native plugins compatible for Editor in 14.37 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.840 seconds
-Domain Reload Profiling: 3680ms
-	BeginReloadAssembly (239ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (49ms)
-	RebuildCommonClasses (45ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (54ms)
-	LoadAllAssembliesAndSetupDomain (484ms)
-		LoadAssemblies (575ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (37ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (27ms)
-	FinalizeReload (2841ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1144ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (11ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (268ms)
-			ProcessInitializeOnLoadAttributes (701ms)
-			ProcessInitializeOnLoadMethodAttributes (130ms)
-			AfterProcessingInitializeOnLoad (19ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-Refreshing native plugins compatible for Editor in 11.38 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5798 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 59 unused Assets / (1.0 MB). Loaded Objects now: 6426.
-Memory consumption went from 203.1 MB to 202.2 MB.
-Total: 5.962500 ms (FindLiveObjects: 0.560400 ms CreateObjectMapping: 0.431500 ms MarkObjects: 4.229500 ms  DeleteObjects: 0.739400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:srp/default-shader: ff2869b2ce7c09b51d8bc2926aab598d -> 886a89792de1e9d3697bddabf731a298
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:srp/default-material: 1323b11ab5f8e84b9c4553e3cd30b8d1 -> 00000000000000000f00000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 425.910687 seconds.
-  path: Assets/Scenes/EnemyInteractScene.unity
-  artifactKey: Guid(25dd79cd5a290824e9c7c38d49ee5cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/EnemyInteractScene.unity using Guid(25dd79cd5a290824e9c7c38d49ee5cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6001d1f959dcc0d3122b0b560f055dcc') in 0.007077 seconds
+  Time since last request: 5336.012601 seconds.
+  path: Assets/Env. Sprites/Ded's House.png
+  artifactKey: Guid(3b4a0c5161231c240a6e3efdcdd730c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/Ded's House.png using Guid(3b4a0c5161231c240a6e3efdcdd730c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db84217c52d244fe0ddb56b978fed916') in 0.197769 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.865 seconds
-Refreshing native plugins compatible for Editor in 11.64 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.708 seconds
-Domain Reload Profiling: 3562ms
-	BeginReloadAssembly (242ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (51ms)
-	RebuildCommonClasses (45ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (498ms)
-		LoadAssemblies (594ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (33ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (22ms)
-	FinalizeReload (2708ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1131ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (11ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (266ms)
-			ProcessInitializeOnLoadAttributes (695ms)
-			ProcessInitializeOnLoadMethodAttributes (127ms)
-			AfterProcessingInitializeOnLoad (19ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (24ms)
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-Refreshing native plugins compatible for Editor in 11.52 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5798 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 59 unused Assets / (1.0 MB). Loaded Objects now: 6442.
-Memory consumption went from 205.1 MB to 204.1 MB.
-Total: 6.609900 ms (FindLiveObjects: 0.603100 ms CreateObjectMapping: 1.253100 ms MarkObjects: 4.175300 ms  DeleteObjects: 0.577000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultShader () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1624 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0004f] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:733 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_scriptableRendererData () [0x00018] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:921 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.GetMaterial (UnityEngine.Rendering.Universal.DefaultMaterialType materialType) [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:827 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_defaultMaterial () [0x00001] in .\Library\PackageCache\com.unity.render-pipelines.universal@14.0.10\Runtime\Data\UniversalRenderPipelineAsset.cs:1526 
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 733)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:srp/default-shader: ff2869b2ce7c09b51d8bc2926aab598d -> 886a89792de1e9d3697bddabf731a298
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:srp/default-material: 1323b11ab5f8e84b9c4553e3cd30b8d1 -> 00000000000000000f00000000000000
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 39.059515 seconds.
-  path: Assets/Scenes/ForestScene.unity
-  artifactKey: Guid(918a60b57ca1b6143a16f59618ba7c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/ForestScene.unity using Guid(918a60b57ca1b6143a16f59618ba7c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb19e22a382f741d776ee9f5813a7b44') in 0.005889 seconds
+  Time since last request: 1.099805 seconds.
+  path: Assets/Env. Sprites/3 Animated Objects/Lantern1.png
+  artifactKey: Guid(378a22a4636c14d459c879300dfb4d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/3 Animated Objects/Lantern1.png using Guid(378a22a4636c14d459c879300dfb4d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95dd325d9e47fe8afdeb3ae9cb236d64') in 0.036963 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Env. Sprites/3 Animated Objects/Lantern2.png
+  artifactKey: Guid(e61a3d6860c90b64f9fc23895db5afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/3 Animated Objects/Lantern2.png using Guid(e61a3d6860c90b64f9fc23895db5afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f6feefd2f1b268ead4a1edff81502fd') in 0.033881 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Env. Sprites/3 Animated Objects/Lantern3.png
+  artifactKey: Guid(92c5898e1a60bae41aacc6f8404fda11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/3 Animated Objects/Lantern3.png using Guid(92c5898e1a60bae41aacc6f8404fda11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a4bf195297d633f02860c40d2fde42f') in 0.038604 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Env. Sprites/3 Animated Objects/Skeleton.png
+  artifactKey: Guid(3c9bdfc4365695643ba43b1fb895692d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/3 Animated Objects/Skeleton.png using Guid(3c9bdfc4365695643ba43b1fb895692d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f77cf22b3690cd65f780cee71c617592') in 0.036188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
