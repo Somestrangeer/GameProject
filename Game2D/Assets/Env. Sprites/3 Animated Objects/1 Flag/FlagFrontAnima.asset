@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: FlagFrontAnima
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 673102485, guid: f53d7c845470e60498d570111fc809de, type: 3}
+  - {fileID: -1807640264, guid: f53d7c845470e60498d570111fc809de, type: 3}
+  - {fileID: 1161063818, guid: f53d7c845470e60498d570111fc809de, type: 3}
+  - {fileID: -691528240, guid: f53d7c845470e60498d570111fc809de, type: 3}
+  - {fileID: 1851770911, guid: f53d7c845470e60498d570111fc809de, type: 3}
+  - {fileID: -1333592638, guid: f53d7c845470e60498d570111fc809de, type: 3}
+  m_MinSpeed: 2
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0
