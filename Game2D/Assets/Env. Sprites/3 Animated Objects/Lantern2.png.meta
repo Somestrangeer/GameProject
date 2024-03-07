@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,119 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lantern2_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 6
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2.5, y: -9}
+        - {x: -4.5, y: -9}
+        - {x: -5.5, y: -17}
+        - {x: -2.5, y: -18}
+        - {x: 1.5, y: -17}
+        - {x: 1.5, y: -10}
+        - {x: 1.5, y: 6}
+        - {x: -1.5, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8f68173a9390b4480b8e6ba04c5960
+      internalID: 1033297670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern2_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 6
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2.5, y: 5}
+        - {x: -2.5, y: -8}
+        - {x: -4.5, y: -9}
+        - {x: -5.5, y: -17}
+        - {x: -2.5, y: -18}
+        - {x: 1.5, y: -17}
+        - {x: 1.5, y: 2}
+        - {x: 1.5, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efdccd895c8b9145b2d8e1db46eea26
+      internalID: -1686633235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern2_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 6
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4.5, y: -9}
+        - {x: -4.5, y: -17}
+        - {x: 0.5, y: -17}
+        - {x: 0.5, y: 4}
+        - {x: -1.5, y: 4}
+        - {x: -2.5, y: -9}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850a463bf6d2a3b4e87fdbbda20fdb06
+      internalID: 2002567243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern2_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 6
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2.5, y: -8}
+        - {x: -4.5, y: -9}
+        - {x: -4.5, y: -17}
+        - {x: 1.5, y: -17}
+        - {x: 1.5, y: 4}
+        - {x: -1.5, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85749d0993e21b74da605986a2c57f19
+      internalID: -1413021750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +231,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lantern2_0: 1033297670
+      Lantern2_1: -1686633235
+      Lantern2_2: 2002567243
+      Lantern2_3: -1413021750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

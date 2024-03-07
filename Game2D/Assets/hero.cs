@@ -13,6 +13,8 @@ public class hero : MonoBehaviour
     private bool isMovingRight;
     private bool isMovingUp;
     private bool isMovingDown;
+
+    public int speed = 5;
     void Start()
     {
         herpObj = gameObject;
@@ -27,25 +29,25 @@ public class hero : MonoBehaviour
         if (Input.GetKey(KeyCode.D) && !isMovingLeft && !isMovingUp && !isMovingDown)
         {
             heroAnima.Play("Right Animation");
-            movement += new Vector3(3, 0, 0);
+            movement += new Vector3(speed, 0, 0);
             isMovingRight = true;
         }
         if (Input.GetKey(KeyCode.A) && !isMovingRight && !isMovingUp && !isMovingDown)
         {
             heroAnima.Play("Left Animation");
-            movement -= new Vector3(3, 0, 0);
+            movement -= new Vector3(speed, 0, 0);
             isMovingLeft = true;
         }
         if (Input.GetKey(KeyCode.W) && !isMovingDown && !isMovingLeft && !isMovingRight)
         {
             heroAnima.Play("Up Animation");
-            movement += new Vector3(0, 3, 0);
+            movement += new Vector3(0, speed, 0);
             isMovingUp = true;
         }
         if (Input.GetKey(KeyCode.S) && !isMovingUp && !isMovingLeft && !isMovingRight)
         {
             heroAnima.Play("Down Animation");
-            movement -= new Vector3(0, 3, 0);
+            movement -= new Vector3(0, speed, 0);
             isMovingDown = true;
         }
 

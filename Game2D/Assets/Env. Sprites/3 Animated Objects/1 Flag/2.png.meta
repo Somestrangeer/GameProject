@@ -118,10 +118,20 @@ TextureImporter:
         width: 26
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: 11.5}
+        - {x: -10, y: 11.5}
+        - {x: -10, y: 7.5}
+        - {x: -10, y: -3.5}
+        - {x: -3, y: -5.5}
+        - {x: -3, y: -28.5}
+        - {x: 3, y: -28.5}
+        - {x: 3, y: -5.5}
+        - {x: 10, y: -3.5}
+        - {x: 10, y: 11.5}
       tessellationDetail: 0
       bones: []
       spriteID: 2f3241f923a3e9544b5aad255a42823a
@@ -139,10 +149,20 @@ TextureImporter:
         width: 26
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 11.5}
+        - {x: -10, y: 11.5}
+        - {x: -10, y: 8.5}
+        - {x: -10, y: -4.5}
+        - {x: -3, y: -5.5}
+        - {x: -3, y: -28.5}
+        - {x: 3, y: -28.5}
+        - {x: 3, y: -5.5}
+        - {x: 9, y: -3.5}
+        - {x: 9, y: 13.5}
       tessellationDetail: 0
       bones: []
       spriteID: f85148a03fc1a5b45be8f9e5279fd310
@@ -160,10 +180,22 @@ TextureImporter:
         width: 26
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 7, y: 11.5}
+        - {x: 3, y: 11.5}
+        - {x: -1, y: 11.5}
+        - {x: -10, y: 11.5}
+        - {x: -11, y: 4.5}
+        - {x: -11, y: -3.5}
+        - {x: -3, y: -5.5}
+        - {x: -3, y: -28.5}
+        - {x: 2, y: -28.5}
+        - {x: 3, y: -5.5}
+        - {x: 7, y: -3.5}
+        - {x: 9, y: 11.5}
       tessellationDetail: 0
       bones: []
       spriteID: 5da43ef799eb8d64ca7a4ad0da6a382d
@@ -181,10 +213,24 @@ TextureImporter:
         width: 26
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 12.5}
+        - {x: -11, y: 13.5}
+        - {x: -13, y: 3.5}
+        - {x: -13, y: -2.5}
+        - {x: -11, y: -3.5}
+        - {x: -3, y: -5.5}
+        - {x: -3, y: -28.5}
+        - {x: 2, y: -28.5}
+        - {x: 2, y: -5.5}
+        - {x: 6, y: -4.5}
+        - {x: 7, y: 0.5}
+        - {x: 8, y: 7.5}
+        - {x: 8, y: 11.5}
+        - {x: 3, y: 11.5}
       tessellationDetail: 0
       bones: []
       spriteID: 8adee7791ef7d314dbeeb0685416cdee
@@ -202,10 +248,23 @@ TextureImporter:
         width: 26
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 13.5}
+        - {x: -11, y: 4.5}
+        - {x: -12, y: -2.5}
+        - {x: -10, y: -4.5}
+        - {x: -4, y: -4.5}
+        - {x: -3, y: -5.5}
+        - {x: -3, y: -28.5}
+        - {x: 3, y: -28.5}
+        - {x: 3, y: -5.5}
+        - {x: 8, y: -3.5}
+        - {x: 8, y: 3.5}
+        - {x: 9, y: 11.5}
+        - {x: 3, y: 12.5}
       tessellationDetail: 0
       bones: []
       spriteID: 270e5de581113cf4bb6d28e26873c17d
@@ -223,10 +282,22 @@ TextureImporter:
         width: 26
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 12.5}
+        - {x: -10, y: 1.5}
+        - {x: -10, y: -3.5}
+        - {x: -9, y: -5.5}
+        - {x: -2, y: -5.5}
+        - {x: -3, y: -28.5}
+        - {x: 2, y: -28.5}
+        - {x: 3, y: -5.5}
+        - {x: 8, y: -4.5}
+        - {x: 10, y: 2.5}
+        - {x: 10, y: 11.5}
+        - {x: 1, y: 11.5}
       tessellationDetail: 0
       bones: []
       spriteID: 212a767495058224e928fd1657011abe
