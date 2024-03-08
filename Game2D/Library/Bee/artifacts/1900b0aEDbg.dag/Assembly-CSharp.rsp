@@ -395,6 +395,7 @@
 "Assets/Scripts/EnemiesCollection.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Hero.cs"
+"Assets/Scripts/Light Script/FlickeringLight.cs"
 "Assets/Scripts/SimpleEnemy.cs"
 "Assets/Scripts/StrongEnemy.cs"
 -langversion:9.0
