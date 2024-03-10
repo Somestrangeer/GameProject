@@ -17,6 +17,10 @@ public class Hero : MonoBehaviour
     private bool isMovingUp;
     private bool isMovingDown;
 
+    private GameObject shadowUpDown;
+    private GameObject shadowLeft;
+    private GameObject shadowRight;
+
     private List<GameObject> killedEnemies = new List<GameObject>();
 
     // The object of our hero
@@ -31,6 +35,11 @@ public class Hero : MonoBehaviour
         hero = gameObject;
 
         heroAnima = hero.GetComponent<Animator>();
+
+        SpriteRenderer[] spriteRenderers = hero.GetComponentsInChildren<SpriteRenderer>();
+        shadowUpDown = spriteRenderers[1].gameObject;
+        shadowLeft = spriteRenderers[2].gameObject;
+        shadowRight = spriteRenderers[3].gameObject;
     }
 
     // Update is called once per frame
@@ -55,27 +64,45 @@ public class Hero : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D) && !isMovingLeft && !isMovingUp && !isMovingDown) 
         {
+            shadowUpDown.SetActive(false);
+            shadowLeft.SetActive(false);
+            shadowRight.SetActive(true);
             heroAnima.Play("Right Animation");
             movement += new Vector3(speed, 0, 0);
             isMovingRight = true;
         }
-        if (Input.GetKey(KeyCode.A) && !isMovingRight && !isMovingUp && !isMovingDown) 
+        else if(Input.GetKey(KeyCode.A) && !isMovingRight && !isMovingUp && !isMovingDown) 
         {
+            shadowUpDown.SetActive(false);
+            shadowLeft.SetActive(true);
+            shadowRight.SetActive(false);
             heroAnima.Play("Left Animation");
             movement -= new Vector3(speed, 0, 0);
             isMovingLeft = true;
         }
-        if (Input.GetKey(KeyCode.W) && !isMovingDown && !isMovingLeft && !isMovingRight) 
+        else if(Input.GetKey(KeyCode.W) && !isMovingDown && !isMovingLeft && !isMovingRight) 
         {
+            shadowUpDown.SetActive(true);
+            shadowLeft.SetActive(false);
+            shadowRight.SetActive(false);
             heroAnima.Play("Up Animation");
             movement += new Vector3(0, speed, 0);
             isMovingUp = true;
         }
-        if (Input.GetKey(KeyCode.S) && !isMovingUp && !isMovingLeft && !isMovingRight) 
+        else if(Input.GetKey(KeyCode.S) && !isMovingUp && !isMovingLeft && !isMovingRight) 
         {
+            shadowUpDown.SetActive(true);
+            shadowLeft.SetActive(false);
+            shadowRight.SetActive(false);
             heroAnima.Play("Down Animation");
             movement -= new Vector3(0, speed, 0);
             isMovingDown = true;
+        }
+        else
+        {
+            shadowUpDown.SetActive(true);
+            shadowLeft.SetActive(false);
+            shadowRight.SetActive(false);
         }
 
         if (!Input.GetKey(KeyCode.D))
