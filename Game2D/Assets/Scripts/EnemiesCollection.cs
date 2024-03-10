@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -36,6 +36,7 @@ public class EnemiesCollection : MonoBehaviour
     private void EnemyMovement() 
     {
         GameObject hero = Hero.getHero();
+        bool heroInSight = false;
 
         foreach (GameObject enemy in enemiesList)
         {
@@ -44,11 +45,14 @@ public class EnemiesCollection : MonoBehaviour
 
             if (distance <= visibleArea && distance > attackArea)
             {
+                //Hero.setBattleMode(true);
+
                 Vector3 movementX = Vector3.zero;
                 Vector3 movementY = Vector3.zero;
                 // If the enemy is on the left by x coordinate
                 if (enemy.transform.position.x < hero.transform.position.x)
                 {
+
                     movementX += new Vector3(speed, 0, 0);
                     enemy.transform.position += movementX * Time.deltaTime;
 
@@ -72,8 +76,14 @@ public class EnemiesCollection : MonoBehaviour
                         enemy.transform.position += movementY * Time.deltaTime;
                     }
                 }
+                heroInSight = true;
+            }
+            else if(distance <= attackArea) 
+            {
+                heroInSight = true;
             }
         }
+        Hero.setBattleMode(heroInSight, true);
     }
 
     //Remove selected enemy/enemies 

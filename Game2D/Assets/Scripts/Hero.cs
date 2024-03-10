@@ -5,16 +5,23 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    private static float hp = 200f;
+    private static float hp = 20000f;
     private float damage = 50f;
     private int speed = 3;
     private float attackDistance = 2.0f;
     private bool sneakModeEnable = false;
+    private static bool battleModeEnable = false;
+
+    private bool isMovingLeft;
+    private bool isMovingRight;
+    private bool isMovingUp;
+    private bool isMovingDown;
 
     private List<GameObject> killedEnemies = new List<GameObject>();
 
     // The object of our hero
     private static GameObject hero;
+    private static Animator heroAnima;
 
     public static GameObject getHero() { return hero; }
 
@@ -22,6 +29,8 @@ public class Hero : MonoBehaviour
     {
         // Get the object of hero's sprite
         hero = gameObject;
+
+        heroAnima = hero.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,8 +38,6 @@ public class Hero : MonoBehaviour
     {
         heroMovement();
 
-        // There's a bug. When We click once this condition will fire for 3-5 times
-        // Fix lately
         if (Input.GetMouseButtonDown(0))
         {
             attackEnemy();
@@ -46,10 +53,67 @@ public class Hero : MonoBehaviour
     {
         Vector3 movement = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.D)) { movement += new Vector3(speed, 0, 0); }
-        if (Input.GetKey(KeyCode.A)) { movement -= new Vector3(speed, 0, 0); }
-        if (Input.GetKey(KeyCode.W)) { movement += new Vector3(0, speed, 0); }
-        if (Input.GetKey(KeyCode.S)) { movement -= new Vector3(0, speed, 0); }
+        if (Input.GetKey(KeyCode.D) && !isMovingLeft && !isMovingUp && !isMovingDown) 
+        {
+            heroAnima.Play("Right Animation");
+            movement += new Vector3(speed, 0, 0);
+            isMovingRight = true;
+        }
+        if (Input.GetKey(KeyCode.A) && !isMovingRight && !isMovingUp && !isMovingDown) 
+        {
+            heroAnima.Play("Left Animation");
+            movement -= new Vector3(speed, 0, 0);
+            isMovingLeft = true;
+        }
+        if (Input.GetKey(KeyCode.W) && !isMovingDown && !isMovingLeft && !isMovingRight) 
+        {
+            heroAnima.Play("Up Animation");
+            movement += new Vector3(0, speed, 0);
+            isMovingUp = true;
+        }
+        if (Input.GetKey(KeyCode.S) && !isMovingUp && !isMovingLeft && !isMovingRight) 
+        {
+            heroAnima.Play("Down Animation");
+            movement -= new Vector3(0, speed, 0);
+            isMovingDown = true;
+        }
+
+        if (!Input.GetKey(KeyCode.D))
+        {
+            if (battleModeEnable)
+            {
+                heroAnima.SetBool("AttackStateRight", true);
+            }
+            isMovingRight = false;
+            
+        }
+        if (!Input.GetKey(KeyCode.A))
+        {
+            if (battleModeEnable)
+            {
+                heroAnima.SetBool("AttackStateRight", true);
+            }
+            isMovingLeft = false;
+            
+        }
+        if (!Input.GetKey(KeyCode.W))
+        {
+            if (battleModeEnable)
+            {
+                heroAnima.SetBool("AttackStateRight", true);
+            }
+            isMovingUp = false;
+            
+        }
+        if (!Input.GetKey(KeyCode.S))
+        {
+            if (battleModeEnable)
+            {
+                heroAnima.SetBool("AttackStateRight", true);
+            }
+            isMovingDown = false;
+            
+        }
 
         // To make an animation we have to multiply it by time
         hero.transform.position += movement * Time.deltaTime;
@@ -94,6 +158,17 @@ public class Hero : MonoBehaviour
                 // Calculate the distance between the hero and an enemy
                 if (Vector3.Distance(hero.transform.position, enemy.transform.position) <= attackDistance) 
                 {
+                    if (enemy.transform.position.x < hero.transform.position.x)
+                    {
+                        heroAnima.SetBool("AttackStateLeft", true);
+                        heroAnima.Play("Attack Left Side");
+                    }
+                    else
+                    {
+                        heroAnima.SetBool("AttackStateRight", true);
+                        heroAnima.Play("Attack Right Side");
+                    }
+                    
                     enemyObject.TakeDamage(damage);
 
                     //Store enemy as killed if he's not active (killed)
@@ -108,6 +183,20 @@ public class Hero : MonoBehaviour
         if (killedEnemies.Count != 0) 
         {
             EnemiesCollection.removeEnemies(killedEnemies);
+        }
+    }
+
+    public static void setBattleMode(bool heroInSight, bool side) 
+    {
+        battleModeEnable = heroInSight;
+        if (battleModeEnable) 
+        {
+            heroAnima.SetBool("AttackStateRight", true);
+        }
+        if (!battleModeEnable)
+        {
+            heroAnima.SetBool("AttackStateLeft", false);
+            heroAnima.SetBool("AttackStateRight", false);
         }
     }
 
