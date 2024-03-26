@@ -15,7 +15,7 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51288
+50248
 Successfully changed project path to: C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [13124] Host "[IP] 192.168.1.3 [Port] 0 [Flags] 2 [Guid] 1356346280 [EditorId] 1356346280 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4768] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2069473244 [EditorId] 2069473244 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [13124] Host "[IP] 192.168.1.3 [Port] 0 [Flags] 2 [Guid] 1356346280 [EditorId] 1356346280 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4768] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2069473244 [EditorId] 2069473244 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 35.63 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1975.99 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56944
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.018576 seconds.
-- Loaded All Assemblies, in  1.042 seconds
+Registered in 0.154135 seconds.
+- Loaded All Assemblies, in  8.134 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.626 seconds
-Domain Reload Profiling: 1664ms
-	BeginReloadAssembly (437ms)
+- Finished resetting the current domain, in  0.477 seconds
+Domain Reload Profiling: 8607ms
+	BeginReloadAssembly (6137ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (76ms)
-	RebuildNativeTypeToScriptingClass (199ms)
-	initialDomainReloadingComplete (110ms)
-	LoadAllAssembliesAndSetupDomain (216ms)
-		LoadAssemblies (432ms)
+	RebuildCommonClasses (555ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (242ms)
+	LoadAllAssembliesAndSetupDomain (1179ms)
+		LoadAssemblies (6129ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (213ms)
-			TypeCache.Refresh (211ms)
-				TypeCache.ScanAssembly (189ms)
+		AnalyzeDomain (1177ms)
+			TypeCache.Refresh (1175ms)
+				TypeCache.ScanAssembly (837ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (627ms)
+	FinalizeReload (478ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (526ms)
+		SetupLoadedEditorAssemblies (383ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (17ms)
-			SetLoadedEditorAssemblies (19ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (16ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (407ms)
-			ProcessInitializeOnLoadMethodAttributes (78ms)
+			ProcessInitializeOnLoadAttributes (263ms)
+			ProcessInitializeOnLoadMethodAttributes (82ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 1664ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.111 seconds
-Refreshing native plugins compatible for Editor in 11.66 ms, found 4 plugins.
+- Loaded All Assemblies, in 15.078 seconds
+Refreshing native plugins compatible for Editor in 13.67 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.032 seconds
-Domain Reload Profiling: 4130ms
-	BeginReloadAssembly (750ms)
+- Finished resetting the current domain, in  4.624 seconds
+Domain Reload Profiling: 19687ms
+	BeginReloadAssembly (305ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (42ms)
+		DisableScriptedObjects (12ms)
 		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (71ms)
-	RebuildCommonClasses (182ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (83ms)
-	LoadAllAssembliesAndSetupDomain (1066ms)
-		LoadAssemblies (1139ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (63ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (84ms)
+	LoadAllAssembliesAndSetupDomain (14590ms)
+		LoadAssemblies (13701ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (450ms)
-			TypeCache.Refresh (372ms)
-				TypeCache.ScanAssembly (341ms)
-			ScanForSourceGeneratedMonoScriptInfo (57ms)
+		AnalyzeDomain (1067ms)
+			TypeCache.Refresh (981ms)
+				TypeCache.ScanAssembly (874ms)
+			ScanForSourceGeneratedMonoScriptInfo (63ms)
 			ResolveRequiredComponents (21ms)
-	FinalizeReload (2033ms)
+	FinalizeReload (4625ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1695ms)
+		SetupLoadedEditorAssemblies (3451ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (14ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (387ms)
-			ProcessInitializeOnLoadAttributes (1056ms)
-			ProcessInitializeOnLoadMethodAttributes (211ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (0ms)
+			BeforeProcessingInitializeOnLoad (324ms)
+			ProcessInitializeOnLoadAttributes (2883ms)
+			ProcessInitializeOnLoadMethodAttributes (184ms)
+			AfterProcessingInitializeOnLoad (27ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (20ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 11.78 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 12.90 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5941 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 136 unused Assets / (3.1 MB). Loaded Objects now: 6371.
-Memory consumption went from 225.4 MB to 222.3 MB.
-Total: 8.974300 ms (FindLiveObjects: 0.506700 ms CreateObjectMapping: 0.287400 ms MarkObjects: 6.594200 ms  DeleteObjects: 1.584000 ms)
+Memory consumption went from 225.6 MB to 222.4 MB.
+Total: 6.228600 ms (FindLiveObjects: 0.529200 ms CreateObjectMapping: 0.251200 ms MarkObjects: 3.781700 ms  DeleteObjects: 1.665100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -181,263 +181,201 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 7250.316784 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc9dc6e23e3ff20be61f665750a77b8') in 0.004395 seconds
+  Time since last request: 1113.272276 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e35a31a2f2c91bdb1cdc8df1fbfced') in 0.395444 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
 Received Import Request.
-  Time since last request: 8.040116 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8645cdcc40a35dcd71af675657888524') in 0.000836 seconds
+  Time since last request: 329.826582 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f74f849c51c82b80e23a11daecf5d58d') in 0.328294 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
 Received Import Request.
-  Time since last request: 16.945797 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb6900bcf0cbd8065be57cfc25a81ac') in 0.000845 seconds
+  Time since last request: 803.633242 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09902679d79a8a4452c4b9e1327f7e6') in 0.263097 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
 Received Import Request.
-  Time since last request: 14.542410 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '119f0dd89150ffbd10b955d5d2211594') in 0.000716 seconds
+  Time since last request: 12.327102 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '106380cf193bcf190bb4e6aa74c35cb7') in 0.278622 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
 Received Import Request.
-  Time since last request: 22.560191 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bafcfe2e31bb5ae9812df95c45ea2293') in 0.005065 seconds
+  Time since last request: 775.076887 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '660091f633a9a6610285792973f16b80') in 0.255830 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
 Received Import Request.
-  Time since last request: 9.163804 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10e954870d0fcc20f3e2797568b783bf') in 0.129635 seconds
+  Time since last request: 6.939623 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06caca04c0da211708dcd23e785e6e99') in 0.251892 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
 Received Import Request.
-  Time since last request: 26.029622 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e3be5b192be91c4658e53cbfac382f') in 0.001901 seconds
+  Time since last request: 18.833392 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84e726d2fb33047d805267bcac519a3d') in 0.260782 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
 Received Import Request.
-  Time since last request: 18.460936 seconds.
-  path: Assets/Scripts/Hero.cs
-  artifactKey: Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Hero.cs using Guid(e23161117d6420f439bd7f717cc3a117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c47d5e4675dd749cecc72fa0174a8525') in 0.005745 seconds
+  Time since last request: 7.502449 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b96899f4017686454e9ce5e06d0db30') in 0.296395 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.089 seconds
-Refreshing native plugins compatible for Editor in 13.71 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.480 seconds
-Domain Reload Profiling: 3557ms
-	BeginReloadAssembly (293ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (21ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (79ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (661ms)
-		LoadAssemblies (703ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (94ms)
-			TypeCache.Refresh (17ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (51ms)
-			ResolveRequiredComponents (24ms)
-	FinalizeReload (2480ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1032ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (12ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (262ms)
-			ProcessInitializeOnLoadAttributes (612ms)
-			ProcessInitializeOnLoadMethodAttributes (113ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (24ms)
-Refreshing native plugins compatible for Editor in 10.34 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5828 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 87 unused Assets / (3.1 MB). Loaded Objects now: 6389.
-Memory consumption went from 209.8 MB to 206.7 MB.
-Total: 6.974800 ms (FindLiveObjects: 0.545800 ms CreateObjectMapping: 0.348400 ms MarkObjects: 4.332000 ms  DeleteObjects: 1.746800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 33.128609 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d65c9f6eda303f1535ec41d2504e5d8') in 0.279463 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.872 seconds
-Refreshing native plugins compatible for Editor in 10.16 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.032 seconds
-Domain Reload Profiling: 3893ms
-	BeginReloadAssembly (249ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (19ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (50ms)
-	RebuildCommonClasses (46ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (491ms)
-		LoadAssemblies (596ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (29ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (19ms)
-	FinalizeReload (3032ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1324ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (16ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (318ms)
-			ProcessInitializeOnLoadAttributes (814ms)
-			ProcessInitializeOnLoadMethodAttributes (141ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (33ms)
-Refreshing native plugins compatible for Editor in 18.45 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5828 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 87 unused Assets / (3.2 MB). Loaded Objects now: 6406.
-Memory consumption went from 211.8 MB to 208.6 MB.
-Total: 7.814500 ms (FindLiveObjects: 0.761900 ms CreateObjectMapping: 0.437800 ms MarkObjects: 4.185500 ms  DeleteObjects: 2.427800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 50.391385 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce4b0e44c244cfa3e90af0790b94d619') in 0.267101 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.921 seconds
-Refreshing native plugins compatible for Editor in 10.87 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.125 seconds
-Domain Reload Profiling: 4035ms
-	BeginReloadAssembly (256ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (19ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (54ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (528ms)
-		LoadAssemblies (633ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (29ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (19ms)
-	FinalizeReload (3126ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1305ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (11ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (297ms)
-			ProcessInitializeOnLoadAttributes (812ms)
-			ProcessInitializeOnLoadMethodAttributes (146ms)
-			AfterProcessingInitializeOnLoad (21ms)
-			EditorAssembliesLoaded (2ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (33ms)
-Refreshing native plugins compatible for Editor in 13.09 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5828 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 87 unused Assets / (3.1 MB). Loaded Objects now: 6423.
-Memory consumption went from 213.7 MB to 210.6 MB.
-Total: 8.591300 ms (FindLiveObjects: 0.545800 ms CreateObjectMapping: 0.422400 ms MarkObjects: 4.724800 ms  DeleteObjects: 2.896500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 25.961639 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b552b32483d3fae908d58085c29f10d') in 0.252680 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
+========================================================================
+Received Import Request.
+  Time since last request: 9.794524 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03aa5c6d2b61ea9ef2b247322b843264') in 0.254031 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
+========================================================================
+Received Import Request.
+  Time since last request: 18.906244 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e1dc34f06354e22f65637a774c687d7') in 0.261872 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
+========================================================================
+Received Import Request.
+  Time since last request: 62.683185 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a558134e0be4f4d246beaeb2d78352f') in 0.272585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
+========================================================================
+Received Import Request.
+  Time since last request: 8.203409 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '396edaad7ad3e4d8a4b52267532cdbfb') in 0.256092 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
+========================================================================
+Received Import Request.
+  Time since last request: 29.522061 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99554a0bbf45de51e40664228c7f106e') in 0.257572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
+========================================================================
+Received Import Request.
+  Time since last request: 5.984767 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9f890aaa8fb29295c7402a32319691c') in 0.283596 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 58
+========================================================================
+Received Import Request.
+  Time since last request: 73.299439 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '270d2145c53fc26fd5d185128f9d9ccf') in 0.036458 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 12.217240 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7168bc6aa7996817064011783509457') in 0.030102 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 32.761563 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade929c20b670ebd4e0de2e8d2149c53') in 0.035302 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 42.573398 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2015491f3f41e94d3fd186fff4b95883') in 0.041785 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 35.765432 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '169360f748755f417f958c8d87f6be57') in 0.034477 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 13.953718 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
+  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b296fe3e0196acffc27aad4d93001713') in 0.030693 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 124.633826 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/floor_church.png
+  artifactKey: Guid(0cbfefa763a92af4fac5e0c1fe1f7602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/floor_church.png using Guid(0cbfefa763a92af4fac5e0c1fe1f7602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '778f252bf8fc225a09d697670bec1226') in 0.220694 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 50
+========================================================================
+Received Import Request.
+  Time since last request: 55.875603 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/floor_church.png
+  artifactKey: Guid(0cbfefa763a92af4fac5e0c1fe1f7602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/floor_church.png using Guid(0cbfefa763a92af4fac5e0c1fe1f7602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aab270700a315bcf4e4836085712be83') in 0.248430 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 50
