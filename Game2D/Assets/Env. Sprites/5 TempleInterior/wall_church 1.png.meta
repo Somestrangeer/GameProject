@@ -113,9 +113,9 @@ TextureImporter:
       name: wall_church_0
       rect:
         serializedVersion: 2
-        x: 98
+        x: 97
         y: 262
-        width: 92
+        width: 96
         height: 73
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

@@ -130,6 +130,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: wall_church_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 348
+        width: 6
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c3346f8c52f75468fcee2941e91026
+      internalID: 622346117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_church_2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 337
+        width: 88
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fae9cab10538f43ad4f0869959dd79
+      internalID: 577580427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_church_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 241
+        width: 94
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a858b26836faf7848a4a600830bbad48
+      internalID: -487241598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -142,6 +205,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       wall_church_0: -1331631079
+      wall_church_1: 622346117
+      wall_church_2: 577580427
+      wall_church_3: -487241598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
