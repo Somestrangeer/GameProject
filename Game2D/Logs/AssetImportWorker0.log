@@ -15,7 +15,7 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50278
+50123
 Successfully changed project path to: C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8540] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 3484657652 [EditorId] 3484657652 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12616] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2213615318 [EditorId] 2213615318 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [8540] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 3484657652 [EditorId] 3484657652 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12616] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2213615318 [EditorId] 2213615318 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 29.51 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 30.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56260
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56228
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.017777 seconds.
-- Loaded All Assemblies, in  0.542 seconds
+Registered in 0.017664 seconds.
+- Loaded All Assemblies, in  0.600 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.410 seconds
-Domain Reload Profiling: 947ms
-	BeginReloadAssembly (174ms)
+- Finished resetting the current domain, in  0.434 seconds
+Domain Reload Profiling: 1029ms
+	BeginReloadAssembly (197ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (49ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (99ms)
-	LoadAllAssembliesAndSetupDomain (199ms)
-		LoadAssemblies (168ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (103ms)
+	LoadAllAssembliesAndSetupDomain (228ms)
+		LoadAssemblies (189ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (196ms)
-			TypeCache.Refresh (194ms)
-				TypeCache.ScanAssembly (178ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
+		AnalyzeDomain (225ms)
+			TypeCache.Refresh (223ms)
+				TypeCache.ScanAssembly (205ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (411ms)
+	FinalizeReload (435ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (319ms)
+		SetupLoadedEditorAssemblies (339ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (16ms)
-			SetLoadedEditorAssemblies (13ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (12ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (216ms)
-			ProcessInitializeOnLoadMethodAttributes (70ms)
+			ProcessInitializeOnLoadAttributes (225ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,57 +115,57 @@ Domain Reload Profiling: 947ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file data-00000260060E6030 doesn't match image C:\Users\Dr.House\UnityProjects\GameProject\Game2D\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file data-0000024491A07580 doesn't match image C:\Users\Dr.House\UnityProjects\GameProject\Game2D\Library\ScriptAssemblies\Assembly-CSharp.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.204 seconds
-Refreshing native plugins compatible for Editor in 10.63 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.261 seconds
+Refreshing native plugins compatible for Editor in 10.55 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.360 seconds
-Domain Reload Profiling: 2553ms
-	BeginReloadAssembly (240ms)
+- Finished resetting the current domain, in  1.425 seconds
+Domain Reload Profiling: 2659ms
+	BeginReloadAssembly (234ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (70ms)
-	LoadAllAssembliesAndSetupDomain (816ms)
-		LoadAssemblies (604ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (86ms)
+	LoadAllAssembliesAndSetupDomain (847ms)
+		LoadAssemblies (641ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (348ms)
-			TypeCache.Refresh (285ms)
-				TypeCache.ScanAssembly (264ms)
-			ScanForSourceGeneratedMonoScriptInfo (43ms)
+		AnalyzeDomain (343ms)
+			TypeCache.Refresh (279ms)
+				TypeCache.ScanAssembly (258ms)
+			ScanForSourceGeneratedMonoScriptInfo (44ms)
 			ResolveRequiredComponents (18ms)
-	FinalizeReload (1361ms)
+	FinalizeReload (1425ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1077ms)
+		SetupLoadedEditorAssemblies (1110ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (9ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (241ms)
-			ProcessInitializeOnLoadAttributes (670ms)
-			ProcessInitializeOnLoadMethodAttributes (126ms)
-			AfterProcessingInitializeOnLoad (19ms)
+			BeforeProcessingInitializeOnLoad (247ms)
+			ProcessInitializeOnLoadAttributes (693ms)
+			ProcessInitializeOnLoadMethodAttributes (130ms)
+			AfterProcessingInitializeOnLoad (17ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 10.45 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 12.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5941 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 136 unused Assets / (3.2 MB). Loaded Objects now: 6371.
-Memory consumption went from 225.5 MB to 222.3 MB.
-Total: 7.711300 ms (FindLiveObjects: 1.159200 ms CreateObjectMapping: 0.543300 ms MarkObjects: 4.047400 ms  DeleteObjects: 1.960000 ms)
+Unloading 136 unused Assets / (3.1 MB). Loaded Objects now: 6371.
+Memory consumption went from 225.3 MB to 222.2 MB.
+Total: 7.568100 ms (FindLiveObjects: 0.512100 ms CreateObjectMapping: 0.306700 ms MarkObjects: 5.141600 ms  DeleteObjects: 1.606300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -183,193 +183,49 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2485.285930 seconds.
+  Time since last request: 14778.845495 seconds.
   path: Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset
   artifactKey: Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset using Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33ec4ee269e1c13361ca7ef17d32714c') in 0.116530 seconds
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset using Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f71e06d7243345469a32ed912347677') in 0.116871 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000035 seconds.
+  Time since last request: 0.000124 seconds.
   path: Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset
   artifactKey: Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset using Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92707aefdd2ae87f087ccd1fa13630a8') in 0.012865 seconds
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset using Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8076fd36d2eff759b57d0eb41efdcb8d') in 0.014585 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
+  Time since last request: 0.000018 seconds.
   path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
   artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4356bfb0ce23e195ced7835bc37286ba') in 0.065736 seconds
+Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9ec8dece977ad20923e9c1d25c53dfc') in 0.066996 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 6
 ========================================================================
 Received Import Request.
-  Time since last request: 8968.213888 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
-  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99c71243f3f196e6db628d2a6859f6a9') in 0.050946 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
-========================================================================
-Received Import Request.
-  Time since last request: 0.000900 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset
-  artifactKey: Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset using Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '390f12880216ff2e36b5649c3e2fcf82') in 0.014378 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset
-  artifactKey: Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset using Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '027d0a2c9d4f216c96491ee784e467b4') in 0.024281 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 249.471109 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/floor_church_2.asset
-  artifactKey: Guid(d35dbd752e182fc4ca53e81372d9675b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/floor_church_2.asset using Guid(d35dbd752e182fc4ca53e81372d9675b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ed6eadcbb970d263402b019bb3187a3') in 0.020497 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 30.577481 seconds.
+  Time since last request: 417.963557 seconds.
   path: Assets/Env. Sprites/5 TempleInterior/church2.png
   artifactKey: Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/church2.png using Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a60c4c8f6d73392567a06a6e5178ca') in 0.212391 seconds
+Start importing Assets/Env. Sprites/5 TempleInterior/church2.png using Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b376f96f3e887612c61a36ed5c918f8') in 0.225312 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 39
+========================================================================
+Received Import Request.
+  Time since last request: 338.593056 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/church2.png
+  artifactKey: Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/church2.png using Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed789a5994d0c028c9feb85f39beb959') in 0.197470 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 40
+========================================================================
+Received Import Request.
+  Time since last request: 1404.021076 seconds.
+  path: Assets/Jandars' animations/JandarAnimationController.controller
+  artifactKey: Guid(2dcca22abde234b438155a0f0b5e2933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Jandars' animations/JandarAnimationController.controller using Guid(2dcca22abde234b438155a0f0b5e2933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1653a509967bb513c5929e04e72caeaa') in 0.012858 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 36
-========================================================================
-Received Import Request.
-  Time since last request: 2989.172185 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
-  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f99da0764ad2df18f3419d752111cff') in 0.042146 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset
-  artifactKey: Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset using Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb157a745b2d937bac265627d9c138fc') in 0.008874 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset
-  artifactKey: Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset using Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34f2a9b779c390238f8576ee04af5c53') in 0.015810 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 25.155139 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
-  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e817c1d4c20dc7393ecdf25f3fd9d169') in 0.043746 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset
-  artifactKey: Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset using Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b2e601fe7b65486f543c4e07e16e58') in 0.016895 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset
-  artifactKey: Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset using Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e758422eeb77a4b855cac5264fd4c8') in 0.008657 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 409.348126 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5e8401593e0e18449a1b67ee6fa3ddd') in 0.033801 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 5.366038 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b23c0cd8469f72e65fc7846a2991dde') in 0.030964 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 19.570549 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926e162ac336072ccea6118fcd9e48f5') in 0.031270 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 114.314022 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc11a45ec017a578cc846b65a4ff53c0') in 0.046060 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 56.426940 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45927bee898df0c8c8e5a58e9d4cbaf5') in 0.055200 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 9.960432 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35804c714c0bd736477ca15097f7fac4') in 0.064939 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 10.317670 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4a5bb7ff4ec3c1afeb12790b2594723') in 0.054194 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 8.020953 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/Inside_A5.png
-  artifactKey: Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/Inside_A5.png using Guid(1904ebaae56adac40bbc9b5d3115699c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e716e3078a958e81db0ac20158d36d5') in 0.048300 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 114.496857 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/floor_church.png
-  artifactKey: Guid(0cbfefa763a92af4fac5e0c1fe1f7602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/floor_church.png using Guid(0cbfefa763a92af4fac5e0c1fe1f7602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28fa65ee9f3a4a7ab3a8db7f59f80fd5') in 0.248792 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 50
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/floor_church_2.asset
-  artifactKey: Guid(d35dbd752e182fc4ca53e81372d9675b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/floor_church_2.asset using Guid(d35dbd752e182fc4ca53e81372d9675b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63599c2d00a44786c701420bfee4253a') in 0.020284 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3

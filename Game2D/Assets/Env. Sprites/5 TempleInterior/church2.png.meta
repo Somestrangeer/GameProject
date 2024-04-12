@@ -155,10 +155,10 @@ TextureImporter:
       name: church2_2
       rect:
         serializedVersion: 2
-        x: 241
-        y: 457
-        width: 143
-        height: 215
+        x: 242
+        y: 578
+        width: 44
+        height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +386,10 @@ TextureImporter:
       name: church2_17
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 288
-        width: 48
-        height: 84
+        width: 44
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,7 +811,7 @@ TextureImporter:
         width: 193
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -819,6 +819,90 @@ TextureImporter:
       bones: []
       spriteID: 72a98b1932ef5b14b991ecc599da0322
       internalID: 1426766392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: church2_7
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 479
+        width: 38
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b47b0985a1ac0241bc2336f14f819b7
+      internalID: -1416103194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: church2_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 455
+        width: 99
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98fb903f2a0e514099e148b20420fa3
+      internalID: -93427452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: church2_33
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 338
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99fde5fb4ca287498e715550a838e06
+      internalID: -817864063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: church2_37
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 408
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1c27fd7fbc27c4288d4cbb090952d5
+      internalID: 606840192
       vertices: []
       indices: 
       edges: []
