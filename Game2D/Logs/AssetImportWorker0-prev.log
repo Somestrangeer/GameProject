@@ -15,7 +15,7 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50123
+53152
 Successfully changed project path to: C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [12616] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2213615318 [EditorId] 2213615318 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [15968] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 3123460114 [EditorId] 3123460114 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [12616] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2213615318 [EditorId] 2213615318 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [15968] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 3123460114 [EditorId] 3123460114 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 30.36 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 28.74 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56228
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56836
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.017664 seconds.
-- Loaded All Assemblies, in  0.600 seconds
+Registered in 0.017622 seconds.
+- Loaded All Assemblies, in  0.536 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.434 seconds
-Domain Reload Profiling: 1029ms
-	BeginReloadAssembly (197ms)
+- Finished resetting the current domain, in  0.427 seconds
+Domain Reload Profiling: 959ms
+	BeginReloadAssembly (168ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (103ms)
-	LoadAllAssembliesAndSetupDomain (228ms)
-		LoadAssemblies (189ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (97ms)
+	LoadAllAssembliesAndSetupDomain (200ms)
+		LoadAssemblies (163ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (225ms)
-			TypeCache.Refresh (223ms)
-				TypeCache.ScanAssembly (205ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (197ms)
+			TypeCache.Refresh (195ms)
+				TypeCache.ScanAssembly (178ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (435ms)
+	FinalizeReload (428ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (339ms)
+		SetupLoadedEditorAssemblies (335ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (13ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (225ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
+			ProcessInitializeOnLoadAttributes (233ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,57 +115,57 @@ Domain Reload Profiling: 1029ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file data-0000024491A07580 doesn't match image C:\Users\Dr.House\UnityProjects\GameProject\Game2D\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file data-000001670C337C50 doesn't match image C:\Users\Dr.House\UnityProjects\GameProject\Game2D\Library\ScriptAssemblies\Assembly-CSharp.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.261 seconds
-Refreshing native plugins compatible for Editor in 10.55 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.200 seconds
+Refreshing native plugins compatible for Editor in 10.79 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.425 seconds
-Domain Reload Profiling: 2659ms
-	BeginReloadAssembly (234ms)
+- Finished resetting the current domain, in  1.377 seconds
+Domain Reload Profiling: 2567ms
+	BeginReloadAssembly (229ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (49ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (86ms)
-	LoadAllAssembliesAndSetupDomain (847ms)
-		LoadAssemblies (641ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (72ms)
+	LoadAllAssembliesAndSetupDomain (822ms)
+		LoadAssemblies (625ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (343ms)
-			TypeCache.Refresh (279ms)
-				TypeCache.ScanAssembly (258ms)
-			ScanForSourceGeneratedMonoScriptInfo (44ms)
-			ResolveRequiredComponents (18ms)
-	FinalizeReload (1425ms)
+		AnalyzeDomain (332ms)
+			TypeCache.Refresh (272ms)
+				TypeCache.ScanAssembly (249ms)
+			ScanForSourceGeneratedMonoScriptInfo (42ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1378ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1110ms)
+		SetupLoadedEditorAssemblies (1088ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (247ms)
-			ProcessInitializeOnLoadAttributes (693ms)
-			ProcessInitializeOnLoadMethodAttributes (130ms)
-			AfterProcessingInitializeOnLoad (17ms)
-			EditorAssembliesLoaded (0ms)
+			BeforeProcessingInitializeOnLoad (253ms)
+			ProcessInitializeOnLoadAttributes (660ms)
+			ProcessInitializeOnLoadMethodAttributes (132ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (5ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 12.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 10.48 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5941 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 136 unused Assets / (3.1 MB). Loaded Objects now: 6371.
 Memory consumption went from 225.3 MB to 222.2 MB.
-Total: 7.568100 ms (FindLiveObjects: 0.512100 ms CreateObjectMapping: 0.306700 ms MarkObjects: 5.141600 ms  DeleteObjects: 1.606300 ms)
+Total: 5.872400 ms (FindLiveObjects: 0.495400 ms CreateObjectMapping: 0.247600 ms MarkObjects: 3.582700 ms  DeleteObjects: 1.545800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -183,49 +183,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 14778.845495 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset
-  artifactKey: Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_2.asset using Guid(e716800d56ef3c944ac2e2a21d5e36b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f71e06d7243345469a32ed912347677') in 0.116871 seconds
+  Time since last request: 39104.027556 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/open doors.psd
+  artifactKey: Guid(148ab699f10090341a550d24219630d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/open doors.psd using Guid(148ab699f10090341a550d24219630d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e845a2a934f695f6b81f1a7e8557ebe8') in 0.096156 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000124 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset
-  artifactKey: Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church_1.asset using Guid(4daba8cf74d700240a2056c189ad901f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8076fd36d2eff759b57d0eb41efdcb8d') in 0.014585 seconds
+  Time since last request: 25.555791 seconds.
+  path: Assets/Env. Sprites/5 TempleInterior/open doors.psd
+  artifactKey: Guid(148ab699f10090341a550d24219630d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Sprites/5 TempleInterior/open doors.psd using Guid(148ab699f10090341a550d24219630d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32cfe376df3b034c9d92c2c84c88d12') in 0.101285 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/wall_church.png
-  artifactKey: Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/wall_church.png using Guid(909f0ab3341459f489c4bb13952e98a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9ec8dece977ad20923e9c1d25c53dfc') in 0.066996 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
-========================================================================
-Received Import Request.
-  Time since last request: 417.963557 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/church2.png
-  artifactKey: Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/church2.png using Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b376f96f3e887612c61a36ed5c918f8') in 0.225312 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 39
-========================================================================
-Received Import Request.
-  Time since last request: 338.593056 seconds.
-  path: Assets/Env. Sprites/5 TempleInterior/church2.png
-  artifactKey: Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Env. Sprites/5 TempleInterior/church2.png using Guid(b0620bdeffcda754faa7cfc609947471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed789a5994d0c028c9feb85f39beb959') in 0.197470 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 40
-========================================================================
-Received Import Request.
-  Time since last request: 1404.021076 seconds.
-  path: Assets/Jandars' animations/JandarAnimationController.controller
-  artifactKey: Guid(2dcca22abde234b438155a0f0b5e2933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/JandarAnimationController.controller using Guid(2dcca22abde234b438155a0f0b5e2933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1653a509967bb513c5929e04e72caeaa') in 0.012858 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 36
+Number of asset objects unloaded after import = 7
