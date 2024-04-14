@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,6 +18,15 @@ public class hero : MonoBehaviour
     private GameObject shadowLeft;
     private GameObject shadowRight;
 
+
+    //Size camera in the Temple
+    private GameObject objCameraSize;
+    CinemachineVirtualCamera virtualCamera;
+    public float targetOrthographicSize = 12f;
+    public float smoothTime = 0.5f;
+    private float velocity = 0f;
+    private float currentOrthographicSize = 8.108678f;
+
     public int speed = 5;
     void Start()
     {
@@ -27,6 +37,9 @@ public class hero : MonoBehaviour
         shadowUpDown = spriteRenderers[1].gameObject;
         shadowLeft = spriteRenderers[2].gameObject;
         shadowRight = spriteRenderers[3].gameObject;
+
+        objCameraSize = GameObject.FindGameObjectWithTag("SizeCamera");
+        virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
     }
 
     // Update is called once per frame
@@ -99,6 +112,17 @@ public class hero : MonoBehaviour
         if (!Input.GetKey(KeyCode.S))
         {
             isMovingDown = false;
+        }
+
+        if (Vector3.Distance(objCameraSize.transform.position, herpObj.transform.position) <= 10) 
+        {
+
+            virtualCamera.m_Lens.OrthographicSize = Mathf.SmoothDamp(virtualCamera.m_Lens.OrthographicSize, targetOrthographicSize, ref velocity, smoothTime);
+        }
+        else
+        {
+            virtualCamera.m_Lens.OrthographicSize = Mathf.SmoothDamp(virtualCamera.m_Lens.OrthographicSize, currentOrthographicSize, ref velocity, smoothTime);
+            //virtualCamera.m_Lens.OrthographicSize = currentOrthographicSize;
         }
 
 
