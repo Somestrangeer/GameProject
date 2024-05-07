@@ -30,6 +30,9 @@ public class OpenDoorTemple : MonoBehaviour
                 doorAnima.SetBool("openDoor", true);
                 BoxCollider2D boxCollider = door.GetComponentInChildren<BoxCollider2D>();
                 boxCollider.enabled = false;
+
+
+                AudioManager.instance.Play("Door");
             }
         }
         

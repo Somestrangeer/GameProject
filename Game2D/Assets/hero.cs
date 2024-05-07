@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class hero : MonoBehaviour
+public class hero : Footstep
 {
     // Start is called before the first frame update
     private GameObject herpObj;
@@ -56,7 +56,6 @@ public class hero : MonoBehaviour
             movement += new Vector3(speed, 0, 0);
             isMovingRight = true;
 
-            
         }
         else if (Input.GetKey(KeyCode.A) && !isMovingRight && !isMovingUp && !isMovingDown)
         {
@@ -67,7 +66,6 @@ public class hero : MonoBehaviour
             movement -= new Vector3(speed, 0, 0);
             isMovingLeft = true;
 
-            
         }
         else if (Input.GetKey(KeyCode.W) && !isMovingDown && !isMovingLeft && !isMovingRight)
         {
@@ -77,6 +75,7 @@ public class hero : MonoBehaviour
             heroAnima.Play("Up Animation");
             movement += new Vector3(0, speed, 0);
             isMovingUp = true;
+
         }
         else if (Input.GetKey(KeyCode.S) && !isMovingUp && !isMovingLeft && !isMovingRight)
         {
@@ -86,6 +85,7 @@ public class hero : MonoBehaviour
             heroAnima.Play("Down Animation");
             movement -= new Vector3(0, speed, 0);
             isMovingDown = true;
+
         }
         else 
         {
