@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/TempleInterior.unity
+=======
+- path: Assets/Scenes/GrandfatherHouse.unity
+>>>>>>> GrandfatherHouseLocation
   isLoaded: 1
   isActive: 1
   isSubScene: 0
