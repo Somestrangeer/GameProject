@@ -11,5 +11,5 @@ public struct EnemyParams
     public static float damageSpeed = 0.5f;
     public static float visibleArea = 8f;
     public static float attackArea = 2f;
-    public static int enemySpeed = 3;
+    public static float enemySpeed = 2.4f;
 }

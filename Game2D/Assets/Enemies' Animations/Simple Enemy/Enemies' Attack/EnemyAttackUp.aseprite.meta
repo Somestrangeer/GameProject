@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 25
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638507209752017771
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 45
-      y: 59
+      x: 57
+      y: 176
       width: 29
       height: 51
     spriteID: 13ee1bce60d2a8d4da30ee2b757164cf
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 45, y: 59}
+    uvTransform: {x: 57, y: 176}
   - name: EnemyAttackUp_Frame_1
     originalName: 
     pivot: {x: 0.5151515, y: -0.19607843}
@@ -148,8 +148,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 59
+      x: 57
+      y: 117
       width: 33
       height: 51
     spriteID: ec36e743d09d7ed4fa7cb15ce2fab57f
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 59}
+    uvTransform: {x: 57, y: 117}
   - name: EnemyAttackUp_Frame_2
     originalName: 
     pivot: {x: 0.425, y: -0.21276595}
@@ -169,7 +169,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 57
-      y: 4
+      y: 62
       width: 40
       height: 47
     spriteID: 182509afd3bce814ebd7cfcc7c2581f4
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 57, y: 4}
+    uvTransform: {x: 57, y: 62}
   - name: EnemyAttackUp_Frame_3
     originalName: 
     pivot: {x: 0.37777779, y: -0.21276595}
@@ -201,6 +201,86 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: EnemyAttackUp_Frame_4
+    originalName: 
+    pivot: {x: 0.37777779, y: -0.21739131}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 59
+      width: 45
+      height: 46
+    spriteID: e7be5ba69d38dd54599f1a82009c0f36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 59}
+  - name: EnemyAttackUp_Frame_5
+    originalName: 
+    pivot: {x: 0.38636366, y: -0.21739131}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 113
+      width: 44
+      height: 46
+    spriteID: 5e4745d4c1d5f0147aecf86762562627
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 113}
+  - name: EnemyAttackUp_Frame_6
+    originalName: 
+    pivot: {x: 0.425, y: -0.19999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 4
+      width: 40
+      height: 50
+    spriteID: d0307a0643d8c25449392d3fa1bf6e0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 4}
+  - name: EnemyAttackUp_Frame_7
+    originalName: 
+    pivot: {x: 0.4473684, y: -0.18867925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 167
+      width: 38
+      height: 53
+    spriteID: 721608baa494cab478d0f371daf8d472
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 167}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -242,9 +322,77 @@ ScriptedImporter:
         width: 45
         height: 47
       spriteId: 8aedd4d650305b34ca9a9e22dfe8725e
+    - name: EnemyAttackUp_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 15
+        y: 10
+        width: 45
+        height: 46
+      spriteId: e7be5ba69d38dd54599f1a82009c0f36
+    - name: EnemyAttackUp_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 15
+        y: 10
+        width: 44
+        height: 46
+      spriteId: 5e4745d4c1d5f0147aecf86762562627
+    - name: EnemyAttackUp_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 15
+        y: 10
+        width: 40
+        height: 50
+      spriteId: d0307a0643d8c25449392d3fa1bf6e0a
+    - name: EnemyAttackUp_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 15
+        y: 10
+        width: 38
+        height: 53
+      spriteId: 721608baa494cab478d0f371daf8d472
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 

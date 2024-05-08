@@ -11,11 +11,13 @@ public class SimpleEnemy : MonoBehaviour, Enemy
     private bool isAttacking = false;
 
     private GameObject simpleEnemy;
+    private Animator simpleEnemyAnimator;
 
     private void Awake()
     {
         // Get enemy
         simpleEnemy = gameObject;
+        simpleEnemyAnimator = simpleEnemy.GetComponent<Animator>();
 
     }
 
@@ -24,7 +26,7 @@ public class SimpleEnemy : MonoBehaviour, Enemy
         // We always update the var to get the changed value
         attackDistance = EnemyParams.attackArea;
 
-        if (Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) <= attackDistance && !isAttacking)
+        if (Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 0.4f <= attackDistance && !isAttacking)
         {
             //Start the function in parallel
             StartCoroutine(Attack());
@@ -35,10 +37,29 @@ public class SimpleEnemy : MonoBehaviour, Enemy
     {
         if (isAttacking) yield break;
 
-        //rend - is a simulation of animation. NOTE: CHANGE TO ANIMATION LATER
         Renderer rend = Hero.getHero().GetComponent<Renderer>();
 
         isAttacking = true;
+
+        //Start animations
+        if (simpleEnemy.transform.position.x < Hero.getHero().transform.position.x)
+        {
+            simpleEnemyAnimator.SetBool("AttackStateLeft", false);
+            simpleEnemyAnimator.SetBool("IsAttackingLeft", false);
+
+            simpleEnemyAnimator.SetBool("AttackStateRight", true);
+            simpleEnemyAnimator.SetBool("IsAttacingRight", true);
+        }
+        else 
+        {
+            simpleEnemyAnimator.SetBool("AttackStateRight", false);
+            simpleEnemyAnimator.SetBool("IsAttacingRight", false);
+
+            simpleEnemyAnimator.SetBool("AttackStateLeft", true);
+            simpleEnemyAnimator.SetBool("IsAttackingLeft", true);
+        }
+
+        
 
         //The hero was hit
         rend.material.color = Color.red;
