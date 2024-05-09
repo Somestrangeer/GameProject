@@ -114,7 +114,7 @@ public class hero : MonoBehaviour
             isMovingDown = false;
         }
 
-        if (Vector3.Distance(objCameraSize.transform.position, herpObj.transform.position) <= 10) 
+        /*if (Vector3.Distance(objCameraSize.transform.position, herpObj.transform.position) <= 10) 
         {
 
             virtualCamera.m_Lens.OrthographicSize = Mathf.SmoothDamp(virtualCamera.m_Lens.OrthographicSize, targetOrthographicSize, ref velocity, smoothTime);
@@ -123,7 +123,7 @@ public class hero : MonoBehaviour
         {
             virtualCamera.m_Lens.OrthographicSize = Mathf.SmoothDamp(virtualCamera.m_Lens.OrthographicSize, currentOrthographicSize, ref velocity, smoothTime);
             //virtualCamera.m_Lens.OrthographicSize = currentOrthographicSize;
-        }
+        }*/
 
 
         herpObj.transform.position += movement * Time.deltaTime;

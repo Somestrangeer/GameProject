@@ -15,7 +15,7 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50541
+51612
 Successfully changed project path to: C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 C:/Users/Dr.House/UnityProjects/GameProject/Game2D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Dr.House/UnityProjects/GameProject/Game2D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [5988] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 4023014670 [EditorId] 4023014670 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10772] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2294867508 [EditorId] 2294867508 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [5988] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 4023014670 [EditorId] 4023014670 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10772] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 2294867508 [EditorId] 2294867508 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CFD6NLJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 30.44 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 29.19 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56600
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56756
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.019609 seconds.
-- Loaded All Assemblies, in  0.596 seconds
+Registered in 0.019694 seconds.
+- Loaded All Assemblies, in  0.856 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.429 seconds
-Domain Reload Profiling: 1020ms
-	BeginReloadAssembly (201ms)
+- Finished resetting the current domain, in  0.664 seconds
+Domain Reload Profiling: 1515ms
+	BeginReloadAssembly (329ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (54ms)
+	RebuildCommonClasses (59ms)
 	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (109ms)
-	LoadAllAssembliesAndSetupDomain (209ms)
-		LoadAssemblies (195ms)
+	initialDomainReloadingComplete (159ms)
+	LoadAllAssembliesAndSetupDomain (285ms)
+		LoadAssemblies (289ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (206ms)
-			TypeCache.Refresh (204ms)
-				TypeCache.ScanAssembly (186ms)
+		AnalyzeDomain (282ms)
+			TypeCache.Refresh (280ms)
+				TypeCache.ScanAssembly (259ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (430ms)
+	FinalizeReload (665ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (335ms)
+		SetupLoadedEditorAssemblies (565ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (16ms)
-			SetLoadedEditorAssemblies (11ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (12ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (226ms)
-			ProcessInitializeOnLoadMethodAttributes (77ms)
+			ProcessInitializeOnLoadAttributes (441ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 1020ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.372 seconds
-Refreshing native plugins compatible for Editor in 12.72 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.504 seconds
+Refreshing native plugins compatible for Editor in 43.03 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.615 seconds
-Domain Reload Profiling: 2976ms
-	BeginReloadAssembly (262ms)
+- Finished resetting the current domain, in  1.815 seconds
+Domain Reload Profiling: 3314ms
+	BeginReloadAssembly (290ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (12ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (79ms)
-	LoadAllAssembliesAndSetupDomain (948ms)
-		LoadAssemblies (671ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (38ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (1040ms)
+		LoadAssemblies (784ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (428ms)
-			TypeCache.Refresh (343ms)
-				TypeCache.ScanAssembly (318ms)
-			ScanForSourceGeneratedMonoScriptInfo (60ms)
-			ResolveRequiredComponents (22ms)
-	FinalizeReload (1616ms)
+		AnalyzeDomain (406ms)
+			TypeCache.Refresh (320ms)
+				TypeCache.ScanAssembly (298ms)
+			ScanForSourceGeneratedMonoScriptInfo (48ms)
+			ResolveRequiredComponents (34ms)
+	FinalizeReload (1816ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1247ms)
+		SetupLoadedEditorAssemblies (1422ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (11ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (257ms)
-			ProcessInitializeOnLoadAttributes (784ms)
-			ProcessInitializeOnLoadMethodAttributes (161ms)
-			AfterProcessingInitializeOnLoad (22ms)
+			BeforeProcessingInitializeOnLoad (337ms)
+			ProcessInitializeOnLoadAttributes (869ms)
+			ProcessInitializeOnLoadMethodAttributes (172ms)
+			AfterProcessingInitializeOnLoad (19ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 10.68 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 38.30 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5945 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 136 unused Assets / (3.5 MB). Loaded Objects now: 6377.
-Memory consumption went from 226.4 MB to 223.0 MB.
-Total: 6.231300 ms (FindLiveObjects: 0.505800 ms CreateObjectMapping: 0.271700 ms MarkObjects: 3.705100 ms  DeleteObjects: 1.747200 ms)
+Memory consumption went from 226.5 MB to 223.0 MB.
+Total: 7.090900 ms (FindLiveObjects: 0.655600 ms CreateObjectMapping: 0.276700 ms MarkObjects: 4.283300 ms  DeleteObjects: 1.873700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -181,288 +181,86 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2789.896238 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttckIDELRight.png
-  artifactKey: Guid(10aa96d2e9f363a48a17c99900b6932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttckIDELRight.png using Guid(10aa96d2e9f363a48a17c99900b6932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '663414a52b0ef9acd36bcc10215f9e1a') in 0.178399 seconds
+  Time since last request: 8585.308722 seconds.
+  path: Assets/Jandars' animations/Jandar's Shadows/shadow_sboku.aseprite
+  artifactKey: Guid(cb35a7fd2e387af4a9e30c0eab786cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Jandars' animations/Jandar's Shadows/shadow_sboku.aseprite using Guid(cb35a7fd2e387af4a9e30c0eab786cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4fac96bd1d4cb5dd19898bb38b83c4c') in 0.630158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Jandars' animations/Jandar's Shadows/shadow.aseprite
+  artifactKey: Guid(20aa73ae0be090949b1464c769490ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Jandars' animations/Jandar's Shadows/shadow.aseprite using Guid(20aa73ae0be090949b1464c769490ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ec7a937b78ed5ad4143c62edce6e77') in 0.057731 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 1646.450670 seconds.
+  path: Assets/Materials/FogMaterial.mat
+  artifactKey: Guid(06caed4850af81943bbf14f773dad235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/FogMaterial.mat using Guid(06caed4850af81943bbf14f773dad235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a074e2ddafd1551d8f024cef48be71b') in 0.064058 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000065 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttackIDLE2Right.png
-  artifactKey: Guid(ae803b3ca81a70a4fb085503e31eb8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttackIDLE2Right.png using Guid(ae803b3ca81a70a4fb085503e31eb8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '111079a6f17f426966d77f50f0deb41e') in 0.041316 seconds
+  Time since last request: 1.837317 seconds.
+  path: Assets/Materials/Fog.shadergraph
+  artifactKey: Guid(8d833ee3aa817044fbbf53e1f10a5ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Fog.shadergraph using Guid(8d833ee3aa817044fbbf53e1f10a5ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75dee77a6101d02619cd22a8ae07bfbd') in 0.019696 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttckIDEL2Left.png
-  artifactKey: Guid(681cace5b601b474f83f7433af0a68ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttckIDEL2Left.png using Guid(681cace5b601b474f83f7433af0a68ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '889bbfd5e1f00e6e214de47748d5a623') in 0.041988 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/Attack IDLE/AttackIDLEAnimationLeft.anim
-  artifactKey: Guid(6020a6cba1a495243a00c3f559c8d476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/Attack IDLE/AttackIDLEAnimationLeft.anim using Guid(6020a6cba1a495243a00c3f559c8d476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e50606cf6b2736236d488d0759983e2') in 0.002227 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttackIDLE2Left.png
-  artifactKey: Guid(589bd4c040c423d4c97d7375fc54e914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/Attack IDLE/JandarAttackIDLE2Left.png using Guid(589bd4c040c423d4c97d7375fc54e914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b28b8faf2d845286a467cdd34e7218') in 0.040803 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 3.285964 seconds.
-  path: Assets/Enemies' Animations/Simple Enemy
-  artifactKey: Guid(1f0a3e9dbd9ed654ba95bff9f9863682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemies' Animations/Simple Enemy using Guid(1f0a3e9dbd9ed654ba95bff9f9863682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24eab3d9729ab66a33f75a41184b4b4a') in 0.000745 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.837042 seconds.
-  path: Assets/Enemies' Animations/Simple Enemy/Enemies' Attack
-  artifactKey: Guid(e159df4f3580f184a99c87c980300683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemies' Animations/Simple Enemy/Enemies' Attack using Guid(e159df4f3580f184a99c87c980300683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4f239ac867311b5ccf7e708bd5a6978') in 0.000914 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.048571 seconds.
-  path: Assets/Enemies' Animations/Simple Enemy/Enemies' Attack/EnemyAttackDownLeft.aseprite
-  artifactKey: Guid(14783d02f05000440b93559604259a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemies' Animations/Simple Enemy/Enemies' Attack/EnemyAttackDownLeft.aseprite using Guid(14783d02f05000440b93559604259a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82fd4e7da7b28d98d926583f32e8d2db') in 0.410736 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 21
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Enemies' Animations/Simple Enemy/Enemies' Attack/EnemyAttackUp.aseprite
-  artifactKey: Guid(8b4b5cc594d89804b873cd463e470619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemies' Animations/Simple Enemy/Enemies' Attack/EnemyAttackUp.aseprite using Guid(8b4b5cc594d89804b873cd463e470619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbc33844abafc676a3f5caf5b8eeca36') in 0.054992 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 20
-========================================================================
-Received Import Request.
-  Time since last request: 560.428278 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/человечек меч вверх.aseprite
-  artifactKey: Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/человечек меч вверх.aseprite using Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8eed76856c2d5461eeaebe7635de99') in 0.044240 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/человечек меч вниз.aseprite
-  artifactKey: Guid(2753536755d89784cb8e05e8f1023e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/человечек меч вниз.aseprite using Guid(2753536755d89784cb8e05e8f1023e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292bea6c3bd915338c87d6c73a8382a6') in 0.034070 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 87.260726 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/человечек меч вверх.aseprite
-  artifactKey: Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/человечек меч вверх.aseprite using Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c793cebc41d02602d6dc08f57e1e9e5') in 0.044856 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 24.903793 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackRight.aseprite
-  artifactKey: Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackRight.aseprite using Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69e84fea344362e1ee3fb8725fcba3d') in 0.044610 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 3.186339 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackRight 1.aseprite
-  artifactKey: Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackRight 1.aseprite using Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8587785285a96f1e40d6230bb020ca85') in 0.056267 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 6.952921 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite
-  artifactKey: Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite using Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a620adacbb3720539c1c80ae9338ec0') in 0.042842 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 8.534156 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite
-  artifactKey: Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite using Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04514888dad02780ab33e7bf0f705401') in 0.073386 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.904 seconds
-Refreshing native plugins compatible for Editor in 14.20 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.973 seconds
+Refreshing native plugins compatible for Editor in 10.05 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.980 seconds
-Domain Reload Profiling: 3873ms
-	BeginReloadAssembly (259ms)
+- Finished resetting the current domain, in  2.982 seconds
+Domain Reload Profiling: 3943ms
+	BeginReloadAssembly (320ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (24ms)
+		DisableScriptedObjects (33ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (57ms)
-	RebuildCommonClasses (49ms)
+		CreateAndSetChildDomain (91ms)
+	RebuildCommonClasses (57ms)
 	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (80ms)
-	LoadAllAssembliesAndSetupDomain (487ms)
-		LoadAssemblies (583ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (509ms)
+		LoadAssemblies (623ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (31ms)
+		AnalyzeDomain (28ms)
 			TypeCache.Refresh (8ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (22ms)
-	FinalizeReload (2981ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (2983ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1256ms)
+		SetupLoadedEditorAssemblies (1238ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (19ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (286ms)
-			ProcessInitializeOnLoadAttributes (796ms)
-			ProcessInitializeOnLoadMethodAttributes (130ms)
-			AfterProcessingInitializeOnLoad (19ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (30ms)
-Refreshing native plugins compatible for Editor in 12.13 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5829 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 87 unused Assets / (3.5 MB). Loaded Objects now: 6469.
-Memory consumption went from 215.4 MB to 212.0 MB.
-Total: 7.856200 ms (FindLiveObjects: 0.591200 ms CreateObjectMapping: 0.696800 ms MarkObjects: 4.181100 ms  DeleteObjects: 2.385600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 58.878659 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite
-  artifactKey: Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite using Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81238de0b022f4bba791daf2ea58a398') in 0.445842 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 37
-========================================================================
-Received Import Request.
-  Time since last request: 4.308925 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite
-  artifactKey: Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite using Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2819fae82372f4a97432c91a1037faee') in 0.069178 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 17.479563 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite
-  artifactKey: Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite using Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146a0224c3a6327879c902acf40cd91e') in 0.057434 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 14.310048 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite
-  artifactKey: Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackLeft.aseprite using Guid(f0ec7933dcf31bf4c9c2f5dd86088c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b8ba86e7a6b2eba72cffba58a249380') in 0.070410 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 19.781824 seconds.
-  path: Assets/Jandars' animations/Jandar's Attack/JandarAttackRight.aseprite
-  artifactKey: Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Jandars' animations/Jandar's Attack/JandarAttackRight.aseprite using Guid(acedd49dd8a2c3449971f03d15fa653d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8deec64b7b1758f378e711f98f583c1a') in 0.053929 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.925 seconds
-Refreshing native plugins compatible for Editor in 12.11 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.942 seconds
-Domain Reload Profiling: 3856ms
-	BeginReloadAssembly (258ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (25ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (56ms)
-	RebuildCommonClasses (47ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (535ms)
-		LoadAssemblies (631ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (32ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (22ms)
-	FinalizeReload (2943ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1256ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (10ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (322ms)
-			ProcessInitializeOnLoadAttributes (762ms)
-			ProcessInitializeOnLoadMethodAttributes (128ms)
+			BeforeProcessingInitializeOnLoad (319ms)
+			ProcessInitializeOnLoadAttributes (731ms)
+			ProcessInitializeOnLoadMethodAttributes (133ms)
 			AfterProcessingInitializeOnLoad (19ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (31ms)
-Refreshing native plugins compatible for Editor in 14.42 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 14.56 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5829 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 87 unused Assets / (3.5 MB). Loaded Objects now: 6523.
-Memory consumption went from 217.5 MB to 214.0 MB.
-Total: 22.537500 ms (FindLiveObjects: 1.784900 ms CreateObjectMapping: 2.425400 ms MarkObjects: 13.729900 ms  DeleteObjects: 4.595500 ms)
+Unloading 5830 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (3.5 MB). Loaded Objects now: 6482.
+Memory consumption went from 216.1 MB to 212.6 MB.
+Total: 10.383100 ms (FindLiveObjects: 0.838500 ms CreateObjectMapping: 0.565800 ms MarkObjects: 6.079500 ms  DeleteObjects: 2.897500 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -479,3 +277,209 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.896 seconds
+Refreshing native plugins compatible for Editor in 9.95 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.255 seconds
+Domain Reload Profiling: 3140ms
+	BeginReloadAssembly (249ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (18ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (513ms)
+		LoadAssemblies (582ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (60ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (31ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (2256ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (931ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (226ms)
+			ProcessInitializeOnLoadAttributes (563ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 10.70 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5829 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (3.5 MB). Loaded Objects now: 6499.
+Memory consumption went from 217.7 MB to 214.2 MB.
+Total: 7.130000 ms (FindLiveObjects: 0.575000 ms CreateObjectMapping: 0.571900 ms MarkObjects: 4.115200 ms  DeleteObjects: 1.866600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.858 seconds
+Refreshing native plugins compatible for Editor in 10.13 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.021 seconds
+Domain Reload Profiling: 3867ms
+	BeginReloadAssembly (251ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (18ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (477ms)
+		LoadAssemblies (580ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (27ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (18ms)
+	FinalizeReload (3021ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1281ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (309ms)
+			ProcessInitializeOnLoadAttributes (795ms)
+			ProcessInitializeOnLoadMethodAttributes (130ms)
+			AfterProcessingInitializeOnLoad (20ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+Refreshing native plugins compatible for Editor in 11.92 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5829 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (3.5 MB). Loaded Objects now: 6516.
+Memory consumption went from 219.6 MB to 216.2 MB.
+Total: 9.937400 ms (FindLiveObjects: 0.546200 ms CreateObjectMapping: 0.457000 ms MarkObjects: 5.516400 ms  DeleteObjects: 3.416100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.854 seconds
+Refreshing native plugins compatible for Editor in 11.87 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.265 seconds
+Domain Reload Profiling: 4108ms
+	BeginReloadAssembly (252ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (17ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (468ms)
+		LoadAssemblies (574ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (27ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (18ms)
+	FinalizeReload (3266ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1317ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (343ms)
+			ProcessInitializeOnLoadAttributes (776ms)
+			ProcessInitializeOnLoadMethodAttributes (144ms)
+			AfterProcessingInitializeOnLoad (23ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (37ms)
+Refreshing native plugins compatible for Editor in 13.69 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5829 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (3.5 MB). Loaded Objects now: 6533.
+Memory consumption went from 221.6 MB to 218.1 MB.
+Total: 12.491900 ms (FindLiveObjects: 1.079200 ms CreateObjectMapping: 2.031500 ms MarkObjects: 7.063200 ms  DeleteObjects: 2.165400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2856.915487 seconds.
+  path: Assets/Materials/FogMaterial.mat
+  artifactKey: Guid(06caed4850af81943bbf14f773dad235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/FogMaterial.mat using Guid(06caed4850af81943bbf14f773dad235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0433b88302fa83b1587b8131e1206f56') in 0.712538 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
