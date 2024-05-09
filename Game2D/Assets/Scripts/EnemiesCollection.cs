@@ -1,15 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class EnemiesCollection : MonoBehaviour
 {
     // Store enemies of the level in this list
     private static List<GameObject> enemiesList = new List<GameObject>();
 
-    private int speed = EnemyParams.enemySpeed;
+    private float speed = EnemyParams.enemySpeed;
     private float visibleArea = EnemyParams.visibleArea;
     private float attackArea = EnemyParams.attackArea;
 
@@ -40,49 +42,64 @@ public class EnemiesCollection : MonoBehaviour
 
         foreach (GameObject enemy in enemiesList)
         {
+           
             // Calculate the distance if the hero is inside the enemy's visibleArea
             float distance = Vector3.Distance(hero.transform.position, enemy.transform.position);
+            float bias = 0.0f;
 
-            if (distance <= visibleArea && distance > attackArea)
+            Animator enemyAnimator = enemy.GetComponent<Animator>();
+
+            if (distance <= visibleArea && distance > 0.1)
             {
                 //Hero.setBattleMode(true);
 
-                Vector3 movementX = Vector3.zero;
-                Vector3 movementY = Vector3.zero;
-                // If the enemy is on the left by x coordinate
-                if (enemy.transform.position.x < hero.transform.position.x)
+                Vector3 movement = Vector3.zero;
+
+                //Logs
+                /*Debug.Log("A - " + Math.Abs(enemy.transform.position.x - hero.transform.position.x).ToString());
+                Debug.Log("B - " + distance.ToString());*/
+
+                bias = Math.Abs(enemy.transform.position.x - hero.transform.position.x);
+
+                // Determine movement direction based on hero's position relative to enemy
+                //Here and there we use the biases to draw the 'border' around the hero for enemies
+                if (enemy.transform.position.x < hero.transform.position.x && bias >= 2)
                 {
-
-                    movementX += new Vector3(speed, 0, 0);
-                    enemy.transform.position += movementX * Time.deltaTime;
-
-                    // If the enemy is above the hero we get it up
-                    if (enemy.transform.position.y < hero.transform.position.y)
-                    {
-                        movementY += new Vector3(0, speed, 0);
-                        enemy.transform.position += movementY * Time.deltaTime;
-                    }
+                    // Move right
+                    movement += new Vector3(speed, 0, 0);
+                    enemyAnimator.Play("Right Animation");
                 }
-                // If the enemy is on the left by x coordinate
-                else
+                else if (enemy.transform.position.x > hero.transform.position.x && bias >= 2)
                 {
-                    movementX -= new Vector3(speed, 0, 0);
-                    enemy.transform.position += movementX * Time.deltaTime;
-
-                    // If the enemy is below the hero we get it down
-                    if (enemy.transform.position.y > hero.transform.position.y)
-                    {
-                        movementY -= new Vector3(0, speed, 0);
-                        enemy.transform.position += movementY * Time.deltaTime;
-                    }
+                    // Move left
+                    movement -= new Vector3(speed, 0, 0);
+                    enemyAnimator.Play("Left Animation");
                 }
+                else if (enemy.transform.position.y + 1.37f < hero.transform.position.y + 0.1)
+                {
+                    // Move up
+                    movement += new Vector3(0, speed, 0);
+                    enemyAnimator.Play("Up Animation");
+                    //isMovingUp = true;
+                }
+                else if (enemy.transform.position.y /*+ 1.37f */> hero.transform.position.y - 0.2)
+                {
+                    // Move down
+                    movement -= new Vector3(0, speed, 0);
+                    enemyAnimator.Play("Down Animation");
+                }
+                
+                // Apply movement only once based on the final direction
+                enemy.transform.position += movement * Time.deltaTime;
+
                 heroInSight = true;
             }
-            else if(distance <= attackArea) 
+            else if (bias <= attackArea)
             {
                 heroInSight = true;
             }
         }
+
         Hero.setBattleMode(heroInSight, true);
     }
 

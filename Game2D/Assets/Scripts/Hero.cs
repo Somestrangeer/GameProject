@@ -174,17 +174,19 @@ public class Hero : MonoBehaviour
     {
         List<GameObject> enemyList = EnemiesCollection.getEnemyCollection();
 
+        //Sort the list of enemis by distance to the hero
+        enemyList.Sort((a, b) => Vector3.Distance(hero.transform.position, a.transform.position).CompareTo(Vector3.Distance(hero.transform.position, b.transform.position)));
+
         foreach (GameObject enemy in enemyList) 
         {
             if (enemy != null) 
             {
-                // We use the interface to interact with an enemy
-                Enemy enemyObject = enemy.GetComponent<Enemy>();
-
-
                 // Calculate the distance between the hero and an enemy
-                if (Vector3.Distance(hero.transform.position, enemy.transform.position) <= attackDistance) 
+                if (Vector3.Distance(hero.transform.position, enemy.transform.position) - 0.4f <= attackDistance) 
                 {
+                    // We use the interface to interact with an enemy
+                    Enemy enemyObject = enemy.GetComponent<Enemy>();
+
                     if (enemy.transform.position.x < hero.transform.position.x)
                     {
                         heroAnima.SetBool("AttackStateLeft", true);
@@ -203,6 +205,9 @@ public class Hero : MonoBehaviour
                     {
                         killedEnemies.Add(enemy);
                     }
+
+                    //break the loop cuz we need to attack the closest enemy to the hero in the attack area!
+                    break;
                 }
             }
         }

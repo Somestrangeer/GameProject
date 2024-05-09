@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1600
     height: 809
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 93
+  controlID: 43
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 94
+  controlID: 44
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,8 +213,8 @@ MonoBehaviour:
     y: 0
     width: 317
     height: 520
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -735,9 +735,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.5884943, y: -0.049675502, z: 810392.94}
+    m_Target: {x: -3.2861576, y: -0.36832651, z: 195730.89}
     speed: 2
-    m_Value: {x: 5.5884943, y: -0.049675502, z: 810392.94}
+    m_Value: {x: -3.2861576, y: -0.36832651, z: 195730.89}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -787,9 +787,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.6051855
+    m_Target: 2.3207018
     speed: 2
-    m_Value: 9.6051855
+    m_Value: 2.3207018
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -851,9 +851,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 087d0000
+      m_SelectedIDs: 4e7e0000
       m_LastClickedID: 0
-      m_ExpandedIDs: dee2fffffce3ffff18e5ffff5ee6ffff0cf1fffffefaffff587500004c7f0000
+      m_ExpandedIDs: fefaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1000,7 +1000,7 @@ MonoBehaviour:
     x: 317
     y: 73
     width: 938
-    height: 410
+    height: 499
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1015,15 +1015,18 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: -7235981834987881579, guid: 2dcca22abde234b438155a0f0b5e2933, type: 2}
     - {fileID: 5253797145721096792, guid: 0737ade6fe464bf498be79627871d4a3, type: 2}
+    - {fileID: 8935139105511635633, guid: 14783d02f05000440b93559604259a20, type: 3}
+    - {fileID: 8935139105511635633, guid: acedd49dd8a2c3449971f03d15fa653d, type: 3}
+    - {fileID: 8935139105511635633, guid: f0ec7933dcf31bf4c9c2f5dd86088c46, type: 3}
     m_ValueSerializationHelper:
-    - e00: 0.6314712
+    - e00: 0.71666664
       e01: 0
       e02: 0
-      e03: 48.298378
+      e03: 82.5
       e10: 0
-      e11: 0.6314712
+      e11: 0.71666664
       e12: 0
-      e13: 172.50096
+      e13: 158.33334
       e20: 0
       e21: 0
       e22: 1
@@ -1040,6 +1043,54 @@ MonoBehaviour:
       e11: 0.8210526
       e12: 0
       e13: 120.31579
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.7305263
+      e01: 0
+      e02: 0
+      e03: -21.526337
+      e10: 0
+      e11: 0.7305263
+      e12: 0
+      e13: 167.90526
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.7626374
+      e01: 0
+      e02: 0
+      e03: -23.131866
+      e10: 0
+      e11: 0.7626374
+      e12: 0
+      e13: 173.18352
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.7626374
+      e01: 0
+      e02: 0
+      e03: -23.131866
+      e10: 0
+      e11: 0.7626374
+      e12: 0
+      e13: 173.18352
       e20: 0
       e21: 0
       e22: 1
@@ -1109,7 +1160,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Jandars' animations/Jandar's Attack
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1117,16 +1168,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Jandars' animations/Jandar's Attack
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Dr.House\UnityProjects\GameProject\Game2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 027d0000
-    m_LastClickedID: 32002
-    m_ExpandedIDs: 00000000b8760000ba760000bc760000be760000c0760000c2760000c476000000ca9a3b
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: 76760000
+    m_LastClickedID: 30326
+    m_ExpandedIDs: 000000006c7600006e76000070760000727600007476000076760000787600007a760000187d00009a7d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1154,7 +1205,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b8760000ba760000bc760000be760000c0760000c2760000c4760000
+    m_ExpandedIDs: 000000006c7600006e76000070760000727600007476000076760000787600007a760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1182,7 +1233,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000084590000806700007478000076760000127e0000c67d0000407a000086780000aa7400003e7c0000367c0000c27900002a75000036790000907e0000f67c000044780000927d0000947d000058780000327a00008c7a0000427a000092780000927a00006e7a0000da7800006e790000527300005c730000b6730000a67c00000a74000008740000047400002e74000030740000ba7a0000
+    m_ExpandedInstanceIDs: c623000084590000806700007478000076760000127e0000c67d0000407a000086780000aa7400003e7c0000367c0000c27900002a75000036790000907e0000f67c000044780000927d0000947d000058780000327a00008c7a0000427a000092780000927a00006e7a0000da7800006e790000527300005c730000b6730000a67c00000a74000008740000047400002e74000030740000ba7a00008c880000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
