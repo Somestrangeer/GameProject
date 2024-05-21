@@ -21,12 +21,6 @@ public class Footstep : MonoBehaviour
             if (instance == null)
             {
                 instance = FindObjectOfType<Footstep>();
-                if (instance == null)
-                {
-                    GameObject obj = new GameObject();
-                    obj.name = "Footstep";
-                    instance = obj.AddComponent<Footstep>();
-                }
             }
             return instance;
         }

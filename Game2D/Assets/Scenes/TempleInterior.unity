@@ -37864,7 +37864,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1889788159}
   - component: {fileID: 1889788158}
-  - component: {fileID: 1889788162}
   - component: {fileID: 1889788161}
   - component: {fileID: 1889788157}
   - component: {fileID: 1889788156}
@@ -38075,18 +38074,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 85897121b35ce544a904d7fdfc787abe, type: 3}
   randSound:
   - soundArray: []
---- !u!114 &1889788162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889788153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bf6164fc7f1ebb41abb6c852cbb5a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1889788163
 AudioSource:
   m_ObjectHideFlags: 0

@@ -41,8 +41,6 @@ public class hero : MonoBehaviour
 
         objCameraSize = GameObject.FindGameObjectWithTag("SizeCamera");
         virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
-
-        footstep = Footstep.Instance;
         
     }
 
@@ -124,7 +122,7 @@ public class hero : MonoBehaviour
 
         if (movement != Vector3.zero)
         {
-            footstep.PlaySound(0);
+            Footstep.Instance.PlaySound(0);
         }
 
         herpObj.transform.position += movement * Time.deltaTime;
