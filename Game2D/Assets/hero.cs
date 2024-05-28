@@ -27,7 +27,7 @@ public class hero : MonoBehaviour
 
     public int speed = 5;
 
-    private Footstep footstep;
+    //private Footstep footstep;
 
     void Start()
     {
@@ -51,6 +51,7 @@ public class hero : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D) && !isMovingLeft && !isMovingUp && !isMovingDown)
         {
+
             shadowUpDown.SetActive(false);
             shadowLeft.SetActive(false);
             shadowRight.SetActive(true);
@@ -120,10 +121,10 @@ public class hero : MonoBehaviour
             //virtualCamera.m_Lens.OrthographicSize = currentOrthographicSize;
         }
 
-        if (movement != Vector3.zero)
+        /*if (movement != Vector3.zero)
         {
             Footstep.Instance.PlaySound(0);
-        }
+        }*/
 
         herpObj.transform.position += movement * Time.deltaTime;
 
