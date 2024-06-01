@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class hero : MonoBehaviour
 {
-    // Start is called before the first frame update
     private GameObject herpObj;
     private Animator heroAnima;
     private bool isMovingLeft;
@@ -18,7 +17,6 @@ public class hero : MonoBehaviour
     private GameObject shadowLeft;
     private GameObject shadowRight;
 
-
     //Size camera in the Temple
     private GameObject objCameraSize;
     CinemachineVirtualCamera virtualCamera;
@@ -28,6 +26,9 @@ public class hero : MonoBehaviour
     private float currentOrthographicSize = 8.108678f;
 
     public int speed = 5;
+
+    //private Footstep footstep;
+
     void Start()
     {
         herpObj = gameObject;
@@ -40,23 +41,24 @@ public class hero : MonoBehaviour
 
         objCameraSize = GameObject.FindGameObjectWithTag("SizeCamera");
         virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 movement = Vector3.zero;
+        bool isMoving = false; // Добавлена переменная для отслеживания движения
 
         if (Input.GetKey(KeyCode.D) && !isMovingLeft && !isMovingUp && !isMovingDown)
         {
+
             shadowUpDown.SetActive(false);
             shadowLeft.SetActive(false);
             shadowRight.SetActive(true);
             heroAnima.Play("Right Animation");
             movement += new Vector3(speed, 0, 0);
             isMovingRight = true;
-
-            
         }
         else if (Input.GetKey(KeyCode.A) && !isMovingRight && !isMovingUp && !isMovingDown)
         {
@@ -66,8 +68,6 @@ public class hero : MonoBehaviour
             heroAnima.Play("Left Animation");
             movement -= new Vector3(speed, 0, 0);
             isMovingLeft = true;
-
-            
         }
         else if (Input.GetKey(KeyCode.W) && !isMovingDown && !isMovingLeft && !isMovingRight)
         {
@@ -87,14 +87,12 @@ public class hero : MonoBehaviour
             movement -= new Vector3(0, speed, 0);
             isMovingDown = true;
         }
-        else 
+        else
         {
             shadowUpDown.SetActive(true);
             shadowLeft.SetActive(false);
             shadowRight.SetActive(false);
         }
-
-
 
         // Для остановки анимации при отпускании клавиши
         if (!Input.GetKey(KeyCode.D))
@@ -114,9 +112,8 @@ public class hero : MonoBehaviour
             isMovingDown = false;
         }
 
-        /*if (Vector3.Distance(objCameraSize.transform.position, herpObj.transform.position) <= 10) 
+       /* if (Vector3.Distance(objCameraSize.transform.position, herpObj.transform.position) <= 10)
         {
-
             virtualCamera.m_Lens.OrthographicSize = Mathf.SmoothDamp(virtualCamera.m_Lens.OrthographicSize, targetOrthographicSize, ref velocity, smoothTime);
         }
         else
@@ -125,7 +122,22 @@ public class hero : MonoBehaviour
             //virtualCamera.m_Lens.OrthographicSize = currentOrthographicSize;
         }*/
 
+        //if (movement != Vector3.zero)
+        //{
+        //    Footstep.Instance.PlaySound(0);
+        //}
+        if (movement != Vector3.zero)
+        {
+            isMoving = true; // Установка флага движения в true, если есть движение
+        }
 
+        // Проверка флага движения перед вызовом PlaySound
+        if (isMoving)
+        {
+            Footstep.Instance.PlaySound(0.5f); // Установка громкости на 0.5 для примера
+        }
         herpObj.transform.position += movement * Time.deltaTime;
+
+       
     }
 }

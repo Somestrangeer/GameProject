@@ -142,6 +142,11 @@ public class Hero : MonoBehaviour
             
         }
 
+        if (movement != Vector3.zero) 
+        {
+            Footstep.Instance.PlaySound(0.5f);
+        }
+
         // To make an animation we have to multiply it by time
         hero.transform.position += movement * Time.deltaTime;
     }

@@ -41080,10 +41080,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1809650869}
   - component: {fileID: 1809650868}
-  - component: {fileID: 1809650867}
   - component: {fileID: 1809650866}
   - component: {fileID: 1809650865}
   - component: {fileID: 1809650864}
+  - component: {fileID: 1809650870}
   m_Layer: 0
   m_Name: JandarIdle2
   m_TagString: Untagged
@@ -41184,21 +41184,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1809650867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809650863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbd8d9e0240df84aac2ddbcbf203408, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetOrthographicSize: 12
-  smoothTime: 0.5
-  speed: 3
 --- !u!212 &1809650868
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41269,6 +41254,18 @@ Transform:
   - {fileID: 1910383665}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1809650870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809650863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23161117d6420f439bd7f717cc3a117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1910383664
 PrefabInstance:
   m_ObjectHideFlags: 0

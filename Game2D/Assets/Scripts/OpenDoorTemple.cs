@@ -9,6 +9,8 @@ public class OpenDoorTemple : MonoBehaviour
     GameObject hero;
     GameObject door;
     Animator doorAnima;
+    bool DoorOpened = false;
+
 
     void Start()
     {
@@ -24,14 +26,26 @@ public class OpenDoorTemple : MonoBehaviour
         if(Input.GetKey(KeyCode.E)) 
         {
             Debug.Log("Here1");
-            if (Vector3.Distance(hero.transform.position, door.transform.position) < 6) 
+            if (Vector3.Distance(hero.transform.position, door.transform.position) < 6)
             {
                 Debug.Log("Here2");
                 doorAnima.SetBool("openDoor", true);
                 BoxCollider2D boxCollider = door.GetComponentInChildren<BoxCollider2D>();
                 boxCollider.enabled = false;
+
+                if (!DoorOpened)
+                {
+                    StartCoroutine(PlayDoorSoundWithDelay(0.15f)); //добавил небольшую задержку перед воспроизведением
+                    DoorOpened = true;
+                }
             }
         }
         
+    }
+
+    IEnumerator PlayDoorSoundWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.instance.Play("Door");
     }
 }
