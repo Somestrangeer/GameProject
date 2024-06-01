@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour {
 
@@ -8,7 +10,11 @@ public class AudioManager : MonoBehaviour {
 
 	public Sound[] sounds;
 
-	void Awake ()
+    private bool isForestScene = false;
+    private WaitForSeconds initialDelay = new WaitForSeconds(5f);
+    private WaitForSeconds owlSoundInterval = new WaitForSeconds(15f);
+
+    void Awake ()
 	{
 		if (instance != null)
 		{
@@ -28,9 +34,25 @@ public class AudioManager : MonoBehaviour {
 			s.source.pitch = s.pitch;
 			s.source.loop = s.loop;
 		}
-	}
 
-	public void Play(string sound)
+        if (SceneManager.GetActiveScene().name == "ForestScene")
+        {
+            isForestScene = true;
+            StartCoroutine(PlayOwlSoundAtInterval());
+        }
+    }
+
+    IEnumerator PlayOwlSoundAtInterval()
+    {
+        yield return initialDelay;
+        while (isForestScene)
+        {
+            Play("owl");
+            yield return owlSoundInterval;
+        }
+    }
+
+    public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		s.source.Play();

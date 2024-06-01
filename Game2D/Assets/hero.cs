@@ -48,6 +48,7 @@ public class hero : MonoBehaviour
     void Update()
     {
         Vector3 movement = Vector3.zero;
+        bool isMoving = false; // Добавлена переменная для отслеживания движения
 
         if (Input.GetKey(KeyCode.D) && !isMovingLeft && !isMovingUp && !isMovingDown)
         {
@@ -121,11 +122,20 @@ public class hero : MonoBehaviour
             //virtualCamera.m_Lens.OrthographicSize = currentOrthographicSize;
         }
 
-        /*if (movement != Vector3.zero)
+        //if (movement != Vector3.zero)
+        //{
+        //    Footstep.Instance.PlaySound(0);
+        //}
+        if (movement != Vector3.zero)
         {
-            Footstep.Instance.PlaySound(0);
-        }*/
+            isMoving = true; // Установка флага движения в true, если есть движение
+        }
 
+        // Проверка флага движения перед вызовом PlaySound
+        if (isMoving)
+        {
+            Footstep.Instance.PlaySound(0.5f); // Установка громкости на 0.5 для примера
+        }
         herpObj.transform.position += movement * Time.deltaTime;
 
        
