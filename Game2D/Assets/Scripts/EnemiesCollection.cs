@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
@@ -10,6 +12,7 @@ public class EnemiesCollection : MonoBehaviour
 {
     // Store enemies of the level in this list
     private static List<GameObject> enemiesList = new List<GameObject>();
+    private static List<EnemyShadow> shadows = new List<EnemyShadow>();
 
     private float speed = EnemyParams.enemySpeed;
     private float visibleArea = EnemyParams.visibleArea;
@@ -20,10 +23,29 @@ public class EnemiesCollection : MonoBehaviour
         // Get Enemies by their tag "Enemy" 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        foreach (GameObject enemy in enemies) 
+        foreach (GameObject enemy in enemies)
         {
             enemiesList.Add(enemy);
+
+            SpriteRenderer[] spriteShadows = enemy.GetComponentsInChildren<SpriteRenderer>();
+
+            if (spriteShadows.Length >= 4) // Проверяем, что есть как минимум 4 элемента в массиве
+            {
+                EnemyShadow shadow = new EnemyShadow();
+                shadow.enemy = enemy;
+
+                shadow.shadowUpDown  = spriteShadows[1].gameObject; //shadowUpDown
+                shadow.shadowLeft = spriteShadows[2].gameObject; //shadowLeft
+                shadow.shadowRight = spriteShadows[3].gameObject; //shadowRight
+
+                shadows.Add(shadow);
+            }
+            else
+            {
+                // Обработка случая, когда не хватает элементов в массиве spriteShadows
+            }
         }
+
     }
 
     private void Update()
@@ -68,25 +90,37 @@ public class EnemiesCollection : MonoBehaviour
                     // Move right
                     movement += new Vector3(speed, 0, 0);
                     enemyAnimator.Play("Right Animation");
+
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowUpDown.SetActive(false);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowLeft.SetActive(false);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(true);
                 }
                 else if (enemy.transform.position.x > hero.transform.position.x && bias >= 2)
                 {
                     // Move left
                     movement -= new Vector3(speed, 0, 0);
                     enemyAnimator.Play("Left Animation");
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowUpDown.SetActive(false);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowLeft.SetActive(true);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(false);
                 }
                 else if (enemy.transform.position.y + 1.37f < hero.transform.position.y + 0.1)
                 {
                     // Move up
                     movement += new Vector3(0, speed, 0);
                     enemyAnimator.Play("Up Animation");
-                    //isMovingUp = true;
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowUpDown.SetActive(true);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowLeft.SetActive(false);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(true);
                 }
                 else if (enemy.transform.position.y /*+ 1.37f */> hero.transform.position.y - 0.2)
                 {
                     // Move down
                     movement -= new Vector3(0, speed, 0);
                     enemyAnimator.Play("Down Animation");
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowUpDown.SetActive(true);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowLeft.SetActive(false);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(true);
                 }
                 
                 // Apply movement only once based on the final direction
@@ -113,5 +147,15 @@ public class EnemiesCollection : MonoBehaviour
     } 
 
     public static List<GameObject> getEnemyCollection() { return enemiesList; }
+}
+
+struct EnemyShadow 
+{
+    public GameObject enemy;
+    //public List<GameObject> shadows;
+
+    public GameObject shadowUpDown;
+    public GameObject shadowLeft;
+    public GameObject shadowRight;
 }
 
