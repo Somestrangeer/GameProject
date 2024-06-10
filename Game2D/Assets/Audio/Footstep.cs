@@ -41,7 +41,7 @@ public class Footstep : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
-    public void PlaySound(float volume = 0.3f)
+    public void PlaySound(float volume = 0.1f)
     {
         if (audioSrc == null || sounds.Length == 0 || Time.time < nextStepTime)
         {
