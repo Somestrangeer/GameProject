@@ -111,7 +111,7 @@ public class EnemiesCollection : MonoBehaviour
                     enemyAnimator.Play("Up Animation");
                     shadows.FirstOrDefault(s => s.enemy == enemy).shadowUpDown.SetActive(true);
                     shadows.FirstOrDefault(s => s.enemy == enemy).shadowLeft.SetActive(false);
-                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(true);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(false);
                 }
                 else if (enemy.transform.position.y /*+ 1.37f */> hero.transform.position.y - 0.2)
                 {
@@ -120,7 +120,7 @@ public class EnemiesCollection : MonoBehaviour
                     enemyAnimator.Play("Down Animation");
                     shadows.FirstOrDefault(s => s.enemy == enemy).shadowUpDown.SetActive(true);
                     shadows.FirstOrDefault(s => s.enemy == enemy).shadowLeft.SetActive(false);
-                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(true);
+                    shadows.FirstOrDefault(s => s.enemy == enemy).shadowRight.SetActive(false);
                 }
                 
                 // Apply movement only once based on the final direction
