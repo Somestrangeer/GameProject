@@ -12,6 +12,8 @@ public class Footstep : MonoBehaviour
     private float stepRate = 0.45f; // Время между шагами в секундах
     private float nextStepTime = 0f; // Время следующего шага
     private static Footstep instance;
+    
+
     public static Footstep Instance
     {
         get

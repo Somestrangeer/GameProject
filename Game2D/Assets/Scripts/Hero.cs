@@ -144,7 +144,7 @@ public class Hero : MonoBehaviour
 
         if (movement != Vector3.zero) 
         {
-            Footstep.Instance.PlaySound(0.5f);
+            Footstep.Instance.PlaySound(0.1f);
         }
 
         // To make an animation we have to multiply it by time
