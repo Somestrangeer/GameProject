@@ -12,6 +12,8 @@ public class Footstep : MonoBehaviour
     private float stepRate = 0.45f; // Время между шагами в секундах
     private float nextStepTime = 0f; // Время следующего шага
     private static Footstep instance;
+    
+
     public static Footstep Instance
     {
         get
@@ -41,7 +43,7 @@ public class Footstep : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
-    public void PlaySound(float volume = 0.3f)
+    public void PlaySound(float volume = 0.1f)
     {
         if (audioSrc == null || sounds.Length == 0 || Time.time < nextStepTime)
         {
