@@ -20,10 +20,9 @@ public class DialogTrigger : MonoBehaviour
 
     private void Awake()
     {
-        
         VisualCue.SetActive(false);
         dialogueSystem = FindObjectOfType<DialogueSystem>();
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Hero");
     }
 
     //shows the Dialogue available indicator and starts dialogue where button E pressed
@@ -46,7 +45,7 @@ public class DialogTrigger : MonoBehaviour
     //if player enter the collider range
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Hero")
         {
             PlayerInRange = true;
         }
@@ -55,9 +54,14 @@ public class DialogTrigger : MonoBehaviour
     //if player exit the collider range
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Hero")
         {
             PlayerInRange = false;
         }
+    }
+
+    public void StartDialgueCutScene()
+    {
+        DialogueSystem.GetInstance().EnterDialogueMode(InkJSON);
     }
 }

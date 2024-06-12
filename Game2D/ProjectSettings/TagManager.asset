@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Hero
   - SizeCamera
+  - Trigger
   layers:
   - Default
   - TransparentFX

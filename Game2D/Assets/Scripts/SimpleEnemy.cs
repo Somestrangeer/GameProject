@@ -13,6 +13,8 @@ public class SimpleEnemy : MonoBehaviour, Enemy
     private GameObject simpleEnemy;
     private Animator simpleEnemyAnimator;
 
+    
+
     private void Awake()
     {
         // Get enemy
@@ -88,6 +90,11 @@ public class SimpleEnemy : MonoBehaviour, Enemy
         // We hide the enemy and remove it from the enemy's list 
         simpleEnemy.SetActive(false);
 
+    }
+
+    public void EnableAttackMode()
+    {
+        EnemiesCollection.attackMode = true;
     }
 
 

@@ -18,6 +18,8 @@ public class EnemiesCollection : MonoBehaviour
     private float visibleArea = EnemyParams.visibleArea;
     private float attackArea = EnemyParams.attackArea;
 
+    public static bool attackMode { get; set; }
+
     private void Awake()
     {
         // Get Enemies by their tag "Enemy" 
@@ -36,7 +38,9 @@ public class EnemiesCollection : MonoBehaviour
 
                 shadow.shadowUpDown  = spriteShadows[1].gameObject; //shadowUpDown
                 shadow.shadowLeft = spriteShadows[2].gameObject; //shadowLeft
+                shadow.shadowLeft.SetActive(false);
                 shadow.shadowRight = spriteShadows[3].gameObject; //shadowRight
+                shadow.shadowRight.SetActive(false);
 
                 shadows.Add(shadow);
             }
@@ -54,7 +58,8 @@ public class EnemiesCollection : MonoBehaviour
         visibleArea = EnemyParams.visibleArea;
         attackArea = EnemyParams.attackArea;
 
-        EnemyMovement();
+        if(attackMode)
+            EnemyMovement();
     }
 
     private void EnemyMovement() 

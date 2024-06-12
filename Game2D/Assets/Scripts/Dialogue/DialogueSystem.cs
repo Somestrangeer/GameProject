@@ -48,7 +48,9 @@ public class DialogueSystem : MonoBehaviour
 
         //get all of the choises text
         ChoisesText = new Text[Choises.Length];
+
         int index = 0;
+
         foreach (GameObject Choise in Choises) 
         {
             ChoisesText[index] = Choise.GetComponentInChildren<Text>();
@@ -90,7 +92,7 @@ public class DialogueSystem : MonoBehaviour
 
     //if the stroy can continue adds text to the dialogue panel
     //Story is a Ink.Runtime class
-    private void ContinueStory()
+    public void ContinueStory()
     {
         if (CurrentStory.canContinue)
         {
