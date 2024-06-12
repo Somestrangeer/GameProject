@@ -18,6 +18,7 @@ public class EnemiesCollection : MonoBehaviour
     private float visibleArea = EnemyParams.visibleArea;
     private float attackArea = EnemyParams.attackArea;
 
+    //Use for cut scene to stop enemies attacking us!
     public static bool attackMode { get; set; }
 
     private void Awake()

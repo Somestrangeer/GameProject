@@ -5,7 +5,7 @@ using UnityEngine;
 public class SimpleEnemy : MonoBehaviour, Enemy
 {
     private float hp = 200.0f;
-    private float damage = 30.0f;
+    private float damage = 5.0f;
     private float attackDistance = EnemyParams.attackArea;
     private float damageSpeed = EnemyParams.damageSpeed;
     private bool isAttacking = false;
@@ -30,8 +30,17 @@ public class SimpleEnemy : MonoBehaviour, Enemy
 
         if (Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 0.4f <= attackDistance && !isAttacking)
         {
+            Debug.Log("YEAS");
             //Start the function in parallel
-            StartCoroutine(Attack());
+            if (EnemiesCollection.attackMode)
+                StartCoroutine(Attack());
+        }
+        else 
+        {
+            simpleEnemyAnimator.SetBool("AttackStateLeft", false);
+            simpleEnemyAnimator.SetBool("IsAttackingLeft", false);
+            simpleEnemyAnimator.SetBool("AttackStateRight", false);
+            simpleEnemyAnimator.SetBool("IsAttacingRight", false);
         }
     }
 

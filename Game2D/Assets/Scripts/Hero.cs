@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
-    private static float hp = 20000f;
+    private static float hp = 20;
     private float damage = 50f;
     private int speed = 3;
     private float attackDistance = 2.0f;
@@ -29,10 +30,14 @@ public class Hero : MonoBehaviour
 
     public static GameObject getHero() { return hero; }
 
+    private static string sceneName;
+
     private void Awake()
     {
         // Get the object of hero's sprite
         hero = gameObject;
+
+        sceneName = SceneManager.GetActiveScene().name;
 
         heroAnima = hero.GetComponent<Animator>();
 
@@ -45,9 +50,15 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (hp <= 10 && sceneName == "Village") 
+        {
+            GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
+
+        }
+
         heroMovement();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && EnemiesCollection.attackMode)
         {
             attackEnemy();
         }
@@ -250,7 +261,20 @@ public class Hero : MonoBehaviour
     private static void Die()
     {
         // We hide the hero
+        battleModeEnable = false;
+        Renderer rend = hero.GetComponent<Renderer>();
+        rend.material.color = Color.white;
+        heroAnima.SetBool("AttackStateRight", false);
         hero.SetActive(false);
+        EnemiesCollection.attackMode = false;
+        if (sceneName == "Village") 
+        {
+            hp = 50f;
+            hero.SetActive(true);
+            hero.transform.position = new Vector3(54.5f, -50f, 0);
+            GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
+
+        }
 
     }
 }
