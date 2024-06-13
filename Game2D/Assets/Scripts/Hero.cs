@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 
 public class Hero : MonoBehaviour
 {
@@ -52,7 +54,7 @@ public class Hero : MonoBehaviour
     {
         if (hp <= 10 && sceneName == "Village") 
         {
-            GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
+            //GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
 
         }
 
@@ -272,7 +274,9 @@ public class Hero : MonoBehaviour
             hp = 50f;
             hero.SetActive(true);
             hero.transform.position = new Vector3(54.5f, -50f, 0);
-            GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
+            //EnemiesCollection.attackMode = true;
+            //GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
+            
 
         }
 

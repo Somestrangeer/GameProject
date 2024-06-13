@@ -30,10 +30,14 @@ public class SimpleEnemy : MonoBehaviour, Enemy
 
         if (Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 0.4f <= attackDistance && !isAttacking)
         {
-            Debug.Log("YEAS");
+            
             //Start the function in parallel
-            if (EnemiesCollection.attackMode)
+            if (EnemiesCollection.attackMode) 
+            {
+                Debug.Log("YEAS");
                 StartCoroutine(Attack());
+            }
+                
         }
         else 
         {

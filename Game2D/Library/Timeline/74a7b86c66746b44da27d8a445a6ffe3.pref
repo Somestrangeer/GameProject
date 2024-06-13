@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79cb9ecc0d4a6d428ab98a681a33897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeAreaShownRange: {x: 0.36535484, y: 29.768423}
+  timeAreaShownRange: {x: -0.40211552, y: 18.175623}
   trackScale: 1
   playRangeEnabled: 0
   windowTime: 0
-  verticalScroll: 37
+  verticalScroll: 0
   sequencerHeaderWidth: 315
   m_TimeAreaPlayRange:
     start: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   - {fileID: -3662735820986382647, guid: 74a7b86c66746b44da27d8a445a6ffe3, type: 2}
   - {fileID: -2920098187785470047, guid: 74a7b86c66746b44da27d8a445a6ffe3, type: 2}
   m_Vals:
-  - collapsed: 1
+  - collapsed: 0
     showMarkers: 1
     showInlineCurves: 0
     inlineAnimationCurveHeight: 100
@@ -578,8 +578,8 @@ MonoBehaviour:
       width: 1
       height: 1
     trackHeightExtension: 0
-    m_MarkerTimeStampsKeys: a659ffff967e000012d2ffffeea6ffff00aeffffd8acffff10a5ffff329effffd0b3fffff695ffffba95ffff8695ffff4695ffffe096ffff6896ffffa032ffff
-    m_MarkerTimeStampsValues: 56090332d78adc083dba19d7e18adc08f6144a0de68adc085f39ce55e38adc08aba3cf58e38adc089f097258e38adc0879894a57e38adc0853a3db57e38adc08c9cc3e59e38adc08c5bf909ce68adc08c00d9e9de68adc084fa3d69ee68adc082ccd41b9e38adc0839d5640ee68adc08ec051e10e68adc084607a9a0e68adc08
+    m_MarkerTimeStampsKeys: a659ffff967e000012d2ffffeea6ffff00aeffffd8acffff10a5ffff329effffd0b3fffff695ffffba95ffff8695ffff4695ffffe096ffff6896ffffa032ffff0881000006810000
+    m_MarkerTimeStampsValues: 56090332d78adc083dba19d7e18adc08f6144a0de68adc085f39ce55e38adc08aba3cf58e38adc089f097258e38adc0879894a57e38adc0853a3db57e38adc08c9cc3e59e38adc08c5bf909ce68adc08c00d9e9de68adc084fa3d69ee68adc082ccd41b9e38adc0839d5640ee68adc08ec051e10e68adc084607a9a0e68adc08fdb4854e398bdc08fae07b52398bdc08
   - collapsed: 0
     showMarkers: 1
     showInlineCurves: 0
