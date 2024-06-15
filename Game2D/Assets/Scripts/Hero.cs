@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
+using Cinemachine;
 
 public class Hero : MonoBehaviour
 {
@@ -34,6 +35,14 @@ public class Hero : MonoBehaviour
 
     private static string sceneName;
 
+    private CinemachineVirtualCamera virtualCamera;
+    private GameObject objCameraSize;
+    public float targetOrthographicSize = 12f;
+    public float smoothTime = 0.5f;
+    private float velocity = 0f;
+    private float currentOrthographicSize = 8.108678f;
+
+
     private void Awake()
     {
         // Get the object of hero's sprite
@@ -47,6 +56,12 @@ public class Hero : MonoBehaviour
         shadowUpDown = spriteRenderers[1].gameObject;
         shadowLeft = spriteRenderers[2].gameObject;
         shadowRight = spriteRenderers[3].gameObject;
+
+        if(sceneName == "TempleInterior") 
+        {
+            objCameraSize = GameObject.FindGameObjectWithTag("SizeCamera");
+            virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        }
     }
 
     // Update is called once per frame
@@ -155,13 +170,31 @@ public class Hero : MonoBehaviour
             
         }
 
+        if (sceneName == "TempleInterior") 
+        {
+            resizeCamera();
+        }
+        
+
         if (movement != Vector3.zero) 
         {
-            Footstep.Instance.PlaySound(0.1f);
+            Footstep.Instance.PlaySound(0.5f);
         }
 
         // To make an animation we have to multiply it by time
         hero.transform.position += movement * Time.deltaTime;
+    }
+    private void resizeCamera() 
+    {
+        if (Vector3.Distance(objCameraSize.transform.position, hero.transform.position) <= 10)
+        {
+            virtualCamera.m_Lens.OrthographicSize = Mathf.SmoothDamp(virtualCamera.m_Lens.OrthographicSize, targetOrthographicSize, ref velocity, smoothTime);
+        }
+        else
+        {
+            virtualCamera.m_Lens.OrthographicSize = Mathf.SmoothDamp(virtualCamera.m_Lens.OrthographicSize, currentOrthographicSize, ref velocity, smoothTime);
+            //virtualCamera.m_Lens.OrthographicSize = currentOrthographicSize;
+        }
     }
     private void sneakHero() 
     {

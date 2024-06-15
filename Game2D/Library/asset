@@ -13,6 +13,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkLibrary:
+  - inkAsset: {fileID: 102900000, guid: 6fda8af41c0d74446987aeafb1bcdc36, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: d00fb393b3cdb1545a3635e2efa4108c, type: 3}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
+  - inkAsset: {fileID: 102900000, guid: 8026d8b4af30eb94092e7c307fdbebf7, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: c3a3d7859f115154b9305af6ff193ae8, type: 3}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
   - inkAsset: {fileID: 102900000, guid: a508dee282bcbe14abfba4a30d6a31fe, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 430a80520d39fb34abbccfa14b960b9d, type: 3}
@@ -49,6 +71,28 @@ MonoBehaviour:
   - inkAsset: {fileID: 102900000, guid: cda9516b09667be4db1b2e1f884ca259, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 641cba62a97003743857008102ede25f, type: 3}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
+  - inkAsset: {fileID: 102900000, guid: 7001e32b80c8a784280ef93a60cbe4e3, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 11739471e5f056948b5da500cf4e6ab0, type: 3}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
+  - inkAsset: {fileID: 102900000, guid: c77eaee6b6363da418b6102ea9e2dc4f, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 27f0cdfd59e226f4e84cc591b9712a01, type: 3}
     unhandledCompileErrors: []
     recursiveIncludeErrorPaths: []
     errors: []

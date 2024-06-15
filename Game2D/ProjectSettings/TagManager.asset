@@ -10,6 +10,7 @@ TagManager:
   - Hero
   - SizeCamera
   - Trigger
+  - CutSceneTrigger
   layers:
   - Default
   - TransparentFX

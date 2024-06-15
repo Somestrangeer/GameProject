@@ -395,6 +395,7 @@
 "Assets/Audio/SceneMusic.cs"
 "Assets/Audio/Sound.cs"
 "Assets/hero.cs"
+"Assets/Scripts/CutSceneTrigger.cs"
 "Assets/Scripts/Dialogue/DialogTrigger.cs"
 "Assets/Scripts/Dialogue/DialogueSystem.cs"
 "Assets/Scripts/EnemiesCollection.cs"
@@ -406,6 +407,7 @@
 "Assets/Scripts/OpenDoorTemple.cs"
 "Assets/Scripts/SimpleEnemy.cs"
 "Assets/Scripts/StrongEnemy.cs"
+"Assets/Scripts/Temple Helpers/Interact.cs"
 -langversion:9.0
 
 /deterministic
