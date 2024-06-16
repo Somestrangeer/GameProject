@@ -68,9 +68,31 @@ MonoBehaviour:
     masterInkAssets: []
     localIncludePaths: []
     includes: []
+  - inkAsset: {fileID: 102900000, guid: b81429e680b2fc445a12bca885df7ba8, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: a847444bedb97254a994f71c42b50e2a, type: 3}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
   - inkAsset: {fileID: 102900000, guid: cda9516b09667be4db1b2e1f884ca259, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 641cba62a97003743857008102ede25f, type: 3}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
+  - inkAsset: {fileID: 102900000, guid: 13ab9b7d9ff00ae4597231dfdce52ec8, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 95deab2a8e8fb9c4e8640d9e9e7e1ac8, type: 3}
     unhandledCompileErrors: []
     recursiveIncludeErrorPaths: []
     errors: []

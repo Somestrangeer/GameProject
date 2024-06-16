@@ -11,6 +11,8 @@ TagManager:
   - SizeCamera
   - Trigger
   - CutSceneTrigger
+  - NPC
+  - Alim
   layers:
   - Default
   - TransparentFX
