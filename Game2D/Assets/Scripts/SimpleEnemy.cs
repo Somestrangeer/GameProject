@@ -34,7 +34,6 @@ public class SimpleEnemy : MonoBehaviour, Enemy
             //Start the function in parallel
             if (EnemiesCollection.attackMode) 
             {
-                Debug.Log("YEAS");
                 StartCoroutine(Attack());
             }
                 

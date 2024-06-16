@@ -33,7 +33,7 @@ public class Hero : MonoBehaviour
 
     public static GameObject getHero() { return hero; }
 
-    private static string sceneName;
+    public static string sceneName = "";
 
     private CinemachineVirtualCamera virtualCamera;
     private GameObject objCameraSize;

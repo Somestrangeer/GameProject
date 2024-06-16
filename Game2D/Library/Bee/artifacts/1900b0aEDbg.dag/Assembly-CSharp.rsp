@@ -395,6 +395,7 @@
 "Assets/Audio/SceneMusic.cs"
 "Assets/Audio/Sound.cs"
 "Assets/hero.cs"
+"Assets/Scripts/Alim.cs"
 "Assets/Scripts/CutSceneTrigger.cs"
 "Assets/Scripts/Dialogue/DialogTrigger.cs"
 "Assets/Scripts/Dialogue/DialogueSystem.cs"
