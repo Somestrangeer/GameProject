@@ -142,7 +142,7 @@ public class EnemiesCollection : MonoBehaviour
             else if (bias <= attackArea)
             {
                 heroInSight = true;
-                Hero.setBattleMode(heroInSight, true);
+                Hero.setBattleMode(heroInSight, false);
             }
         }
 
