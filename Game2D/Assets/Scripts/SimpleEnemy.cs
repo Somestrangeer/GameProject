@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SimpleEnemy : MonoBehaviour, Enemy
 {
-    private float hp = 200.0f;
+    private float hp = 400.0f;
     private float damage = 5.0f;
     private float attackDistance = EnemyParams.attackArea;
     private float damageSpeed = EnemyParams.damageSpeed;
@@ -12,8 +13,6 @@ public class SimpleEnemy : MonoBehaviour, Enemy
 
     private GameObject simpleEnemy;
     private Animator simpleEnemyAnimator;
-
-    
 
     private void Awake()
     {
@@ -28,7 +27,9 @@ public class SimpleEnemy : MonoBehaviour, Enemy
         // We always update the var to get the changed value
         attackDistance = EnemyParams.attackArea;
 
-        if (Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 0.4f <= attackDistance && !isAttacking)
+        Debug.Log(Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 0.4f);
+
+        if (Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 1f <= attackDistance && !isAttacking)
         {
             
             //Start the function in parallel
@@ -40,10 +41,14 @@ public class SimpleEnemy : MonoBehaviour, Enemy
         }
         else 
         {
-            simpleEnemyAnimator.SetBool("AttackStateLeft", false);
-            simpleEnemyAnimator.SetBool("IsAttackingLeft", false);
-            simpleEnemyAnimator.SetBool("AttackStateRight", false);
-            simpleEnemyAnimator.SetBool("IsAttacingRight", false);
+            if (SceneManager.GetActiveScene().name == "Village") 
+            {
+                simpleEnemyAnimator.SetBool("AttackStateLeft", false);
+                simpleEnemyAnimator.SetBool("IsAttackingLeft", false);
+                simpleEnemyAnimator.SetBool("AttackStateRight", false);
+                simpleEnemyAnimator.SetBool("IsAttacingRight", false);
+            }
+           
         }
     }
 

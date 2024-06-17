@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class CutSceneTrigger : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CutSceneTrigger : MonoBehaviour
     GameObject obj;
 
     [SerializeField] public PlayableDirector timelineDirector;
+
+    private bool IsPlayed = false;
 
     private void Awake()
     {
@@ -19,9 +22,27 @@ public class CutSceneTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(hero.transform.position, obj.transform.position) <= 1.5f) 
+        if (SceneManager.GetActiveScene().name == "Cave")
         {
-            timelineDirector.Play();
+            if (EnemiesCollection.getEnemyCollection().Count == 0 && !IsPlayed) 
+            {
+                Debug.Log(Vector3.Distance(hero.transform.position, obj.transform.position));
+                if (Vector3.Distance(hero.transform.position, obj.transform.position) <= 1.5f) 
+                {
+                    timelineDirector.Play();
+                    IsPlayed = true;
+
+                }
+                    
+            }
         }
+        else 
+        {
+            if (Vector3.Distance(hero.transform.position, obj.transform.position) <= 1.5f)
+            {
+                timelineDirector.Play();
+            }
+        }
+        
     }
 }

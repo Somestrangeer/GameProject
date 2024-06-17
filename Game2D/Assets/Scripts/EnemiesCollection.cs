@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
@@ -23,6 +24,8 @@ public class EnemiesCollection : MonoBehaviour
 
     private void Awake()
     {
+        if (SceneManager.GetActiveScene().name == "Cave")
+            attackMode = true;
         // Get Enemies by their tag "Enemy" 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -73,6 +76,7 @@ public class EnemiesCollection : MonoBehaviour
            
             // Calculate the distance if the hero is inside the enemy's visibleArea
             float distanceJandar = Vector3.Distance(hero.transform.position, enemy.transform.position);
+
             float bias = 0.0f;
 
             Animator enemyAnimator = enemy.GetComponent<Animator>();
@@ -133,14 +137,16 @@ public class EnemiesCollection : MonoBehaviour
                 enemy.transform.position += movement * Time.deltaTime;
 
                 heroInSight = true;
+                Hero.setBattleMode(heroInSight, true);
             }
             else if (bias <= attackArea)
             {
                 heroInSight = true;
+                Hero.setBattleMode(heroInSight, true);
             }
         }
 
-        Hero.setBattleMode(heroInSight, true);
+        
     }
 
     //Remove selected enemy/enemies 

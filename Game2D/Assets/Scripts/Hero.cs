@@ -9,12 +9,13 @@ using Cinemachine;
 
 public class Hero : MonoBehaviour
 {
-    private static float hp = 20;
+    private static float hp = 1120;
     private float damage = 50f;
     private int speed = 3;
     private float attackDistance = 2.0f;
     private bool sneakModeEnable = false;
     private static bool battleModeEnable = false;
+    public float damageSpeed = 0.5f;
 
     private bool isMovingLeft;
     private bool isMovingRight;
@@ -41,7 +42,7 @@ public class Hero : MonoBehaviour
     public float smoothTime = 0.5f;
     private float velocity = 0f;
     private float currentOrthographicSize = 8.108678f;
-
+    private bool isAttacking = false;
 
     private void Awake()
     {
@@ -67,6 +68,7 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         if (hp <= 10 && sceneName == "Village") 
         {
             //GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
@@ -75,7 +77,7 @@ public class Hero : MonoBehaviour
 
         heroMovement();
 
-        if (Input.GetMouseButtonDown(0) && EnemiesCollection.attackMode)
+        if (Input.GetMouseButtonDown(0) && EnemiesCollection.attackMode && !isAttacking)
         {
             attackEnemy();
         }
@@ -221,6 +223,45 @@ public class Hero : MonoBehaviour
         
 
     }
+    private IEnumerator Attack(GameObject enemy, Enemy enemyObject)
+    {
+        if (isAttacking) yield break;
+
+        Renderer rend = enemy.GetComponent<Renderer>();
+
+        isAttacking = true;
+
+        if (enemy.transform.position.x < hero.transform.position.x)
+        {
+            heroAnima.SetBool("AttackStateLeft", true);
+            heroAnima.Play("Attack Left Side");
+        }
+        else
+        {
+            heroAnima.SetBool("AttackStateRight", true);
+            heroAnima.Play("Attack Right Side");
+        }
+
+        enemyObject.TakeDamage(damage);
+
+        //Store enemy as killed if he's not active (killed)
+        if (!enemy.active)
+        {
+            killedEnemies.Add(enemy);
+        }
+
+        //The hero was hit
+        rend.material.color = Color.red;
+        Hero.TakeDamage(damage);
+
+        yield return new WaitForSeconds(damageSpeed);
+
+        rend.material.color = Color.white;
+
+        yield return new WaitForSeconds(damageSpeed);
+
+        isAttacking = false;
+    }
     private void attackEnemy()
     {
         List<GameObject> enemyList = EnemiesCollection.getEnemyCollection();
@@ -233,29 +274,13 @@ public class Hero : MonoBehaviour
             if (enemy != null) 
             {
                 // Calculate the distance between the hero and an enemy
-                if (Vector3.Distance(hero.transform.position, enemy.transform.position) - 0.4f <= attackDistance) 
+                if (Vector3.Distance(hero.transform.position, enemy.transform.position) - 1.2f <= attackDistance) 
                 {
                     // We use the interface to interact with an enemy
                     Enemy enemyObject = enemy.GetComponent<Enemy>();
+                    StartCoroutine(Attack(enemy, enemyObject));
 
-                    if (enemy.transform.position.x < hero.transform.position.x)
-                    {
-                        heroAnima.SetBool("AttackStateLeft", true);
-                        heroAnima.Play("Attack Left Side");
-                    }
-                    else
-                    {
-                        heroAnima.SetBool("AttackStateRight", true);
-                        heroAnima.Play("Attack Right Side");
-                    }
-                    
-                    enemyObject.TakeDamage(damage);
-
-                    //Store enemy as killed if he's not active (killed)
-                    if (!enemy.active) 
-                    {
-                        killedEnemies.Add(enemy);
-                    }
+                  
 
                     //break the loop cuz we need to attack the closest enemy to the hero in the attack area!
                     break;

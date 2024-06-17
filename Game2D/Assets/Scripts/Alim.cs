@@ -7,7 +7,7 @@ public class Alim : MonoBehaviour
     // Start is called before the first frame update
 
     private static float hp = 20;
-    private float damage = 50f;
+    private float damage = 5f;
     private int speed = 3;
     private float attackDistance = 2.0f;
 
@@ -45,12 +45,12 @@ public class Alim : MonoBehaviour
         enemiesList = EnemiesCollection.getEnemyCollection();
         GameObject nearestObject = FindNearestObject();
 
-        if (nearestObject != null)
+        if (nearestObject != null && EnemiesCollection.attackMode)
         {
             currentTarget = nearestObject.transform;
 
             // Move towards the nearest object
-            MoveTowardsTarget();
+            MoveTowardsTarget(nearestObject);
         }
 
 
@@ -75,11 +75,12 @@ public class Alim : MonoBehaviour
         return nearestObject;
     }
 
-    void MoveTowardsTarget()
+    void MoveTowardsTarget(GameObject nearestObject)
     {
         if (currentTarget == null)
             return;
 
+        Enemy enemyObject = nearestObject.GetComponent<Enemy>();
         // Calculate direction to move towards the target
         Vector3 moveDirection = (currentTarget.position - transform.position).normalized;
 
@@ -88,10 +89,10 @@ public class Alim : MonoBehaviour
         float moveY = Mathf.Abs(moveDirection.y) > Mathf.Abs(moveDirection.x) ? moveDirection.y : 0;
 
         // Set animator parameters based on movement direction
-        alimAnimator.SetBool("MoveUp", moveY > 0);
-        alimAnimator.SetBool("MoveDown", moveY < 0);
-        alimAnimator.SetBool("MoveRight", moveX > 0);
-        alimAnimator.SetBool("MoveLeft", moveX < 0);
+        alimAnimator.SetBool("UpMovement", moveY > 0);
+        alimAnimator.SetBool("DownMovement", moveY < 0);
+        alimAnimator.SetBool("RightMovement", moveX > 0);
+        alimAnimator.SetBool("LeftMovement", moveX < 0);
 
         // Move the character
         transform.position += moveDirection * speed * Time.deltaTime;
@@ -110,6 +111,15 @@ public class Alim : MonoBehaviour
 
             // Set combat animation based on target's position relative to the character
             alimAnimator.SetBool(isTargetOnLeft ? "AttackStateLeft" : "AttackStateRight", true);
+            enemyObject.TakeDamage(damage);
+            if (!nearestObject.active)
+            {
+                killedEnemies.Add(nearestObject);
+            }
+            if (killedEnemies.Count != 0)
+            {
+                EnemiesCollection.removeEnemies(killedEnemies);
+            }
         }
         else
         {
