@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Alim : MonoBehaviour
 {
@@ -8,7 +11,7 @@ public class Alim : MonoBehaviour
 
     private static float hp = 20;
     private float damage = 5f;
-    private int speed = 3;
+    private int speed = 2;
     private float attackDistance = 2.0f;
 
     private static bool battleModeEnable = false;
@@ -27,9 +30,21 @@ public class Alim : MonoBehaviour
     private static GameObject alim;
     private static Animator alimAnimator;
 
-    private static List<GameObject> enemiesList;
+    private static List<GameObject> enemiesList = EnemiesCollection.getEnemyCollection();
     private Transform currentTarget;
+    float bias = 0.0f;
 
+    public static bool canMoveToEndPoint = false;
+
+    public static void SetCanMove() { canMoveToEndPoint = true; }
+    // Define the path points
+    public Vector2 point1 = new Vector2(54.31f, -80.24f);
+    public Vector2 point2 = new Vector2(78.85f, -80.24f);
+    public Vector2 point3 = new Vector2(78.85f, -87.87f);
+    public Vector2 point4 = new Vector2(110f, -87.87f);
+
+    // Current position on the path
+    private int currentPointIndex = 0;
 
 
     public static GameObject getAlim() { return alim; }
@@ -42,92 +57,63 @@ public class Alim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemiesList = EnemiesCollection.getEnemyCollection();
-        GameObject nearestObject = FindNearestObject();
+        //enemiesList = EnemiesCollection.getEnemyCollection();
 
-        if (nearestObject != null && EnemiesCollection.attackMode)
+        if (canMoveToEndPoint && SceneManager.GetActiveScene().name == "Village") 
         {
-            currentTarget = nearestObject.transform;
+            // Get the current target point
+            Vector2 targetPoint = GetCurrentTargetPoint();
 
-            // Move towards the nearest object
-            MoveTowardsTarget(nearestObject);
+            // Calculate direction to the target
+            Vector2 direction = (targetPoint - (Vector2)transform.position).normalized;
+
+            // Move towards the target
+            transform.position += (Vector3)direction * speed * Time.deltaTime;
+
+            // Check if we've reached the target point
+            if (Vector2.Distance(transform.position, targetPoint) < 1f)
+            {
+                // Move to the next point
+                currentPointIndex++;
+
+                // If we've reached the last point, stop moving
+                if (currentPointIndex >= 4)
+                {
+                    currentPointIndex = 3; // Stay at the final point
+                    alimAnimator.SetBool("RightMovement", false);
+                    return; // Stop moving
+                }
+            }
         }
-
 
     }
 
-    GameObject FindNearestObject()
+    // Helper function to get the current target point
+    private Vector2 GetCurrentTargetPoint()
     {
-        GameObject nearestObject = null;
-        float shortestDistance = Mathf.Infinity;
-        Vector3 currentPosition = transform.position;
-
-        foreach (GameObject obj in enemiesList)
+        switch (currentPointIndex)
         {
-            float distanceToObj = Vector3.Distance(obj.transform.position, currentPosition);
-            if (distanceToObj < shortestDistance)
-            {
-                shortestDistance = distanceToObj;
-                nearestObject = obj;
-            }
-        }
-
-        return nearestObject;
-    }
-
-    void MoveTowardsTarget(GameObject nearestObject)
-    {
-        if (currentTarget == null)
-            return;
-
-        Enemy enemyObject = nearestObject.GetComponent<Enemy>();
-        // Calculate direction to move towards the target
-        Vector3 moveDirection = (currentTarget.position - transform.position).normalized;
-
-        // Determine movement along X and Y axes
-        float moveX = Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.y) ? moveDirection.x : 0;
-        float moveY = Mathf.Abs(moveDirection.y) > Mathf.Abs(moveDirection.x) ? moveDirection.y : 0;
-
-        // Set animator parameters based on movement direction
-        alimAnimator.SetBool("UpMovement", moveY > 0);
-        alimAnimator.SetBool("DownMovement", moveY < 0);
-        alimAnimator.SetBool("RightMovement", moveX > 0);
-        alimAnimator.SetBool("LeftMovement", moveX < 0);
-
-        // Move the character
-        transform.position += moveDirection * speed * Time.deltaTime;
-
-        // Check distance to target
-        float distanceToTarget = Vector3.Distance(transform.position, currentTarget.position);
-
-        // Check if distance is less than or equal to a certain threshold
-        float combatDistanceThreshold = 2.0f; // Adjust this distance threshold as needed
-
-        if (distanceToTarget <= combatDistanceThreshold)
-        {
-            // Determine if the target is on the left or right side
-            bool isTargetOnLeft = moveDirection.x < 0;
-            bool isTargetOnRight = moveDirection.x > 0;
-
-            // Set combat animation based on target's position relative to the character
-            alimAnimator.SetBool(isTargetOnLeft ? "AttackStateLeft" : "AttackStateRight", true);
-            enemyObject.TakeDamage(damage);
-            if (!nearestObject.active)
-            {
-                killedEnemies.Add(nearestObject);
-            }
-            if (killedEnemies.Count != 0)
-            {
-                EnemiesCollection.removeEnemies(killedEnemies);
-            }
-        }
-        else
-        {
-            // Ensure combat animations are off when not in combat range
-            alimAnimator.SetBool("AttackStateLeft", false);
-            alimAnimator.SetBool("AttackStateRight", false);
+            case 0:
+                alimAnimator.SetBool("UpMovement", true);
+                return point1;
+            case 1:
+                alimAnimator.SetBool("UpMovement", false);
+                alimAnimator.SetBool("RightMovement", true);
+                return point2;
+            case 2:
+                alimAnimator.SetBool("RightMovement", false);
+                alimAnimator.SetBool("DownMovement", true);
+                return point3;
+            case 3:
+                alimAnimator.SetBool("DownMovement", false);
+                alimAnimator.SetBool("RightMovement", true);
+                return point4;
+            default:
+                alimAnimator.SetBool("RightMovement", false);
+                return point4; // Default to the last point
         }
     }
+
 
 
 }

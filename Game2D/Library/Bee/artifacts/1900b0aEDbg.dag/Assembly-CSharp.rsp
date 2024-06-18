@@ -404,6 +404,7 @@
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Hero.cs"
 "Assets/Scripts/ImpulseManager.cs"
+"Assets/Scripts/Light Script/AppleWorks.cs"
 "Assets/Scripts/Light Script/FlickeringLight.cs"
 "Assets/Scripts/Light Script/GlobalLightDim.cs"
 "Assets/Scripts/OpenDoorTemple.cs"
