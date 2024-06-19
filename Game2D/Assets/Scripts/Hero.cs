@@ -136,6 +136,7 @@ public class Hero : MonoBehaviour
         {
             if (battleModeEnable)
             {
+
                 heroAnima.SetBool("AttackStateRight", true);
             }
             isMovingDown = false;
@@ -205,6 +206,9 @@ public class Hero : MonoBehaviour
                     
                     enemyObject.TakeDamage(damage);
 
+                    AttackSound.Instance.PlaySoundAttack(0.1f);//воспроизведение звука удара
+
+
                     //Store enemy as killed if he's not active (killed)
                     if (!enemy.active) 
                     {
@@ -223,20 +227,33 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public static void setBattleMode(bool heroInSight, bool side) 
+    public static void setBattleMode(bool heroInSight, bool side)
     {
         battleModeEnable = heroInSight;
-        if (battleModeEnable) 
+        if (battleModeEnable)
         {
-            heroAnima.SetBool("AttackStateRight", true);
+            // Проверяем, не играет ли уже музыка боя
+            if (!AudioManager.instance.isPlaying("battleMusic"))
+            {
+                heroAnima.SetBool("AttackStateRight", true);
+                AudioManager.instance.PlayBattleMusic();
+            }
+            
+
         }
         if (!battleModeEnable)
         {
-            heroAnima.SetBool("AttackStateLeft", false);
-            heroAnima.SetBool("AttackStateRight", false);
+            if (!AudioManager.instance.isPlaying("Background"))
+            {
+                heroAnima.SetBool("AttackStateLeft", false);
+                heroAnima.SetBool("AttackStateRight", false);
+                AudioManager.instance.PlayNormalMusic();
+
+            }
+            
         }
     }
-
+    
     public static void TakeDamage(float damage)
     {
         hp -= damage;
