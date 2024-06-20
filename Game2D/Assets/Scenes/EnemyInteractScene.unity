@@ -515,14 +515,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Background
-    clip: {fileID: 8300000, guid: 2a47cea57516c8c44a34276f182b7e86, type: 3}
+    clip: {fileID: 8300000, guid: 9ebcef8b7134fe848bc8253a43d1660d, type: 3}
     volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: battleMusic
-    clip: {fileID: 8300000, guid: 80716d0a6fd32bb4f9f3d1d23c7cb1ce, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 48abd2bb3d5fea043acd8ea61a85a9c7, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}

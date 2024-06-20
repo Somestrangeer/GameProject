@@ -206,7 +206,7 @@ public class Hero : MonoBehaviour
                     
                     enemyObject.TakeDamage(damage);
 
-                    AttackSound.Instance.PlaySoundAttack(0.1f);//воспроизведение звука удара
+                    AttackSound.Instance.PlaySoundAttack(0.3f);//воспроизведение звука удара
 
 
                     //Store enemy as killed if he's not active (killed)
