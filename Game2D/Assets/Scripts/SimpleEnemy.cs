@@ -84,6 +84,8 @@ public class SimpleEnemy : MonoBehaviour, Enemy
         rend.material.color = Color.red;
         Hero.TakeDamage(damage);
 
+        AttackSound.PlaySoundUnit();
+
         yield return new WaitForSeconds(damageSpeed);
 
         rend.material.color = Color.white;

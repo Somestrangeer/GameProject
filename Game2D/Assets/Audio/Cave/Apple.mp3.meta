@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: b2dbedcc82745814f965ba4b7c1ea8da
+<<<<<<<< HEAD:Game2D/Assets/Audio/Cave/Apple.mp3.meta
+guid: 3db01c6ed03ca584c8f6d66d4e83bc0e
+========
+guid: eaa806571f20c304881e84738b66117b
+>>>>>>>> Sounds:Game2D/Assets/Audio/Cave/JDSherbert - Ambiences Music Pack - Bloodrat Sewers.mp3.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 7

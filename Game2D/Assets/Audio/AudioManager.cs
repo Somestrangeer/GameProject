@@ -51,16 +51,63 @@ public class AudioManager : MonoBehaviour {
             yield return owlSoundInterval;
         }
     }
-
     public void Play(string sound)
-	{
-		Sound s = Array.Find(sounds, item => item.name == sound);
-		s.source.Play();
-	}
-	public void Stop(string sound)
-	{
-		Sound s = Array.Find(sounds, item => item.name == sound);
-		s.source.Stop();
-	}
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.Play();
+    }
 
+    public void Stop(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.Stop();
+    }
+    public bool isPlaying(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + sound + " not found!");
+            return false;
+        }
+        return s.source.isPlaying;
+    }
+
+    //   public void Play(string sound)
+    //{
+    //	Sound s = Array.Find(sounds, item => item.name == sound);
+    //	s.source.Play();
+    //}
+    //public void Stop(string sound)
+    //{
+    //	Sound s = Array.Find(sounds, item => item.name == sound);
+    //	s.source.Stop();
+    //}
+
+    // Добавленные методы для управления музыкой боя и обычной музыкой
+    public void PlayBattleMusic()
+    {
+        Stop("Background");
+        Play("battleMusic");
+        Debug.Log("Playing Battle Music"); // Добавление сообщения в консоль, когда проигрывается музыка боя
+
+    }
+
+    public void PlayNormalMusic()
+    {
+        Stop("battleMusic");
+        Play("Background");
+        Debug.Log("Playing Normal Music"); // Добавление сообщения в консоль, когда проигрывается обычная музыка
+
+    }
 }
