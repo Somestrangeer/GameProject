@@ -41,13 +41,13 @@ public class SimpleEnemy : MonoBehaviour, Enemy
         }
         else 
         {
-            if (SceneManager.GetActiveScene().name == "Village") 
+            /*if (SceneManager.GetActiveScene().name == "Village") 
             {
                 simpleEnemyAnimator.SetBool("AttackStateLeft", false);
                 simpleEnemyAnimator.SetBool("IsAttackingLeft", false);
                 simpleEnemyAnimator.SetBool("AttackStateRight", false);
                 simpleEnemyAnimator.SetBool("IsAttacingRight", false);
-            }
+            }*/
            
         }
     }

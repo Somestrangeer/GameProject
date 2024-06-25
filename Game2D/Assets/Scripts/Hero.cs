@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,16 +6,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
 using Cinemachine;
+using System.Runtime.CompilerServices;
 
 public class Hero : MonoBehaviour
 {
-    private static float hp = 1120;
+    private static float hp = 20;
     private float damage = 50f;
     private int speed = 3;
     private float attackDistance = 2.0f;
     private bool sneakModeEnable = false;
     private static bool battleModeEnable = false;
-    public float damageSpeed = 0.5f;
+    public float damageSpeed = 0.2f;
 
     private bool isMovingLeft;
     private bool isMovingRight;
@@ -33,6 +34,8 @@ public class Hero : MonoBehaviour
     private static Animator heroAnima;
 
     public static GameObject getHero() { return hero; }
+    public float getHp() { return hp; }
+    public static void setHp(float hp1) {  hp = hp1; }
 
     public static string sceneName = "";
 
@@ -44,12 +47,36 @@ public class Hero : MonoBehaviour
     private float currentOrthographicSize = 8.108678f;
     private bool isAttacking = false;
 
+    public static string gameProgress;
+
     private void Awake()
     {
         // Get the object of hero's sprite
         hero = gameObject;
 
         sceneName = SceneManager.GetActiveScene().name;
+
+        if (SaveData.sceneName != sceneName)
+        {
+            // Переходим на нужную сцену асинхронно
+            SceneManager.LoadSceneAsync(SaveData.sceneName);
+            Debug.Log("Name her" + sceneName);
+
+        }
+
+        /*Не хочу заморачиваться*/
+        if (SaveData.position.x != 0 && SaveData.position.y != 0) 
+        {
+            hero.transform.position = SaveData.position;
+        }
+        if (SaveData.health != 0f) 
+        {
+            hp = SaveData.health;
+        }
+        if (SaveData.gameProgress != null) 
+        {
+            gameProgress = SaveData.gameProgress;
+        }
 
         heroAnima = hero.GetComponent<Animator>();
 
@@ -58,12 +85,30 @@ public class Hero : MonoBehaviour
         shadowLeft = spriteRenderers[2].gameObject;
         shadowRight = spriteRenderers[3].gameObject;
 
+
+
         if(sceneName == "TempleInterior") 
         {
             objCameraSize = GameObject.FindGameObjectWithTag("SizeCamera");
             virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
     }
+
+    /**/
+    /*async void Start()
+    {
+        
+
+        if (SaveData.sceneName != SceneManager.GetActiveScene().name)
+        {
+            // Переходим на нужную сцену асинхронно
+            SceneManager.LoadSceneAsync(SaveData.sceneName);
+            hero.transform.position = SaveData.position;
+            hp = SaveData.health;
+            gameProgress = SaveData.gameProgress;
+
+        }
+    }*/
 
     // Update is called once per frame
     private void Update()
@@ -255,7 +300,7 @@ public class Hero : MonoBehaviour
 
         //The hero was hit
         rend.material.color = Color.red;
-        Hero.TakeDamage(damage);
+        //Hero.TakeDamage(damage);
 
         yield return new WaitForSeconds(damageSpeed);
 
@@ -302,7 +347,7 @@ public class Hero : MonoBehaviour
         battleModeEnable = heroInSight;
         if (battleModeEnable)
         {
-            // ���������, �� ������ �� ��� ������ ���
+            // Ïðîâåðÿåì, íå èãðàåò ëè óæå ìóçûêà áîÿ
             if (!AudioManager.instance.isPlaying("battleMusic"))
             {
                 heroAnima.SetBool("AttackStateRight", true);
@@ -334,15 +379,46 @@ public class Hero : MonoBehaviour
         }
     }
 
+
+
+    /*Swith to another cutscene*/
+    public void ReplacementStart()
+    {
+        StartCoroutine(Replace());
+    }
+    private static IEnumerator Replace()
+    {
+        GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
+        yield return new WaitForSeconds(0f); // Ждем 3 секунды после гашения света
+        battleModeEnable = false;
+        EnemiesCollection.attackMode = false;
+        hero.transform.position = new Vector3(54.5f, -50f, 0);
+
+        GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
+    }
+    
+
     private static void Die()
     {
+        Debug.Log("FICK" + SaveData.health);
         // We hide the hero
-        battleModeEnable = false;
+        /*battleModeEnable = false;
         Renderer rend = hero.GetComponent<Renderer>();
         rend.material.color = Color.white;
-        heroAnima.SetBool("AttackStateRight", false);
+        heroAnima.SetBool("AttackStateRight", false);*/
+
+        SaveData.health = 300f;
+        SaveData.position = hero.transform.position;
+        SaveData.gameProgress = gameProgress;
+        SaveData.sceneName = sceneName;
+
+        Debug.Log("FICK" + SaveData.health);
+        Debug.Log(sceneName);
+
         hero.SetActive(false);
-        EnemiesCollection.attackMode = false;
+
+
+        /*EnemiesCollection.attackMode = false;
         if (sceneName == "Village") 
         {
             hp = 50f;
@@ -352,7 +428,7 @@ public class Hero : MonoBehaviour
             //GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
             
 
-        }
+        }*/
 
     }
 }

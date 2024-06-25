@@ -7,7 +7,7 @@ public class GlobalLightDim : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    static public Light2D globalLight { get; set; }
+    public static Light2D globalLight { get; set; }
     void Awake()
     {
         globalLight = GetComponent<Light2D>();
