@@ -6,9 +6,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
 using Cinemachine;
+using UnityEngine.UI;
+using System.Runtime.CompilerServices;
 
 public class Hero : MonoBehaviour
 {
+    public GameObject HealtBar; //здесь
+
     private static float hp = 1120;
     private float damage = 50f;
     private int speed = 3;
@@ -31,6 +35,7 @@ public class Hero : MonoBehaviour
     // The object of our hero
     private static GameObject hero;
     private static Animator heroAnima;
+    private static Slider heroSlider; //здесь
 
     public static GameObject getHero() { return hero; }
 
@@ -53,6 +58,10 @@ public class Hero : MonoBehaviour
 
         heroAnima = hero.GetComponent<Animator>();
 
+        heroSlider = HealtBar.GetComponent<Slider>(); //здесь
+
+        //heroSlider.value = hp;
+
         SpriteRenderer[] spriteRenderers = hero.GetComponentsInChildren<SpriteRenderer>();
         shadowUpDown = spriteRenderers[1].gameObject;
         shadowLeft = spriteRenderers[2].gameObject;
@@ -74,6 +83,8 @@ public class Hero : MonoBehaviour
             //GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
 
         }
+
+        //healthBar.SetHealth(hp);
 
         heroMovement();
 
@@ -312,6 +323,8 @@ public class Hero : MonoBehaviour
     {
         hp -= damage;
 
+        heroSlider.value = Hero.hp;
+
         if (hp <= 0.0f)
         {
             Die();
@@ -327,6 +340,7 @@ public class Hero : MonoBehaviour
         heroAnima.SetBool("AttackStateRight", false);
         hero.SetActive(false);
         EnemiesCollection.attackMode = false;
+
         if (sceneName == "Village") 
         {
             hp = 50f;
