@@ -2828,6 +2828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186351663}
+  - component: {fileID: 186351664}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -2862,6 +2863,23 @@ Transform:
   - {fileID: 2136545844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &186351664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186351662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb66fb57156924db7674d3fbc8506c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: cc7f7c47d3d2bdd408f142864b790647, type: 3}
+  - {fileID: 8300000, guid: 9a91e30c5f233774eb66b92e6649aa06, type: 3}
+  - {fileID: 8300000, guid: 80cb2c52dca4e6f44ae744d98d5de38e, type: 3}
+  - {fileID: 8300000, guid: de860802ea4e48a4588ccff3b042bd7c, type: 3}
 --- !u!1001 &188967426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46831,6 +46849,7 @@ GameObject:
   - component: {fileID: 1809650873}
   - component: {fileID: 1809650872}
   - component: {fileID: 1809650866}
+  - component: {fileID: 1809650874}
   - component: {fileID: 1809650865}
   - component: {fileID: 1809650864}
   - component: {fileID: 1809650870}
@@ -47146,6 +47165,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf6164fc7f1ebb41abb6c852cbb5a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1809650874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809650863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb66fb57156924db7674d3fbc8506c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: cc7f7c47d3d2bdd408f142864b790647, type: 3}
+  - {fileID: 8300000, guid: 9a91e30c5f233774eb66b92e6649aa06, type: 3}
+  - {fileID: 8300000, guid: 80cb2c52dca4e6f44ae744d98d5de38e, type: 3}
+  - {fileID: 8300000, guid: de860802ea4e48a4588ccff3b042bd7c, type: 3}
 --- !u!1001 &1910383664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48160,7 +48196,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Background
-    clip: {fileID: 8300000, guid: eaa806571f20c304881e84738b66117b, type: 3}
+    clip: {fileID: 8300000, guid: dc567b4034a0b4e4684560f2cf0faf76, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: battleMusic
+    clip: {fileID: 8300000, guid: e8c01b3a63ae49c46b52f634b8d1a815, type: 3}
     volume: 0.3
     pitch: 1
     loop: 1

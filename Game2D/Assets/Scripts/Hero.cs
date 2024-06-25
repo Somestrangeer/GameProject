@@ -181,7 +181,7 @@ public class Hero : MonoBehaviour
 
         if (movement != Vector3.zero) 
         {
-            Footstep.Instance.PlaySound(0.5f);
+            Footstep.Instance.PlaySound(0.3f);
         }
 
         // To make an animation we have to multiply it by time
@@ -244,6 +244,8 @@ public class Hero : MonoBehaviour
         }
 
         enemyObject.TakeDamage(damage);
+
+        AttackSound.Instance.PlaySoundAttack(0.3f);//воспроизведение звука удара
 
         //Store enemy as killed if he's not active (killed)
         if (!enemy.active)

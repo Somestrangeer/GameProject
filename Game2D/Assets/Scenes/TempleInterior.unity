@@ -29709,7 +29709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Background
-    clip: {fileID: 8300000, guid: 7dd657aff464d614a9eb48643031b1de, type: 3}
+    clip: {fileID: 8300000, guid: f721eb7591b00874baff2c3755c86508, type: 3}
     volume: 0.3
     pitch: 1
     loop: 1
@@ -39659,6 +39659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23161117d6420f439bd7f717cc3a117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSpeed: 0.5
   targetOrthographicSize: 12
   smoothTime: 0.5
 --- !u!1 &1920342960

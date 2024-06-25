@@ -25,14 +25,9 @@ public class AttackSound : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
+        
             instance = this;
-        }
+     
     }
 
     void Start()
