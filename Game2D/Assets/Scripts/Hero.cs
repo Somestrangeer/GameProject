@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,6 +33,7 @@ public class Hero : MonoBehaviour
     private static Animator heroAnima;
 
     public static GameObject getHero() { return hero; }
+    public static float getHp() { return hp; }
 
     public static string sceneName = "";
 
@@ -300,7 +301,7 @@ public class Hero : MonoBehaviour
         battleModeEnable = heroInSight;
         if (battleModeEnable)
         {
-            // Проверяем, не играет ли уже музыка боя
+            // ГЏГ°Г®ГўГҐГ°ГїГҐГ¬, Г­ГҐ ГЁГЈГ°Г ГҐГІ Г«ГЁ ГіГ¦ГҐ Г¬ГіГ§Г»ГЄГ  ГЎГ®Гї
             if (!AudioManager.instance.isPlaying("battleMusic"))
             {
                 heroAnima.SetBool("AttackStateRight", true);
@@ -332,15 +333,34 @@ public class Hero : MonoBehaviour
         }
     }
 
+
+
+    /*Swith to another cutscene*/
+    public void ReplacementStart()
+    {
+        StartCoroutine(Replace());
+    }
+    private static IEnumerator Replace()
+    {
+        GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
+        yield return new WaitForSeconds(0f); // Р–РґРµРј 3 СЃРµРєСѓРЅРґС‹ РїРѕСЃР»Рµ РіР°С€РµРЅРёСЏ СЃРІРµС‚Р°
+        battleModeEnable = false;
+        EnemiesCollection.attackMode = false;
+        hero.transform.position = new Vector3(54.5f, -50f, 0);
+
+        GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
+    }
+    
+
     private static void Die()
     {
         // We hide the hero
-        battleModeEnable = false;
+        /*battleModeEnable = false;
         Renderer rend = hero.GetComponent<Renderer>();
         rend.material.color = Color.white;
-        heroAnima.SetBool("AttackStateRight", false);
+        heroAnima.SetBool("AttackStateRight", false);*/
         hero.SetActive(false);
-        EnemiesCollection.attackMode = false;
+        /*EnemiesCollection.attackMode = false;
         if (sceneName == "Village") 
         {
             hp = 50f;
@@ -350,7 +370,7 @@ public class Hero : MonoBehaviour
             //GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
             
 
-        }
+        }*/
 
     }
 }

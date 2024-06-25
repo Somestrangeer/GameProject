@@ -75,7 +75,7 @@ public class EnemiesCollection : MonoBehaviour
         {
            
             // Calculate the distance if the hero is inside the enemy's visibleArea
-            float distanceJandar = Vector3.Distance(hero.transform.position, enemy.transform.position);
+            float distanceJandar = Vector3.Distance(hero.transform.position, enemy.transform.position) - 5;
 
             float bias = 0.0f;
 
