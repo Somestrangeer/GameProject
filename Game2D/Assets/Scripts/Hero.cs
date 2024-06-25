@@ -290,7 +290,7 @@ public class Hero : MonoBehaviour
 
         enemyObject.TakeDamage(damage);
 
-        AttackSound.Instance.PlaySoundAttack(0.3f);//воспроизведение звука удара
+        AttackSound.Instance.PlaySoundAttack(0.3f);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
         //Store enemy as killed if he's not active (killed)
         if (!enemy.active)
@@ -388,11 +388,12 @@ public class Hero : MonoBehaviour
     }
     private static IEnumerator Replace()
     {
+        Debug.Log("HERE");
         GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
         yield return new WaitForSeconds(0f); // Р–РґРµРј 3 СЃРµРєСѓРЅРґС‹ РїРѕСЃР»Рµ РіР°С€РµРЅРёСЏ СЃРІРµС‚Р°
         battleModeEnable = false;
         EnemiesCollection.attackMode = false;
-        hero.transform.position = new Vector3(54.5f, -50f, 0);
+        Hero.hero.transform.position = new Vector3(54.5f, -50f, 0);
 
         GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
     }
@@ -400,7 +401,6 @@ public class Hero : MonoBehaviour
 
     private static void Die()
     {
-        Debug.Log("FICK" + SaveData.health);
         // We hide the hero
         /*battleModeEnable = false;
         Renderer rend = hero.GetComponent<Renderer>();
@@ -411,9 +411,6 @@ public class Hero : MonoBehaviour
         SaveData.position = hero.transform.position;
         SaveData.gameProgress = gameProgress;
         SaveData.sceneName = sceneName;
-
-        Debug.Log("FICK" + SaveData.health);
-        Debug.Log(sceneName);
 
         hero.SetActive(false);
 
