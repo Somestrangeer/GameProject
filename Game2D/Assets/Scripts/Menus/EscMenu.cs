@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,7 +27,6 @@ public class EscMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             Escmenu.SetActive(true);
-            DieMenu.SetActive(true) ;
             //Time.timeScale = 0;
         }
         if (hero.active == false)
@@ -45,6 +45,31 @@ public class EscMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         //Time.timeScale = 0;
+    }
+
+    public void NextLvlButton1()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void NextLvlButton2()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void NextLvlButton3()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void NextLvlButton4()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void NextLvlButton5()
+    {
+        SceneManager.LoadScene(6);
     }
 
     public void ExitButton()
