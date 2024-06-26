@@ -15,6 +15,7 @@ public class ForestToHouse : MonoBehaviour
     {
         hero = GameObject.FindGameObjectWithTag("Hero");
         door = GameObject.FindGameObjectWithTag("Door");
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -33,7 +34,9 @@ public class ForestToHouse : MonoBehaviour
 
                 if (!DoorOpened)
                 {
-                    SceneManager.LoadScene(sceneName);
+                    SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+                    bool h = SceneManager.UnloadScene("ForestScene");
+
                     DoorOpened = true;
                 }
             }
