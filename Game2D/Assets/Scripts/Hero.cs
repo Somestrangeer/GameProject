@@ -6,21 +6,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
 using Cinemachine;
-<<<<<<< HEAD
-=======
 using UnityEngine.UI;
->>>>>>> UI++
 using System.Runtime.CompilerServices;
 
 public class Hero : MonoBehaviour
 {
-<<<<<<< HEAD
-    private static float hp = 20;
-=======
-    public GameObject HealtBar; //здесь
+    public GameObject HealtBar; //пїЅпїЅпїЅпїЅпїЅ
 
     private static float hp = 1120;
->>>>>>> UI++
     private float damage = 50f;
     private int speed = 3;
     private float attackDistance = 2.0f;
@@ -42,7 +35,7 @@ public class Hero : MonoBehaviour
     // The object of our hero
     private static GameObject hero;
     private static Animator heroAnima;
-    private static Slider heroSlider; //здесь
+    private static Slider heroSlider; //пїЅпїЅпїЅпїЅпїЅ
 
     public static GameObject getHero() { return hero; }
     public float getHp() { return hp; }
@@ -91,7 +84,7 @@ public class Hero : MonoBehaviour
 
         heroAnima = hero.GetComponent<Animator>();
 
-        heroSlider = HealtBar.GetComponent<Slider>(); //здесь
+        heroSlider = HealtBar.GetComponent<Slider>(); //пїЅпїЅпїЅпїЅпїЅ
 
         //heroSlider.value = hp;
 
@@ -432,15 +425,10 @@ public class Hero : MonoBehaviour
         SaveData.sceneName = sceneName;
 
         hero.SetActive(false);
-<<<<<<< HEAD
 
-
-        /*EnemiesCollection.attackMode = false;
-=======
         EnemiesCollection.attackMode = false;
 
->>>>>>> UI++
-        if (sceneName == "Village") 
+        /*if (sceneName == "Village") 
         {
             hp = 50f;
             hero.SetActive(true);
