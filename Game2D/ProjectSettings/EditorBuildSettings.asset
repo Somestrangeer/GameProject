@@ -6,9 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/TempleInterior.unity
     guid: 3c35f4e8efd3e6c4e86711b4d805d231
   - enabled: 1
     path: Assets/Scenes/Cave.unity
     guid: dfc4a07ad59854f468ebeb40c402c9b1
+=======
+    path: Assets/Scenes/MainMenu.unity
+    guid: f224f45315fdd1d4c937a7faa4a3c33c
+  - enabled: 1
+    path: Assets/Scenes/ForestScene.unity
+    guid: 918a60b57ca1b6143a16f59618ba7c9b
+  - enabled: 1
+    path: Assets/Scenes/GrandfatherHouse.unity
+    guid: 36dcd0fcee7846a4bab3371c851f17f6
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: 9628be4baa1dbd04c9dfb19b83f7d29a
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: dfc4a07ad59854f468ebeb40c402c9b1
+  - enabled: 1
+    path: Assets/Scenes/TempleExterior.unity
+    guid: e09387e64176ce04bbe3ebcba6973f43
+  - enabled: 1
+    path: Assets/Scenes/TempleInterior.unity
+    guid: 3c35f4e8efd3e6c4e86711b4d805d231
+>>>>>>> UI++
   m_configObjects: {}

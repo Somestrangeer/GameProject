@@ -101,6 +101,7 @@ public class DialogueSystem : MonoBehaviour
 
             //display choises, if any, for this dialogue line
             DisplayChoices();
+            Debug.Log("История продолжилась");
         }
         else
         {
@@ -143,6 +144,8 @@ public class DialogueSystem : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(Choises[0].gameObject);
+
+        Debug.Log("Выбор сделан 1");
     }
 
     public void MakeChoise(int ChoiseIndex)
@@ -150,5 +153,7 @@ public class DialogueSystem : MonoBehaviour
         CurrentStory.ChooseChoiceIndex(ChoiseIndex);
 
         ContinueStory();
+
+        Debug.Log("Выбор сделан 2");
     }
 }
