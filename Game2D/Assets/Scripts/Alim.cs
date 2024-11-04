@@ -45,7 +45,7 @@ public class Alim : MonoBehaviour
 
     // Current position on the path
     private int currentPointIndex = 0;
-
+    private bool reached = false;
 
     public static GameObject getAlim() { return alim; }
     void Start()
@@ -57,6 +57,8 @@ public class Alim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (reached)
+            return;
         //enemiesList = EnemiesCollection.getEnemyCollection();
 
         if (canMoveToEndPoint && SceneManager.GetActiveScene().name == "Village") 
@@ -81,6 +83,7 @@ public class Alim : MonoBehaviour
                 {
                     currentPointIndex = 3; // Stay at the final point
                     alimAnimator.SetBool("RightMovement", false);
+                    reached = true;
                     return; // Stop moving
                 }
             }

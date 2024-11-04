@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IODedHouse : MonoBehaviour
@@ -18,7 +19,17 @@ public class IODedHouse : MonoBehaviour
     {
         if (Hero.getHero() != null) 
         {
-            Debug.Log(Vector2.Distance(Hero.getHero().transform.position, houseInForest.transform.position));
+            //Debug.Log(Vector2.Distance(Hero.getHero().transform.position, houseInForest.transform.position));
+            if(SceneManager.GetActiveScene().name == "Cave") 
+            {
+                SaveSystem save = new SaveSystem();
+                SaveData saveData = save.Load();
+
+                if (!saveData.visited || EnemiesCollection.attackMode) 
+                {
+                    return;
+                }
+            }
             if(Vector2.Distance(Hero.getHero().transform.position, houseInForest.transform.position) < 4) 
             {
                 myButton.gameObject.SetActive(true);

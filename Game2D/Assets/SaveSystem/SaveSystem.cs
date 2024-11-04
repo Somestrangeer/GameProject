@@ -42,6 +42,39 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
+            Debug.LogWarning("Файл сохранения не найден. Создаем новый файл с начальными данными.");
+
+            // Создание начальных данных
+            SaveData initialData = new SaveData
+            {
+                sceneName = "",
+                health = 0,
+                visited = false,
+                coordinates = new Vector3(0, 0, 0),
+                talked = new List<string>()
+            };
+
+            // Сохранение начальных данных в файл
+            string json = JsonUtility.ToJson(initialData, true);
+            File.WriteAllText(saveFilePath, json);
+            Debug.Log("Начальные данные сохранены: " + json);
+
+            return initialData; // Возвращаем начальные данные
+        }
+    }
+
+    public static SaveData LoadStatic()
+    {
+        string saveFilePat1h = Path.Combine(Application.persistentDataPath, "saveData.json");
+        if (File.Exists(saveFilePat1h))
+        {
+            string json = File.ReadAllText(saveFilePat1h);
+            SaveData data = JsonUtility.FromJson<SaveData>(json);
+            //Debug.Log("Данные загружены: " + json);
+            return data;
+        }
+        else
+        {
             Debug.LogWarning("Файл сохранения не найден.");
             return null;
         }

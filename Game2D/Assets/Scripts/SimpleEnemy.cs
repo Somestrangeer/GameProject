@@ -27,7 +27,7 @@ public class SimpleEnemy : MonoBehaviour, Enemy
         // We always update the var to get the changed value
         attackDistance = EnemyParams.attackArea;
 
-        Debug.Log(Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 0.4f);
+        //Debug.Log(Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 0.4f);
 
         if (Vector3.Distance(simpleEnemy.transform.position, Hero.getHero().transform.position) - 1f <= attackDistance && !isAttacking)
         {

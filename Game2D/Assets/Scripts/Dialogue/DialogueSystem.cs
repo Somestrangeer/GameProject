@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -78,7 +79,16 @@ public class DialogueSystem : MonoBehaviour
     {
         saveSystem = new SaveSystem();
         SaveData data = saveSystem.Load();
-        data.talked.Add("Grandfather");
+        if(SceneManager.GetActiveScene().name == "GrandfatherHouse") 
+        {
+            data.talked.Add("Grandfather");
+        }
+        else if (SceneManager.GetActiveScene().name == "Village") 
+        {
+            data.talked.Add("Alim");
+        }
+
+        
         Hero.MakeSave(data.talked);
         DialogueIsPlaying = false;
         Image.SetActive(false);

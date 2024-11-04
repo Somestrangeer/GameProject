@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ForestNewScene 1.unity
     guid: 359078169c2782b4b85bedb2ab733ed9
-  - enabled: 0
-    path: Assets/Scenes/ForestScene.unity
-    guid: 918a60b57ca1b6143a16f59618ba7c9b
   - enabled: 1
     path: Assets/Scenes/GrandfatherHouse.unity
     guid: 36dcd0fcee7846a4bab3371c851f17f6

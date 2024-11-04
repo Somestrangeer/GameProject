@@ -621,6 +621,23 @@ MonoBehaviour:
     - {fileID: 247738924638532550}
     - {fileID: -712598658596800939}
     - {fileID: 5212941595016741594}
+    - {fileID: 2675030211782715630}
+--- !u!114 &2675030211782715630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: SavePoint
+  m_EditorClassIdentifier: 
+  m_Time: 23.683333333333334
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 813fbb6cb807bee4da5cf1f59f021ef6, type: 2}
 --- !u!114 &3898319878406362164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -868,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: b2dbedcc82745814f965ba4b7c1ea8da, type: 3}
+  m_Clip: {fileID: 8300000, guid: 3db01c6ed03ca584c8f6d66d4e83bc0e, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:

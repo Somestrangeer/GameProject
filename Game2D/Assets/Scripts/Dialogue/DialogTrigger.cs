@@ -43,7 +43,6 @@ public class DialogTrigger : MonoBehaviour
                 return;
             }
         }
-
         if (PlayerInRange && !DialogueSystem.GetInstance().DialogueIsPlaying)
         {
             VisualCue.SetActive(true);
@@ -61,6 +60,7 @@ public class DialogTrigger : MonoBehaviour
     //if player enter the collider range
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        Debug.Log("ENTERED");
         if (collider.gameObject.tag == "Hero")
         {
             PlayerInRange = true;
@@ -70,6 +70,7 @@ public class DialogTrigger : MonoBehaviour
     //if player exit the collider range
     private void OnTriggerExit2D(Collider2D collider)
     {
+        Debug.Log("EXIT");
         if (collider.gameObject.tag == "Hero")
         {
             PlayerInRange = false;

@@ -55,11 +55,17 @@ public class Hero : MonoBehaviour
 
     private static bool firstSave = false;
 
+    public static bool weReady = false;
+
+    [SerializeField] public GameObject darkShield1;
+    public static GameObject darkShield;
+
     private SaveSystem save = new SaveSystem();
 
     private void Awake()
     {
         // Get the object of hero's sprite
+        darkShield = darkShield1;
         hero = gameObject;
 
         sceneName = SceneManager.GetActiveScene().name;
@@ -105,12 +111,19 @@ public class Hero : MonoBehaviour
             virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
 
+
+
         SaveData data = save.Load();
 
         if(data.health != 0) 
         {
             hp = data.health;
             hero.transform.position = data.coordinates;
+
+            /*if(sceneName == "Village" && data.visited) 
+            {
+                var k = GameObject.FindWithTag("DisableThis");
+            }*/
             if (data.visited) 
             {
                 var cutScene = GameObject.FindWithTag("CutScene");
@@ -125,7 +138,17 @@ public class Hero : MonoBehaviour
                         audio.SetActive(false);*/
                 }
             }
-        } 
+        }
+
+        /*if (!firstSave)
+        {
+            SaveData data1 = save.Load();
+
+            MakeSave(data1.talked);
+            firstSave = true;
+        }*/
+
+
     }
 
     /**/
@@ -147,13 +170,6 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (!firstSave) 
-        {
-            SaveData data = save.Load();
-
-            MakeSave(data.talked);
-            firstSave = true;
-        }
 
         /*var audio = GameObject.FindWithTag("AudioManager");
         if (audio != null)
@@ -380,8 +396,19 @@ public class Hero : MonoBehaviour
     {
         List<GameObject> enemyList = EnemiesCollection.getEnemyCollection();
 
+
         //Sort the list of enemis by distance to the hero
-        enemyList.Sort((a, b) => Vector3.Distance(hero.transform.position, a.transform.position).CompareTo(Vector3.Distance(hero.transform.position, b.transform.position)));
+        enemyList.Sort((a, b) =>
+        {
+            // Проверка на null для первого объекта
+            if (a == null && b == null) return 0; // Оба null - считаем равными
+            if (a == null) return 1; // a null, b не null - a идет после b
+            if (b == null) return -1; // b null, a не null - a идет перед b
+
+            // Если оба объекта не null, сравниваем их расстояния
+            return Vector3.Distance(hero.transform.position, a.transform.position)
+                .CompareTo(Vector3.Distance(hero.transform.position, b.transform.position));
+        });
 
         foreach (GameObject enemy in enemyList) 
         {
@@ -426,6 +453,11 @@ public class Hero : MonoBehaviour
         {
             if (!AudioManager.instance.isPlaying("Background"))
             {
+                if(hero == null) 
+                {
+                    hero = GameObject.FindWithTag("Hero");
+                    heroAnima = hero.GetComponent<Animator>();
+                }
                 heroAnima.SetBool("AttackStateLeft", false);
                 heroAnima.SetBool("AttackStateRight", false);
                 AudioManager.instance.PlayNormalMusic();
@@ -457,19 +489,43 @@ public class Hero : MonoBehaviour
     private static IEnumerator Replace()
     {
         Debug.Log("HERE");
-        GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
-        yield return new WaitForSeconds(0f); // Ждем 3 секунды после гашения света
+        if(darkShield != null) 
+        {
+            darkShield.SetActive(true);
+
+        }
+
+        yield return new WaitForSeconds(3f); // Ждем 3 секунды после гашения света
+        if (darkShield != null)
+        {
+            darkShield.SetActive(false);
+
+        }
         battleModeEnable = false;
         EnemiesCollection.attackMode = false;
         Hero.hero.transform.position = new Vector3(54.5f, -50f, 0);
 
-        GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
+
+        weReady = true;
     }
 
     public static void MakeSave(List<string> talkedWith) 
     {
         SaveSystem save = new SaveSystem();
         List<string> talked = talkedWith;
+        /*if (talked.Contains("Grandfather")) 
+        {
+            save.Save(SceneManager.GetActiveScene().name, hp, true, new Vector3(51.01f, -5.72f, 0), talked);
+            return;
+        }*/
+        save.Save(SceneManager.GetActiveScene().name, hp, true, hero.transform.position, talked);
+    }
+
+    public void MakeSaveNonStatic()
+    {
+        SaveSystem save = new SaveSystem();
+        SaveData saveData = save.Load();
+        List<string> talked = saveData.talked;
         /*if (talked.Contains("Grandfather")) 
         {
             save.Save(SceneManager.GetActiveScene().name, hp, true, new Vector3(51.01f, -5.72f, 0), talked);

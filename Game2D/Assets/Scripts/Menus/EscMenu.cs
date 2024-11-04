@@ -55,14 +55,33 @@ public class EscMenu : MonoBehaviour
     {
         Hero.getHero().transform.position = new Vector3(51.01f, -5.72f, 0);
         SceneManager.LoadScene(1);
-        Hero.MakeSave(saveSystem.Load().talked);
+        SaveData pre = saveSystem.Load();
+        SaveData saveData = new SaveData
+        {
+            sceneName = "ForestNewScene 1",
+            health = 0,
+            visited = true, /*two cutscenes*/
+            coordinates = new Vector3(51.01f, -5.72f, 0),
+            talked = (pre.talked.Count < 1) ? new List<string>() : pre.talked
+        };
+        Hero.MakeSpecficSave(saveData);
     }
 
     public void NextLvlButton1()
     {
         Hero.getHero().transform.position = new Vector3(-9.52f, -1.22f, 0);
+
         SceneManager.LoadScene(2); //grandfather
-        Hero.MakeSave(saveSystem.Load().talked);
+        SaveData pre = saveSystem.Load();
+        SaveData saveData = new SaveData
+        {
+            sceneName = "GrandfatherHouse",
+            health = 0,
+            visited = true, /*two cutscenes*/
+            coordinates = new Vector3(-9.52f, -1.22f, 0),
+            talked = (pre.talked.Count < 1) ? new List<string>() : pre.talked
+        };
+        Hero.MakeSpecficSave(saveData);
     }
 
     public void NextLvlButton2()
@@ -82,17 +101,50 @@ public class EscMenu : MonoBehaviour
 
     public void NextLvlButton3()
     {
-        SceneManager.LoadScene(4);
+        Hero.getHero().transform.position = new Vector3(5.84f, 12.8f, 0);
+        SceneManager.LoadScene(4); //cave
+        SaveData pre = saveSystem.Load();
+        SaveData saveData = new SaveData
+        {
+            sceneName = "Cave",
+            health = 300,
+            visited = true, /*two cutscenes*/
+            coordinates = new Vector3(5.84f, 12.8f, 0),
+            talked = (pre.talked.Count < 1) ? new List<string>() : pre.talked
+        };
+        Hero.MakeSpecficSave(saveData);
     }
 
     public void NextLvlButton4()
     {
-        SceneManager.LoadScene(5);
+        Hero.getHero().transform.position = new Vector3(0.5f, -40f, 0);
+        SceneManager.LoadScene(5);//extr temple
+        SaveData pre = saveSystem.Load();
+        SaveData saveData = new SaveData
+        {
+            sceneName = "TempleExterior",
+            health = 100,
+            visited = false, /*two cutscenes*/
+            coordinates = new Vector3(0.5f, -40f, 0),
+            talked = (pre.talked.Count < 1) ? new List<string>() : pre.talked
+        };
+        Hero.MakeSpecficSave(saveData);
     }
 
     public void NextLvlButton5()
     {
-        SceneManager.LoadScene(6);
+        Hero.getHero().transform.position = new Vector3(-9.49f, -36.5f, 0);
+        SceneManager.LoadScene(6);//inter temple
+        SaveData pre = saveSystem.Load();
+        SaveData saveData = new SaveData
+        {
+            sceneName = "TempleInterior",
+            health = 100,
+            visited = false, /*two cutscenes*/
+            coordinates = new Vector3(-9.49f, -36.5f, 0),
+            talked = (pre.talked.Count < 1) ? new List<string>() : pre.talked
+        };
+        Hero.MakeSpecficSave(saveData);
     }
 
     public void ExitButton()

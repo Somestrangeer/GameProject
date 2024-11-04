@@ -10,6 +10,7 @@ public class CutSceneTrigger : MonoBehaviour
     GameObject obj;
 
     [SerializeField] public PlayableDirector timelineDirector;
+    [SerializeField] public GameObject hidden;
 
     private bool IsPlayed = false;
 
@@ -26,7 +27,7 @@ public class CutSceneTrigger : MonoBehaviour
         {
             if (EnemiesCollection.getEnemyCollection().Count == 0 && !IsPlayed) 
             {
-                Debug.Log(Vector3.Distance(hero.transform.position, obj.transform.position));
+                //Debug.Log(Vector3.Distance(hero.transform.position, obj.transform.position));
                 if (Vector3.Distance(hero.transform.position, obj.transform.position) <= 1.5f) 
                 {
                     timelineDirector.Play();
@@ -38,8 +39,11 @@ public class CutSceneTrigger : MonoBehaviour
         }
         else 
         {
-            if (Vector3.Distance(hero.transform.position, obj.transform.position) <= 1.5f)
+            Debug.Log(Vector3.Distance(hero.transform.position, obj.transform.position));
+            if (Vector3.Distance(hero.transform.position, obj.transform.position) <= 5f)
             {
+                if(Hero.weReady && hidden != null)
+                    hidden.SetActive(true);
                 timelineDirector.Play();
             }
         }

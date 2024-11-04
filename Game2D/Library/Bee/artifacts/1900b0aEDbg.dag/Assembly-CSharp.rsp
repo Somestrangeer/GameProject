@@ -415,6 +415,7 @@
 "Assets/Scripts/SimpleEnemy.cs"
 "Assets/Scripts/StrongEnemy.cs"
 "Assets/Scripts/Temple Helpers/Interact.cs"
+"Assets/Scripts/VideoPlayerController.cs"
 "Assets/Scripts/VillageCloseScene.cs"
 "Assets/Scripts/Костыли для перехода/IODedHouse.cs"
 -langversion:9.0
