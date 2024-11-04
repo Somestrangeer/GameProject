@@ -1,0 +1,12 @@
+{
+	"sceneName": "ForestNewScene",
+	"health": "1000",
+	"saw": ["FirstCutScene"],
+	"coordinates": {
+		"x": 51.01,
+		"y": -5.72,
+		"z": 0
+	},
+	"talked": ["Grandfather"]
+
+}

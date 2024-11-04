@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: f224f45315fdd1d4c937a7faa4a3c33c
   - enabled: 1
+    path: Assets/Scenes/ForestNewScene 1.unity
+    guid: 359078169c2782b4b85bedb2ab733ed9
+  - enabled: 0
     path: Assets/Scenes/ForestScene.unity
     guid: 918a60b57ca1b6143a16f59618ba7c9b
   - enabled: 1

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogTrigger : MonoBehaviour
 {
@@ -18,22 +19,37 @@ public class DialogTrigger : MonoBehaviour
 
     private bool PlayerInRange;
 
+    private SaveSystem saveSystem = new SaveSystem();
+
+    private string sceneName;
+
     private void Awake()
     {
         VisualCue.SetActive(false);
         dialogueSystem = FindObjectOfType<DialogueSystem>();
         player = GameObject.FindWithTag("Hero");
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     //shows the Dialogue available indicator and starts dialogue where button E pressed
     private void Update()
     {
+        SaveData data = saveSystem.Load();
+
+        if(sceneName == "GrandfatherHouse") 
+        {
+            if (data.talked.Contains("Grandfather")) 
+            {
+                return;
+            }
+        }
+
         if (PlayerInRange && !DialogueSystem.GetInstance().DialogueIsPlaying)
         {
             VisualCue.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E)) 
             {
-                DialogueSystem.GetInstance().EnterDialogueMode(InkJSON);
+                DialogueSystem.GetInstance().EnterDialogueMode(InkJSON, sceneName);
             }
         }
         else
@@ -62,6 +78,6 @@ public class DialogTrigger : MonoBehaviour
 
     public void StartDialgueCutScene()
     {
-        DialogueSystem.GetInstance().EnterDialogueMode(InkJSON);
+        DialogueSystem.GetInstance().EnterDialogueMode(InkJSON, sceneName);
     }
 }

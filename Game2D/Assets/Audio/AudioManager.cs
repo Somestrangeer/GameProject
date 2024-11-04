@@ -18,12 +18,12 @@ public class AudioManager : MonoBehaviour {
 	{
 		if (instance != null)
 		{
-			Destroy(gameObject);
+			//Destroy(gameObject);
 			return;
 		} else
 		{
 			instance = this;
-			DontDestroyOnLoad(gameObject);
+			//DontDestroyOnLoad(gameObject);
 		}
 
 		foreach (Sound s in sounds)
@@ -39,6 +39,13 @@ public class AudioManager : MonoBehaviour {
         {
             isForestScene = true;
             StartCoroutine(PlayOwlSoundAtInterval());
+        }
+    }
+    private void Update()
+    {
+        if (instance == null) 
+        {
+            instance = this;
         }
     }
 

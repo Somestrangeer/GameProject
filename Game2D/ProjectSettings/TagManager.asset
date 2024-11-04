@@ -16,6 +16,10 @@ TagManager:
   - Apple
   - DieMenu
   - Capsule
+  - Btn
+  - AudioManager
+  - CutScene
+  - AdditionalCamera
   layers:
   - Default
   - TransparentFX

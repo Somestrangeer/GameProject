@@ -396,6 +396,7 @@
 "Assets/Audio/SceneMusic.cs"
 "Assets/Audio/Sound.cs"
 "Assets/hero.cs"
+"Assets/SaveSystem/SaveSystem.cs"
 "Assets/Scripts/Alim.cs"
 "Assets/Scripts/CaveHelpers/AppleHide.cs"
 "Assets/Scripts/CutSceneTrigger.cs"
@@ -411,11 +412,11 @@
 "Assets/Scripts/Menus/EscMenu.cs"
 "Assets/Scripts/Menus/MainMenuButtons.cs"
 "Assets/Scripts/OpenDoorTemple.cs"
-"Assets/Scripts/SaveSystem/SaveSystem.cs"
 "Assets/Scripts/SimpleEnemy.cs"
 "Assets/Scripts/StrongEnemy.cs"
 "Assets/Scripts/Temple Helpers/Interact.cs"
 "Assets/Scripts/VillageCloseScene.cs"
+"Assets/Scripts/Костыли для перехода/IODedHouse.cs"
 -langversion:9.0
 
 /deterministic

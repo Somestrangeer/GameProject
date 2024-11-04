@@ -24,6 +24,10 @@ public class DialogueSystem : MonoBehaviour
 
     private static DialogueSystem instance;
 
+    private string sceneName;
+
+    private SaveSystem saveSystem;
+
     private void Awake()
     {
         instance = this;
@@ -59,8 +63,9 @@ public class DialogueSystem : MonoBehaviour
     }
 
     //Open the dialogue panel and starts the new story with information from inkJSON file, pinned to NPC
-    public void EnterDialogueMode(TextAsset inkJSON) 
+    public void EnterDialogueMode(TextAsset inkJSON, string sceneName) 
     {
+        this.sceneName = sceneName;
         CurrentStory = new Story(inkJSON.text);
         DialogueIsPlaying = true;
         Image.SetActive(true);
@@ -71,6 +76,10 @@ public class DialogueSystem : MonoBehaviour
     //Close the dialogue panel and clear the dialogue text
     private void ExitDialogueMode()
     {
+        saveSystem = new SaveSystem();
+        SaveData data = saveSystem.Load();
+        data.talked.Add("Grandfather");
+        Hero.MakeSave(data.talked);
         DialogueIsPlaying = false;
         Image.SetActive(false);
         DialogueText.text = "";

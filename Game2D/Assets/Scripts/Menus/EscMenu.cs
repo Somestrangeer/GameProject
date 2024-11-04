@@ -13,7 +13,7 @@ public class EscMenu : MonoBehaviour
     [SerializeField]
     GameObject hero;
 
-
+    private SaveSystem saveSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +24,10 @@ public class EscMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (saveSystem == null) 
+        {
+            saveSystem = new SaveSystem();
+        }
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             Escmenu.SetActive(true);
@@ -43,18 +47,37 @@ public class EscMenu : MonoBehaviour
 
     public void MenuButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0); //forest
         //Time.timeScale = 0;
+    }
+
+    public void Forest()
+    {
+        Hero.getHero().transform.position = new Vector3(51.01f, -5.72f, 0);
+        SceneManager.LoadScene(1);
+        Hero.MakeSave(saveSystem.Load().talked);
     }
 
     public void NextLvlButton1()
     {
-        SceneManager.LoadScene(2);
+        Hero.getHero().transform.position = new Vector3(-9.52f, -1.22f, 0);
+        SceneManager.LoadScene(2); //grandfather
+        Hero.MakeSave(saveSystem.Load().talked);
     }
 
     public void NextLvlButton2()
     {
+        Hero.getHero().transform.position = new Vector3(0.34f, 10.28f, 0);
         SceneManager.LoadScene(3);
+        SaveData saveData = new SaveData
+        {
+            sceneName = "Village",
+            health = 0,
+            visited = false, /*two cutscenes*/
+            coordinates = new Vector3(0.34f, 10.28f, 0),
+            talked = new List<string>()
+        };
+        Hero.MakeSpecficSave(saveData);
     }
 
     public void NextLvlButton3()

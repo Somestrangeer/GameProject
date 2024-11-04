@@ -53,6 +53,10 @@ public class Hero : MonoBehaviour
 
     public static string gameProgress;
 
+    private static bool firstSave = false;
+
+    private SaveSystem save = new SaveSystem();
+
     private void Awake()
     {
         // Get the object of hero's sprite
@@ -60,16 +64,16 @@ public class Hero : MonoBehaviour
 
         sceneName = SceneManager.GetActiveScene().name;
 
-        if (SaveData.sceneName != sceneName)
+        /*if (SaveData.sceneName != sceneName)
         {
             // Переходим на нужную сцену асинхронно
             SceneManager.LoadSceneAsync(SaveData.sceneName);
             Debug.Log("Name her" + sceneName);
 
-        }
+        }*/
 
         /*Не хочу заморачиваться*/
-        if (SaveData.position.x != 0 && SaveData.position.y != 0) 
+       /* if (SaveData.position.x != 0 && SaveData.position.y != 0) 
         {
             hero.transform.position = SaveData.position;
         }
@@ -80,7 +84,7 @@ public class Hero : MonoBehaviour
         if (SaveData.gameProgress != null) 
         {
             gameProgress = SaveData.gameProgress;
-        }
+        }*/
 
         heroAnima = hero.GetComponent<Animator>();
 
@@ -100,6 +104,28 @@ public class Hero : MonoBehaviour
             objCameraSize = GameObject.FindGameObjectWithTag("SizeCamera");
             virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
+
+        SaveData data = save.Load();
+
+        if(data.health != 0) 
+        {
+            hp = data.health;
+            hero.transform.position = data.coordinates;
+            if (data.visited) 
+            {
+                var cutScene = GameObject.FindWithTag("CutScene");
+                if (cutScene != null)
+                {
+                    cutScene.SetActive(false);
+                    var cam = GameObject.FindWithTag("AdditionalCamera");
+                    if (cam != null)
+                        cam.SetActive(false);
+                    /*var audio = GameObject.FindWithTag("AudioManager");
+                    if (audio != null)
+                        audio.SetActive(false);*/
+                }
+            }
+        } 
     }
 
     /**/
@@ -121,7 +147,37 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        
+        if (!firstSave) 
+        {
+            SaveData data = save.Load();
+
+            MakeSave(data.talked);
+            firstSave = true;
+        }
+
+        /*var audio = GameObject.FindWithTag("AudioManager");
+        if (audio != null)
+        {
+            Debug.Log("HERE");
+            //audio.SetActive(false);
+            //audio.SetActive(true);
+        }*/
+
+
+        /* var cam = GameObject.FindWithTag("AdditionalCamera");
+         if (cam != null)
+         {
+             Debug.Log("dfd");
+             if (cam.active == false)
+             {
+                 Debug.Log("dfd1");
+                 var audio = GameObject.FindWithTag("AudioManager");
+                 if (audio != null)
+                     audio.SetActive(false);
+             }
+         }*/
+
+
         if (hp <= 10 && sceneName == "Village") 
         {
             //GlobalLightDim.globalLight.intensity -= 0.07f * Time.deltaTime;
@@ -409,7 +465,25 @@ public class Hero : MonoBehaviour
 
         GlobalLightDim.globalLight.intensity += 0.07f * Time.deltaTime;
     }
-    
+
+    public static void MakeSave(List<string> talkedWith) 
+    {
+        SaveSystem save = new SaveSystem();
+        List<string> talked = talkedWith;
+        /*if (talked.Contains("Grandfather")) 
+        {
+            save.Save(SceneManager.GetActiveScene().name, hp, true, new Vector3(51.01f, -5.72f, 0), talked);
+            return;
+        }*/
+        save.Save(SceneManager.GetActiveScene().name, hp, true, hero.transform.position, talked);
+    }
+
+    public static void MakeSpecficSave(SaveData data)
+    {
+        SaveSystem save = new SaveSystem();
+        
+        save.Save(data.sceneName, hp, data.visited, hero.transform.position, data.talked);
+    }
 
     private static void Die()
     {
@@ -419,10 +493,10 @@ public class Hero : MonoBehaviour
         rend.material.color = Color.white;
         heroAnima.SetBool("AttackStateRight", false);*/
 
-        SaveData.health = 300f;
+        /*SaveData.health = 300f;
         SaveData.position = hero.transform.position;
         SaveData.gameProgress = gameProgress;
-        SaveData.sceneName = sceneName;
+        SaveData.sceneName = sceneName;*/
 
         hero.SetActive(false);
 
